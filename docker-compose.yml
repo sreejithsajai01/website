@@ -1,0 +1,24 @@
+services:
+  web1:
+    build: ./web1
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./web1:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+
+  web2:
+    build: ./web2
+    ports:
+      - "5567:5000"
+    environment:
+      - NODE_ENV=production
+
+  web3:
+    build:
+      context: ./web3
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "5174:5173"

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'DM Sans', sans-serif;
+    --font-display: 'Playfair Display', serif;
+
+    /* St. Mary's CBSE School Palette: Elegant Maroon & Classic Gold */
+    --background: 0 0% 100%;
+    --foreground: 20 10% 10%;
+    
+    --primary: 345 75% 30%; /* Deep Maroon */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 45 40% 96%; /* Cream */
+    --secondary-foreground: 345 75% 30%;
+    
+    --accent: 45 80% 55%; /* Classic Gold */
+    --accent-foreground: 345 75% 30%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 20 10% 40%;
+    
+    --border: 0 0% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 10%;
+    --ring: 345 75% 30%;
+    
+    --radius: 0rem; /* Sharp corners for a more traditional academic look */
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight font-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-panel {
+    @apply bg-white/90 backdrop-blur-md border border-border shadow-lg;
+  }
+
+  .hover-elevate-card {
+    @apply transition-all duration-500 hover:shadow-xl hover:shadow-primary/5 border-transparent hover:border-primary/20;
+  }
+
+  .section-heading {
+    @apply text-center max-w-3xl mx-auto mb-16;
+  }
+
+  .academic-border {
+    @apply border-t-4 border-primary pt-8;
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #vanta-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+
+/* Custom Entry Animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
