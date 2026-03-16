@@ -59,7 +59,7 @@ export default function AboutSection() {
             </div>
             
             <h2 className="text-3xl md:text-5xl font-sans font-bold text-primary mb-6 leading-tight">
-              St. Mary's School, <br/>Vashi, Navi Mumbai
+              St. Mary's School,<br/> Vashi, Navi Mumbai
             </h2> 
             
             <blockquote className="border-l-4 border-secondary pl-4 py-2 italic text-xl text-muted-foreground mb-8 font-sans">
