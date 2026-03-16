@@ -85,7 +85,7 @@ export default function HeroPopup() {
 
             {/* CTA Buttons */}
             <a
-              href="/admissions"
+              href="/enquiry"
               className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl transition-colors mb-3"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >

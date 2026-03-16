@@ -12,6 +12,7 @@ import Facilities from "@/pages/Facilities";
 import Gallery from "@/pages/Gallery";
 import Contact from "@/pages/Contact";
 import Notices from "@/pages/Notices";
+import Enquiry from "@/pages/Enquiry";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/gallery" component={Gallery}/>
       <Route path="/contact" component={Contact}/>
       <Route path="/notices" component={Notices}/>
+      <Route path="/enquiry" component={Enquiry}/>
       <Route component={NotFound} />
     </Switch>
   );
