@@ -1,19 +1,32 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import heroImg from "@/assets/images/school-hero.png";
+import heroImg2 from "@/assets/images/school-hero1.png";
 import { Button } from "@/components/ui/button";
 import HeroPopup from "./HeroPopup";
 
+const slides = [heroImg, heroImg2];
+
 export default function HeroSlider() {
+  const [current, setCurrent] = useState(0);
+  const [, navigate] = useLocation();
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-10000 hover:scale-105"
-        style={{ backgroundImage: `url(${heroImg})` }}
-      >
-        <div className="absolute inset-0 bg-primary/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
-      </div>
+      {slides.map((img, i) => (
+        <div key={i} className="absolute inset-0 transition-opacity duration-1000" style={{ opacity: i === current ? 1 : 0 }}>
+          <img src={img} alt="" className="w-full h-full object-fill object-bottom" />
+          <div className="absolute inset-0 bg-primary/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+        </div>
+      ))}
 
       {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center text-center">
@@ -30,13 +43,25 @@ export default function HeroSlider() {
               <Button size="lg" className="bg-secondary text-primary hover:bg-white text-lg px-8 font-bold">
                 Virtual Tour
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 bg-transparent/20 backdrop-blur-sm font-bold">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 bg-transparent/20 backdrop-blur-sm font-bold" onClick={() => navigate("/enquiry")}>
                 Admission Enquiry
               </Button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Dots */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-3 h-3 rounded-full transition-all ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
+          />
+        ))}
+      </div>
+
       <HeroPopup />
     </div>
   );
