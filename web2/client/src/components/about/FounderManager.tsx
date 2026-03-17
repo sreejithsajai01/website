@@ -1,31 +1,42 @@
-import managerImg from "@/assets/images/manager.png";
-import { Quote } from "lucide-react";
+import founderImg from "@/assets/images/founder.jpg";
+
+const paragraphs = [
+  "Established in 1986, St. Mary's Multipurpose High School & Junior College has been a beacon of quality education and holistic development for nearly four decades.",
+  `Guided by the inspiring motto "Lead Us from Darkness to Light", the institution embodies a commitment to nurturing young minds and shaping a brighter future for its students.`,
+  "Beyond academics, St. Mary's offers a vibrant array of extracurricular activities, including skating, music, band, Abacus classes, and a wide range of sports. These programs are thoughtfully designed to foster creativity, discipline, and physical fitness, ensuring the all-round development of every student.",
+  "Renowned for its dedicated faculty, supportive environment, and strong community ties, St. Mary's has earned its reputation as one of the most sought-after schools in Navi Mumbai, trusted by students, parents, and educators alike.",
+];
 
 export default function FounderManager() {
   return (
-    <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-8">Founder Manager — MOCCB</h2>
-      <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
-        <div className="w-40 h-40 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-lg shrink-0">
-          <img src={managerImg} alt="Founder Manager" className="w-full h-full object-cover" />
-        </div>
-        <div>
-          <h3 className="text-2xl font-sans font-bold text-primary">His Grace Mathews Mar Barnabas</h3>
-          <p className="text-secondary font-bold text-sm tracking-widest uppercase mt-1 mb-4">Founder Manager, MOCCB</p>
-          <div className="flex items-start gap-3 bg-primary/5 rounded-xl p-4 border-l-4 border-primary">
-            <Quote className="w-6 h-6 text-primary shrink-0 mt-1" />
-            <p className="text-muted-foreground italic leading-relaxed">
-              "Education is the most powerful tool we can give our children — not just to succeed in life, but to serve humanity with love and humility."
+    <div className="flex flex-col md:flex-row gap-10 items-start">
+      {/* Left: text */}
+      <div className="flex-1">
+        <p className="text-sm font-semibold text-primary mb-1">About Us</p>
+        <h2 className="text-3xl font-sans font-bold text-primary mb-6">
+          Welcome to St. Mary's CBSE School, Vashi
+        </h2>
+        <div className="space-y-4">
+          {paragraphs.map((p, i) => (
+            <p key={i} className="text-muted-foreground text-base leading-relaxed text-justify">
+              {p}
             </p>
-          </div>
+          ))}
         </div>
       </div>
-      <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-        The Malankara Orthodox Church Council of Bombay (MOCCB) was founded with a deep commitment to the spiritual and educational upliftment of the community. The Founder Manager's vision laid the groundwork for a network of schools that would serve thousands of students across the region.
-      </p>
-      <p className="text-muted-foreground text-lg leading-relaxed">
-        His tireless dedication to education and community service continues to inspire the leadership and staff of St. Mary's CBSE School to this day.
-      </p>
+
+      {/* Right: photo + caption */}
+      <div className="flex flex-col items-center shrink-0 w-64">
+        <img
+          src={founderImg}
+          alt="His Grace Dr. Philipose Mar Theophilos"
+          className="w-full rounded-sm object-cover shadow-md"
+        />
+        <p className="mt-3 text-sm text-muted-foreground">Founder Manager</p>
+        <p className="text-sm font-semibold text-primary text-center tracking-wide">
+          HIS GRACE DR. PHILIPOSE MAR THEOPHILOS
+        </p>
+      </div>
     </div>
   );
 }

@@ -1,22 +1,50 @@
-import { Heart } from "lucide-react";
+import { Heart, Music } from "lucide-react";
 
 export default function SchoolMotto() {
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">School Motto</h2>
+      {/* Motto */}
+      <h2 className="text-3xl font-sans font-bold text-primary mb-6">Motto of the School</h2>
       <div className="flex items-center gap-4 bg-primary/5 border-l-4 border-primary rounded-xl p-6 mb-8">
         <Heart className="w-10 h-10 text-primary shrink-0" />
-        <p className="text-2xl font-sans font-bold text-primary italic">"To Work and Serve in Love"</p>
+        <p className="text-2xl font-sans font-bold text-primary italic">LEAD US FROM DARKNESS TO LIGHT</p>
       </div>
-      <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+      <p className="text-muted-foreground text-lg leading-relaxed mb-10">
         Our motto encapsulates the very spirit of St. Mary's — a commitment to diligent work, selfless service, and unconditional love for one another and the community.
       </p>
-      <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-        Every student, teacher, and staff member is encouraged to embody this motto in their daily lives — working hard with purpose, serving others with humility, and doing so with love and compassion.
-      </p>
-      <p className="text-muted-foreground text-lg leading-relaxed">
-        This guiding principle has been the cornerstone of our institution since its inception and continues to inspire generations of students to become responsible, caring citizens of the world.
-      </p>
+
+      {/* Anthem */}
+      <div className="border-t border-border pt-10">
+        <div className="flex items-center gap-3 mb-6">
+          <Music className="w-7 h-7 text-primary shrink-0" />
+          <h2 className="text-3xl font-sans font-bold text-primary">School Anthem</h2>
+        </div>
+        <div className="bg-primary/5 border-l-4 border-primary rounded-xl p-6 space-y-5 text-muted-foreground text-lg leading-relaxed">
+          <p>
+            We the Marians have the light,<br />
+            To touch every soul with warmth and delight,<br />
+            In this garden of learning,<br />
+            We sow the seeds of yearning,<br />
+            To keep the fire burning,<br />
+            Of wisdom and truth.
+          </p>
+          <p>
+            March ahead, March ahead, every drop of the sweat,<br />
+            Will set a path of courage,<br />
+            To lead mankind to a life divine.<br />
+            High, High Raise the Marian Banner high!<br />
+            Of Hope, Peace, Compassion,<br />
+            Our selfless service shall build a strong nation.
+          </p>
+          <p>
+            Our Father in Heaven, give our ambition – wings!<br />
+            To be honest and loving,<br />
+            To cure human suffering<br />
+            We shall make our land worth<br />
+            A Heaven on Earth.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
