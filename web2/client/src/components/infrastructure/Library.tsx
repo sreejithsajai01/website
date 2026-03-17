@@ -1,3 +1,5 @@
+import libraryImg from "../../assets/images/WhatsApp Image 2026-03-17 at 3.35.45 PM.jpeg";
+
 const points = [
   "Wide collection of academic books, reference materials, and storybooks",
   "Access to newspapers, magazines, and digital resources",
@@ -7,6 +9,7 @@ const points = [
 export default function Library() {
   return (
     <div>
+      <img src={libraryImg} alt="Library" className="w-full rounded-xl mb-6 object-cover max-h-72" />
       <h2 className="text-3xl font-sans font-bold text-primary mb-4">Library</h2>
       <p className="text-muted-foreground text-lg leading-relaxed mb-6">
         Our school library serves as a knowledge hub, encouraging students to develop a lifelong love for reading and research.
