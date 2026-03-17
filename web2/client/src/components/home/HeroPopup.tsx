@@ -38,7 +38,7 @@ export default function HeroPopup() {
               Admissions Open
             </h2>
             <p className="text-white/80 text-sm mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
-              Academic Year 2025 – 2026
+              Academic Year 2026 – 2027
             </p>
 
             {/* Badge */}
