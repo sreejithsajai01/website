@@ -1,3 +1,5 @@
+import sportsImg from "@/assets/images/WhatsApp Image 2026-03-17 at 3.34.54 PM (1).jpeg";
+
 const points = [
   "Facilities for outdoor sports like football, cricket, and athletics",
   "Indoor games including table tennis and chess",
@@ -12,6 +14,9 @@ export default function SportsFacilities() {
       <p className="text-muted-foreground text-lg leading-relaxed mb-6">
         We strongly believe in the importance of physical fitness and teamwork. Our sports programs help students build discipline, confidence, and leadership skills.
       </p>
+      <div className="rounded-xl overflow-hidden mb-6 shadow-md">
+        <img src={sportsImg} alt="Sports Facilities" className="w-full object-cover max-h-72" />
+      </div>
       <ul className="space-y-3">
         {points.map((point) => (
           <li key={point} className="flex items-start gap-3 text-muted-foreground">

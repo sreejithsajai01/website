@@ -21,15 +21,15 @@ export default function Contact() {
                 <div className="space-y-6">
                   <div className="flex gap-4">
                     <MapPin className="text-secondary shrink-0" />
-                    <p>Vashi, Navi Mumbai - 400703 (Maharashtra)</p>
+                    <p>Dr Mar Theophilus Marg, Sector 10A, Vashi, Navi Mumbai, Maharashtra 400703</p>
                   </div>
                   <div className="flex gap-4">
                     <Phone className="text-secondary shrink-0" />
-                    <p>+91 98765 43210, +91 98765 43211</p>
+                    <p>022-27662725</p>
                   </div>
                   <div className="flex gap-4">
                     <Mail className="text-secondary shrink-0" />
-                    <p>info@stmarys.edu</p>
+                    <p>cbsestmarysvashi@gmail.com</p>
                   </div>
                 </div>
               </div>
