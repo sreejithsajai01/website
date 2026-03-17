@@ -1,23 +1,20 @@
 import { useRoute } from "wouter";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import Curriculum from "./Curriculum";
-import PrimarySchool from "./PrimarySchool";
-import MiddleSchool from "./MiddleSchool";
-import SeniorSecondary from "./SeniorSecondary";
+import Clubs from "./Clubs";
+import Sports from "./Sports";
+import Activities from "./Activities";
 
 const subPages = [
-  { label: "Curriculum", path: "/academics/curriculum" },
-  { label: "Primary School", path: "/academics/primary-school" },
-  { label: "Middle School", path: "/academics/middle-school" },
-  { label: "Senior Secondary", path: "/academics/senior-secondary" },
+  { label: "Clubs", path: "/student-life/clubs" },
+  { label: "Sports", path: "/student-life/sports" },
+  { label: "Activities", path: "/student-life/activities" },
 ];
 
 const componentMap: Record<string, React.ReactNode> = {
-  "/academics/curriculum": <Curriculum />,
-  "/academics/primary-school": <PrimarySchool />,
-  "/academics/middle-school": <MiddleSchool />,
-  "/academics/senior-secondary": <SeniorSecondary />,
+  "/student-life/clubs": <Clubs />,
+  "/student-life/sports": <Sports />,
+  "/student-life/activities": <Activities />,
 };
 
 function useActivePath() {
@@ -29,10 +26,10 @@ function useActivePath() {
   return null;
 }
 
-export default function Academics() {
+export default function StudentLife() {
   const activePath = useActivePath();
-  const activeContent = activePath ? componentMap[activePath] : <Curriculum />;
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "Curriculum";
+  const activeContent = activePath ? componentMap[activePath] : <Clubs />;
+  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "Clubs";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -42,7 +39,7 @@ export default function Academics() {
           <div className="absolute -top-10 -right-10 w-72 h-72 rounded-full bg-white/5" />
           <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-secondary/20" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <p className="text-secondary font-semibold uppercase tracking-widest text-sm mb-2">Academics</p>
+            <p className="text-secondary font-semibold uppercase tracking-widest text-sm mb-2">Student Life</p>
             <h1 className="text-5xl md:text-6xl font-sans font-bold text-white mb-4">{activeLabel}</h1>
             <p className="text-white/70 text-lg">St. Mary's CBSE School — Vashi, Navi Mumbai</p>
           </div>

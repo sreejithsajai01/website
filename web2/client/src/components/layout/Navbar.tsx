@@ -73,6 +73,15 @@ const navItems = [
     ],
   },
   {
+    name: "Student Life",
+    href: "/student-life",
+    sub: [
+      { name: "Clubs", href: "/student-life/clubs" },
+      { name: "Sports", href: "/student-life/sports" },
+      { name: "Activities", href: "/student-life/activities" },
+    ],
+  },
+  {
     name: "Contact Us",
     href: "/contact",
     sub: [
