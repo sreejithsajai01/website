@@ -23,16 +23,16 @@ const subPages = [
   { label: "The MOCCB School Network", path: "/about/school-network" },
 ];
 
-const componentMap: Record<string, React.ReactNode> = {
-  "/about/history": <History />,
-  "/about/school-motto": <SchoolMotto />,
-  "/about/vision-mission": <VisionMission />,
-  "/about/founder-manager": <FounderManager />,
-  "/about/managing-trustee": <ManagingTrustee />,
-  "/about/asst-managing-trustee": <AsstManagingTrustee />,
-  "/about/principals-message": <PrincipalsMessage />,
-  "/about/management-board": <ManagementBoard />,
-  "/about/school-network": <SchoolNetwork />,
+const componentMap: Record<string, () => JSX.Element> = {
+  "/about/history": () => <History />,
+  "/about/school-motto": () => <SchoolMotto />,
+  "/about/vision-mission": () => <VisionMission />,
+  "/about/founder-manager": () => <FounderManager />,
+  "/about/managing-trustee": () => <ManagingTrustee />,
+  "/about/asst-managing-trustee": () => <AsstManagingTrustee />,
+  "/about/principals-message": () => <PrincipalsMessage />,
+  "/about/management-board": () => <ManagementBoard />,
+  "/about/school-network": () => <SchoolNetwork />,
 };
 
 function useActivePath() {
@@ -46,7 +46,7 @@ function useActivePath() {
 
 export default function About() {
   const activePath = useActivePath();
-  const activeContent = activePath ? componentMap[activePath] : <History />;
+  const ActiveComponent = componentMap[activePath || "/about/history"];
   const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "History";
 
   return (
@@ -64,7 +64,9 @@ export default function About() {
 
         {/* Body */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          {activeContent}
+          <div className="bg-white rounded-2xl border border-border shadow-sm p-8 lg:p-10">
+            <ActiveComponent />
+          </div>
         </div>
       </main>
       <Footer />

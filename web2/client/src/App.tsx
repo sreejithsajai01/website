@@ -15,6 +15,7 @@ import InfrastructureSub from "@/components/infrastructure/Infrastructure";
 import GallerySub from "@/components/gallery/Gallery";
 import DisclosureSub from "@/components/disclosure/Disclosure";
 import CareersSub from "@/components/careers/Careers";
+import StudentLifeSub from "@/components/studentlife/StudentLife";
 import ContactSub from "@/components/contact/Contact";
 
 import Notices from "@/pages/Notices";
@@ -72,6 +73,12 @@ function Router() {
       {/* Careers */}
       <Route path="/careers" component={CareersSub} />
       <Route path="/careers/open-positions" component={CareersSub} />
+
+      {/* Student Life */}
+      <Route path="/student-life" component={StudentLifeSub} />
+      <Route path="/student-life/clubs" component={StudentLifeSub} />
+      <Route path="/student-life/sports" component={StudentLifeSub} />
+      <Route path="/student-life/activities" component={StudentLifeSub} />
 
       {/* Contact */}
       <Route path="/contact" component={ContactSub} />
