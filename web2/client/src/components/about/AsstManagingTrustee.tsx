@@ -3,7 +3,7 @@
 export default function AsstManagingTrustee() {
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-8">Asst. Managing Trustee — MOCCB</h2>
+      <h2 className="text-3xl font-sans font-bold text-primary mb-8">Secretary Message</h2>
       <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
         <div className="w-40 h-40 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-lg shrink-0 bg-secondary/20 flex items-center justify-center">
           <span className="text-4xl font-bold text-primary">AT</span>

@@ -41,8 +41,8 @@ export default function About() {
   else if (matchMotto) { ActiveComponent = SchoolMotto; activeLabel = "School Motto"; }
   else if (matchVision) { ActiveComponent = VisionMission; activeLabel = "Vision & Mission"; }
   else if (matchFounder) { ActiveComponent = FounderManager; activeLabel = "Founder Manager — MOCCB"; }
-  else if (matchManaging) { ActiveComponent = ManagingTrustee; activeLabel = "Managing Trustee — MOCCB"; }
-  else if (matchAsst) { ActiveComponent = AsstManagingTrustee; activeLabel = "Asst. Managing Trustee — MOCCB"; }
+  else if (matchManaging) { ActiveComponent = ManagingTrustee; activeLabel = "President Message"; }
+  else if (matchAsst) { ActiveComponent = AsstManagingTrustee; activeLabel = "Secretary Message"; }
   else if (matchPrincipal) { ActiveComponent = PrincipalsMessage; activeLabel = "Principal's Message"; }
   else if (matchBoard) { ActiveComponent = ManagementBoard; activeLabel = "Management / Board Members"; }
   else if (matchNetwork) { ActiveComponent = SchoolNetwork; activeLabel = "The MOCCB School Network"; }
