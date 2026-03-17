@@ -1,6 +1,6 @@
-import principalImg from "@/assets/images/principal.png";
-import managerImg from "@/assets/images/manager.png";
+import founderImg from "@/assets/images/founder.jpg";
 import { ArrowRight, Quote } from "lucide-react";
+import { Link } from "wouter";
 
 export default function MessageSection() {
   return (
@@ -16,62 +16,44 @@ export default function MessageSection() {
             <div className="w-12 h-1 bg-secondary"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-sans font-bold text-primary">
-            Messages from the Desk
+            Vision Of Our Founder
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-6xl mx-auto">
-          
-          {/* Principal Message */}
+        {/* Founder Message */}
+        <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg border border-border/50 p-8 md:p-10 relative group hover:-translate-y-2 transition-transform duration-300">
-            <div className="absolute -top-6 -left-6 bg-secondary text-primary p-4 rounded-full shadow-lg">
-              <Quote className="w-8 h-8" />
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start mb-8">
-              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl flex-shrink-0">
-                <img src={principalImg} alt="Principal" className="w-full h-full object-cover" />
-              </div>
-              <div className="text-center sm:text-left mt-2">
-                <h3 className="text-2xl font-sans font-bold text-primary">Rev. Fr. Jipson Palatty</h3>
-                <p className="text-secondary font-bold text-sm tracking-widest uppercase mt-1">Principal</p>
-              </div>
-            </div>
-            
-            <p className="text-foreground/70 leading-relaxed mb-6 italic">
-              "It is with immense pleasure and a deep sense of gratitude that I address you all through this message from the Principal's Desk. As we stand on the threshold of yet another academic year, I find myself reflecting on the remarkable journey of St. Mary's CBSE School, Vashi, which has been serving the community for nearly 24 years now."
-            </p>
-            
-            <a href="/principal-message" className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors group-hover:underline underline-offset-4">
-              Continue Reading <ArrowRight className="ml-2 w-4 h-4" />
-            </a>
-          </div>
-
-          {/* Manager Message */}
-          <div className="bg-white rounded-2xl shadow-lg border border-border/50 p-8 md:p-10 relative group hover:-translate-y-2 transition-transform duration-300 mt-12 md:mt-0">
             <div className="absolute -top-6 -left-6 bg-primary text-secondary p-4 rounded-full shadow-lg">
               <Quote className="w-8 h-8" />
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start mb-8">
-              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl flex-shrink-0">
-                <img src={managerImg} alt="Manager" className="w-full h-full object-cover" />
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              {/* Left: Image */}
+              <div className="w-48 h-48 rounded-2xl overflow-hidden border-4 border-white shadow-xl flex-shrink-0">
+                <img src={founderImg} alt="His Grace Dr. Philipose Mar Theophilos" className="w-full h-full object-cover" />
               </div>
-              <div className="text-center sm:text-left mt-2">
-                <h3 className="text-2xl font-sans font-bold text-primary">Fr. Andrew Correia</h3>
-                <p className="text-secondary font-bold text-sm tracking-widest uppercase mt-1">Manager</p>
+              
+              {/* Right: Content */}
+              <div className="flex-1">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-sans font-bold text-primary">His Grace Dr. Philipose Mar Theophilos</h3>
+                  <p className="text-secondary font-bold text-sm tracking-widest uppercase mt-1">Founder Manager, MOCCB</p>
+                </div>
+                
+                <p className="text-foreground/70 leading-relaxed mb-4">
+                  Established in 1986, St. Mary's Multipurpose High School & Junior College has been a beacon of quality education and holistic development for nearly four decades.
+                </p>
+                
+                <p className="text-foreground/70 leading-relaxed mb-6">
+                  Guided by the inspiring motto "Lead Us from Darkness to Light", the institution embodies a commitment to nurturing young minds and shaping a brighter future for its students.
+                </p>
+                
+                <Link href="/about/founder-manager" className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors group-hover:underline underline-offset-4">
+                  Continue Reading <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
               </div>
             </div>
-            
-            <p className="text-foreground/70 leading-relaxed mb-6 italic">
-              "We try to live by the motto of our school. I express my deep gratitude to the management, principal, staff, parents and students for their co-operation and co-ordination in all activities of the school. We owe to our management, principals for their well planning every year for the all-round development of the school."
-            </p>
-            
-            <a href="/manager-message" className="inline-flex items-center text-primary font-bold hover:text-secondary transition-colors group-hover:underline underline-offset-4">
-              Continue Reading <ArrowRight className="ml-2 w-4 h-4" />
-            </a>
           </div>
-
         </div>
       </div>
     </section>

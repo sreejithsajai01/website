@@ -3,27 +3,12 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import OpenPositions from "./OpenPositions";
 
-const subPages = [
-  { label: "Open Positions", path: "/careers/open-positions" },
-];
-
-const componentMap: Record<string, () => JSX.Element> = {
-  "/careers/open-positions": () => <OpenPositions />,
-};
-
-function useActivePath() {
-  for (const page of subPages) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [match] = useRoute(page.path);
-    if (match) return page.path;
-  }
-  return null;
-}
-
 export default function Careers() {
-  const activePath = useActivePath();
-  const ActiveComponent = componentMap[activePath || "/careers/open-positions"];
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "Open Positions";
+  const [matchPositions] = useRoute("/careers/open-positions");
+  const [matchBase] = useRoute("/careers");
+
+  const ActiveComponent = OpenPositions;
+  const activeLabel = "Open Positions";
 
   return (
     <div className="min-h-screen flex flex-col">

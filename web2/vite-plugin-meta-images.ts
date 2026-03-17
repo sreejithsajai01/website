@@ -16,27 +16,16 @@ export function metaImagesPlugin(): Plugin {
         return html;
       }
 
-      // Check if opengraph image exists in public directory
+      // Check if favicon image exists in public directory
       const publicDir = path.resolve(process.cwd(), 'client', 'public');
-      const opengraphPngPath = path.join(publicDir, 'opengraph.png');
-      const opengraphJpgPath = path.join(publicDir, 'opengraph.jpg');
-      const opengraphJpegPath = path.join(publicDir, 'opengraph.jpeg');
+      const faviconPath = path.join(publicDir, 'favicon.png');
 
-      let imageExt: string | null = null;
-      if (fs.existsSync(opengraphPngPath)) {
-        imageExt = 'png';
-      } else if (fs.existsSync(opengraphJpgPath)) {
-        imageExt = 'jpg';
-      } else if (fs.existsSync(opengraphJpegPath)) {
-        imageExt = 'jpeg';
-      }
-
-      if (!imageExt) {
-        log('[meta-images] OpenGraph image not found, skipping meta tag updates');
+      if (!fs.existsSync(faviconPath)) {
+        log('[meta-images] favicon.png not found, skipping meta tag updates');
         return html;
       }
 
-      const imageUrl = `${baseUrl}/opengraph.${imageExt}`;
+      const imageUrl = `${baseUrl}/favicon.png`;
 
       log('[meta-images] updating meta image tags to:', imageUrl);
 
@@ -56,6 +45,12 @@ export function metaImagesPlugin(): Plugin {
 }
 
 function getDeploymentUrl(): string | null {
+  // Use your specific deployment URL
+  const deploymentUrl = 'https://web4-716585668749.asia-south1.run.app';
+  log('[meta-images] using deployment URL:', deploymentUrl);
+  return deploymentUrl;
+
+  // Fallback to Replit domains if needed
   if (process.env.REPLIT_INTERNAL_APP_DOMAIN) {
     const url = `https://${process.env.REPLIT_INTERNAL_APP_DOMAIN}`;
     log('[meta-images] using internal app domain:', url);

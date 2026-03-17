@@ -6,33 +6,20 @@ import StaffDetails from "./StaffDetails";
 import InfrastructureDetails from "./InfrastructureDetails";
 import AcademicResults from "./AcademicResults";
 
-const subPages = [
-  { label: "General Information", path: "/disclosure/general-information" },
-  { label: "Staff Details", path: "/disclosure/staff-details" },
-  { label: "Infrastructure Details", path: "/disclosure/infrastructure-details" },
-  { label: "Academic Results", path: "/disclosure/academic-results" },
-];
-
-const componentMap: Record<string, () => JSX.Element> = {
-  "/disclosure/general-information": () => <GeneralInformation />,
-  "/disclosure/staff-details": () => <StaffDetails />,
-  "/disclosure/infrastructure-details": () => <InfrastructureDetails />,
-  "/disclosure/academic-results": () => <AcademicResults />,
-};
-
-function useActivePath() {
-  for (const page of subPages) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [match] = useRoute(page.path);
-    if (match) return page.path;
-  }
-  return null;
-}
-
 export default function Disclosure() {
-  const activePath = useActivePath();
-  const ActiveComponent = componentMap[activePath || "/disclosure/general-information"];
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "General Information";
+  const [matchGeneral] = useRoute("/disclosure/general-information");
+  const [matchStaff] = useRoute("/disclosure/staff-details");
+  const [matchInfra] = useRoute("/disclosure/infrastructure-details");
+  const [matchResults] = useRoute("/disclosure/academic-results");
+  const [matchBase] = useRoute("/disclosure");
+
+  let ActiveComponent = GeneralInformation;
+  let activeLabel = "General Information";
+
+  if (matchGeneral || matchBase) { ActiveComponent = GeneralInformation; activeLabel = "General Information"; }
+  else if (matchStaff) { ActiveComponent = StaffDetails; activeLabel = "Staff Details"; }
+  else if (matchInfra) { ActiveComponent = InfrastructureDetails; activeLabel = "Infrastructure Details"; }
+  else if (matchResults) { ActiveComponent = AcademicResults; activeLabel = "Academic Results"; }
 
   return (
     <div className="min-h-screen flex flex-col">

@@ -12,7 +12,6 @@ export default function FounderManager() {
     <div className="flex flex-col md:flex-row gap-10 items-start">
       {/* Left: text */}
       <div className="flex-1">
-        <p className="text-sm font-semibold text-primary mb-1">About Us</p>
         <h2 className="text-3xl font-sans font-bold text-primary mb-6">
           Welcome to St. Mary's CBSE School, Vashi
         </h2>

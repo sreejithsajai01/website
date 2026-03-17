@@ -6,33 +6,20 @@ import Eligibility from "./Eligibility";
 import FeeStructure from "./FeeStructure";
 import OnlineRegistration from "./OnlineRegistration";
 
-const subPages = [
-  { label: "Admission Process", path: "/admissions/process" },
-  { label: "Eligibility", path: "/admissions/eligibility" },
-  { label: "Fee Structure", path: "/admissions/fee-structure" },
-  { label: "Online Registration / Enquiry Form", path: "/admissions/online-registration" },
-];
-
-const componentMap: Record<string, () => JSX.Element> = {
-  "/admissions/process": () => <AdmissionProcess />,
-  "/admissions/eligibility": () => <Eligibility />,
-  "/admissions/fee-structure": () => <FeeStructure />,
-  "/admissions/online-registration": () => <OnlineRegistration />,
-};
-
-function useActivePath() {
-  for (const page of subPages) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [match] = useRoute(page.path);
-    if (match) return page.path;
-  }
-  return null;
-}
-
 export default function Admissions() {
-  const activePath = useActivePath();
-  const ActiveComponent = componentMap[activePath || "/admissions/process"];
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "Admission Process";
+  const [matchProcess] = useRoute("/admissions/process");
+  const [matchEligibility] = useRoute("/admissions/eligibility");
+  const [matchFee] = useRoute("/admissions/fee-structure");
+  const [matchOnline] = useRoute("/admissions/online-registration");
+  const [matchBase] = useRoute("/admissions");
+
+  let ActiveComponent = AdmissionProcess;
+  let activeLabel = "Admission Process";
+
+  if (matchProcess || matchBase) { ActiveComponent = AdmissionProcess; activeLabel = "Admission Process"; }
+  else if (matchEligibility) { ActiveComponent = Eligibility; activeLabel = "Eligibility"; }
+  else if (matchFee) { ActiveComponent = FeeStructure; activeLabel = "Fee Structure"; }
+  else if (matchOnline) { ActiveComponent = OnlineRegistration; activeLabel = "Online Registration / Enquiry Form"; }
 
   return (
     <div className="min-h-screen flex flex-col">

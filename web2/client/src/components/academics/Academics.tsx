@@ -6,33 +6,20 @@ import PrimarySchool from "./PrimarySchool";
 import MiddleSchool from "./MiddleSchool";
 import SeniorSecondary from "./SeniorSecondary";
 
-const subPages = [
-  { label: "Curriculum", path: "/academics/curriculum" },
-  { label: "Primary School", path: "/academics/primary-school" },
-  { label: "Middle School", path: "/academics/middle-school" },
-  { label: "Senior Secondary", path: "/academics/senior-secondary" },
-];
-
-const componentMap: Record<string, () => JSX.Element> = {
-  "/academics/curriculum": () => <Curriculum />,
-  "/academics/primary-school": () => <PrimarySchool />,
-  "/academics/middle-school": () => <MiddleSchool />,
-  "/academics/senior-secondary": () => <SeniorSecondary />,
-};
-
-function useActivePath() {
-  for (const page of subPages) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [match] = useRoute(page.path);
-    if (match) return page.path;
-  }
-  return null;
-}
-
 export default function Academics() {
-  const activePath = useActivePath();
-  const ActiveComponent = componentMap[activePath || "/academics/curriculum"];
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "Curriculum";
+  const [matchCurriculum] = useRoute("/academics/curriculum");
+  const [matchPrimary] = useRoute("/academics/primary-school");
+  const [matchMiddle] = useRoute("/academics/middle-school");
+  const [matchSenior] = useRoute("/academics/senior-secondary");
+  const [matchBase] = useRoute("/academics");
+
+  let ActiveComponent = Curriculum;
+  let activeLabel = "Curriculum";
+
+  if (matchCurriculum || matchBase) { ActiveComponent = Curriculum; activeLabel = "Curriculum"; }
+  else if (matchPrimary) { ActiveComponent = PrimarySchool; activeLabel = "Primary School"; }
+  else if (matchMiddle) { ActiveComponent = MiddleSchool; activeLabel = "Middle School"; }
+  else if (matchSenior) { ActiveComponent = SeniorSecondary; activeLabel = "Senior Secondary"; }
 
   return (
     <div className="min-h-screen flex flex-col">
