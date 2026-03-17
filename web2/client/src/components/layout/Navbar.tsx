@@ -75,9 +75,9 @@ export default function Navbar() {
               onMouseEnter={() => setAboutOpen(true)}
               onMouseLeave={() => setAboutOpen(false)}
             >
-              <button className="flex items-center gap-1 text-sm font-semibold text-foreground/80 hover:text-primary transition-colors uppercase tracking-wider">
+              <Link href="/about" className="flex items-center gap-1 text-sm font-semibold text-foreground/80 hover:text-primary transition-colors uppercase tracking-wider">
                 About Us <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`} />
-              </button>
+              </Link>
               <div
                 className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-border z-50 overflow-hidden transition-all duration-200 origin-top ${
                   aboutOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"
