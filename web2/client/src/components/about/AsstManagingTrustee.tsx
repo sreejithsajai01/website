@@ -4,7 +4,7 @@ import assisImg from "@/assets/images/moccb1.jpeg";
 export default function AsstManagingTrustee() {
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-8">Secretary Message</h2>
+      <h2 className="text-3xl font-sans font-bold text-primary mb-8">Secretary's Message</h2>
       <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
         <div className="w-48 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-lg shrink-0">
           <img src={assisImg} alt="Asst. Managing Trustee" className="w-full h-auto object-contain" />
