@@ -103,7 +103,7 @@ function DropdownItem({ item, onClose, isLast }: { item: typeof navItems[0]; onC
     >
       <Link
         href={item.href}
-        className="flex items-center gap-1 text-sm font-semibold text-foreground/80 hover:text-primary transition-colors uppercase tracking-wider whitespace-nowrap"
+        className="flex items-center gap-1 text-sm font-semibold text-foreground/80 hover:text-primary transition-colors uppercase tracking-wider whitespace-nowrap py-2"
       >
         {item.name}
         {item.sub.length > 0 && (
@@ -112,7 +112,7 @@ function DropdownItem({ item, onClose, isLast }: { item: typeof navItems[0]; onC
       </Link>
       {item.sub.length > 0 && (
         <div
-          className={`absolute top-full ${isLast ? 'right-0' : 'left-0'} mt-1 w-64 bg-white rounded-xl shadow-xl border border-border z-50 overflow-hidden transition-all duration-200 origin-top ${
+          className={`absolute top-full ${isLast ? 'right-0' : 'left-0'} w-64 bg-white rounded-xl shadow-xl border border-border z-50 overflow-hidden transition-all duration-200 origin-top ${
             open ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"
           }`}
         >
