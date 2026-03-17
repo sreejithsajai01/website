@@ -12,42 +12,40 @@ import ManagementBoard from "./ManagementBoard";
 import SchoolNetwork from "./SchoolNetwork";
 
 const subPages = [
-  { label: "History", path: "/about/history" },
-  { label: "School Motto", path: "/about/school-motto" },
-  { label: "Vision & Mission", path: "/about/vision-mission" },
-  { label: "Founder Manager — MOCCB", path: "/about/founder-manager" },
-  { label: "President's Message", path: "/about/managing-trustee" },
-  { label: "Secretary's Message", path: "/about/asst-managing-trustee" },
-  { label: "Principal's Message", path: "/about/principals-message" },
-  { label: "Management / Board Members", path: "/about/management-board" },
-  { label: "The MOCCB School Network", path: "/about/school-network" },
+  { label: "History", path: "/about/history", Component: History },
+  { label: "School Motto", path: "/about/school-motto", Component: SchoolMotto },
+  { label: "Vision & Mission", path: "/about/vision-mission", Component: VisionMission },
+  { label: "Founder Manager — MOCCB", path: "/about/founder-manager", Component: FounderManager },
+  { label: "President Message", path: "/about/managing-trustee", Component: ManagingTrustee },
+  { label: "Secretary Message", path: "/about/asst-managing-trustee", Component: AsstManagingTrustee },
+  { label: "Principal's Message", path: "/about/principals-message", Component: PrincipalsMessage },
+  { label: "Management / Board Members", path: "/about/management-board", Component: ManagementBoard },
+  { label: "The MOCCB School Network", path: "/about/school-network", Component: SchoolNetwork },
 ];
 
-const componentMap: Record<string, () => JSX.Element> = {
-  "/about/history": () => <History />,
-  "/about/school-motto": () => <SchoolMotto />,
-  "/about/vision-mission": () => <VisionMission />,
-  "/about/founder-manager": () => <FounderManager />,
-  "/about/managing-trustee": () => <ManagingTrustee />,
-  "/about/asst-managing-trustee": () => <AsstManagingTrustee />,
-  "/about/principals-message": () => <PrincipalsMessage />,
-  "/about/management-board": () => <ManagementBoard />,
-  "/about/school-network": () => <SchoolNetwork />,
-};
-
-function useActivePath() {
-  for (const page of subPages) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [match] = useRoute(page.path);
-    if (match) return page.path;
-  }
-  return null;
-}
-
 export default function About() {
-  const activePath = useActivePath();
-  const ActiveComponent = componentMap[activePath || "/about/history"];
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "History";
+  const [matchHistory] = useRoute("/about/history");
+  const [matchMotto] = useRoute("/about/school-motto");
+  const [matchVision] = useRoute("/about/vision-mission");
+  const [matchFounder] = useRoute("/about/founder-manager");
+  const [matchManaging] = useRoute("/about/managing-trustee");
+  const [matchAsst] = useRoute("/about/asst-managing-trustee");
+  const [matchPrincipal] = useRoute("/about/principals-message");
+  const [matchBoard] = useRoute("/about/management-board");
+  const [matchNetwork] = useRoute("/about/school-network");
+
+  let ActiveComponent = History;
+  let activeLabel = "History";
+
+  if (matchHistory) { ActiveComponent = History; activeLabel = "History"; }
+  else if (matchMotto) { ActiveComponent = SchoolMotto; activeLabel = "School Motto"; }
+  else if (matchVision) { ActiveComponent = VisionMission; activeLabel = "Vision & Mission"; }
+  else if (matchFounder) { ActiveComponent = FounderManager; activeLabel = "Founder Manager — MOCCB"; }
+  else if (matchManaging) { ActiveComponent = ManagingTrustee; activeLabel = "President Message"; }
+  else if (matchAsst) { ActiveComponent = AsstManagingTrustee; activeLabel = "Secretary Message"; }
+  else if (matchPrincipal) { ActiveComponent = PrincipalsMessage; activeLabel = "Principal's Message"; }
+  else if (matchBoard) { ActiveComponent = ManagementBoard; activeLabel = "Management / Board Members"; }
+  else if (matchNetwork) { ActiveComponent = SchoolNetwork; activeLabel = "The MOCCB School Network"; }
 
   return (
     <div className="min-h-screen flex flex-col">

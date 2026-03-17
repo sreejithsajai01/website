@@ -6,33 +6,20 @@ import PhonePage from "./Phone";
 import EmailPage from "./Email";
 import MapPage from "./Map";
 
-const subPages = [
-  { label: "Address", path: "/contact/address" },
-  { label: "Phone", path: "/contact/phone" },
-  { label: "Email", path: "/contact/email" },
-  { label: "Map", path: "/contact/map" },
-];
-
-const componentMap: Record<string, () => JSX.Element> = {
-  "/contact/address": () => <Address />,
-  "/contact/phone": () => <PhonePage />,
-  "/contact/email": () => <EmailPage />,
-  "/contact/map": () => <MapPage />,
-};
-
-function useActivePath() {
-  for (const page of subPages) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [match] = useRoute(page.path);
-    if (match) return page.path;
-  }
-  return null;
-}
-
 export default function Contact() {
-  const activePath = useActivePath();
-  const ActiveComponent = componentMap[activePath || "/contact/address"];
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "Address";
+  const [matchAddress] = useRoute("/contact/address");
+  const [matchPhone] = useRoute("/contact/phone");
+  const [matchEmail] = useRoute("/contact/email");
+  const [matchMap] = useRoute("/contact/map");
+  const [matchBase] = useRoute("/contact");
+
+  let ActiveComponent = Address;
+  let activeLabel = "Address";
+
+  if (matchAddress || matchBase) { ActiveComponent = Address; activeLabel = "Address"; }
+  else if (matchPhone) { ActiveComponent = PhonePage; activeLabel = "Phone"; }
+  else if (matchEmail) { ActiveComponent = EmailPage; activeLabel = "Email"; }
+  else if (matchMap) { ActiveComponent = MapPage; activeLabel = "Map"; }
 
   return (
     <div className="min-h-screen flex flex-col">

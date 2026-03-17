@@ -104,7 +104,7 @@ export default function Footer() {
             © {new Date().getFullYear()} St. Mary's School. All Rights Reserved.
           </p>
           <p className="text-primary-foreground/60 text-sm">
-            Designed & Developed for Educational Excellence
+            Designed & Developed by <a href="https://www.aionpixel.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">Aionpixel Technologies Pvt. Ltd</a>
           </p>
         </div>
       </div>

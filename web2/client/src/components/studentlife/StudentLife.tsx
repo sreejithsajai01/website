@@ -5,31 +5,18 @@ import Clubs from "./Clubs";
 import Sports from "./Sports";
 import Activities from "./Activities";
 
-const subPages = [
-  { label: "Clubs", path: "/student-life/clubs" },
-  { label: "Sports", path: "/student-life/sports" },
-  { label: "Activities", path: "/student-life/activities" },
-];
-
-const componentMap: Record<string, () => JSX.Element> = {
-  "/student-life/clubs": () => <Clubs />,
-  "/student-life/sports": () => <Sports />,
-  "/student-life/activities": () => <Activities />,
-};
-
-function useActivePath() {
-  for (const page of subPages) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [match] = useRoute(page.path);
-    if (match) return page.path;
-  }
-  return null;
-}
-
 export default function StudentLife() {
-  const activePath = useActivePath();
-  const ActiveComponent = componentMap[activePath || "/student-life/clubs"];
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "Clubs";
+  const [matchClubs] = useRoute("/student-life/clubs");
+  const [matchSports] = useRoute("/student-life/sports");
+  const [matchActivities] = useRoute("/student-life/activities");
+  const [matchBase] = useRoute("/student-life");
+
+  let ActiveComponent = Clubs;
+  let activeLabel = "Clubs";
+
+  if (matchClubs || matchBase) { ActiveComponent = Clubs; activeLabel = "Clubs"; }
+  else if (matchSports) { ActiveComponent = Sports; activeLabel = "Sports"; }
+  else if (matchActivities) { ActiveComponent = Activities; activeLabel = "Activities"; }
 
   return (
     <div className="min-h-screen flex flex-col">

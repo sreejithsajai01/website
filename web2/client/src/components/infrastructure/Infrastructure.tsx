@@ -5,31 +5,18 @@ import Library from "./Library";
 import Laboratories from "./Laboratories";
 import SportsFacilities from "./SportsFacilities";
 
-const subPages = [
-  { label: "Library", path: "/infrastructure/library" },
-  { label: "Laboratories", path: "/infrastructure/laboratories" },
-  { label: "Sports Facilities", path: "/infrastructure/sports-facilities" },
-];
-
-const componentMap: Record<string, () => JSX.Element> = {
-  "/infrastructure/library": () => <Library />,
-  "/infrastructure/laboratories": () => <Laboratories />,
-  "/infrastructure/sports-facilities": () => <SportsFacilities />,
-};
-
-function useActivePath() {
-  for (const page of subPages) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [match] = useRoute(page.path);
-    if (match) return page.path;
-  }
-  return null;
-}
-
 export default function Infrastructure() {
-  const activePath = useActivePath();
-  const ActiveComponent = componentMap[activePath || "/infrastructure/library"];
-  const activeLabel = subPages.find((p) => p.path === activePath)?.label ?? "Library";
+  const [matchLibrary] = useRoute("/infrastructure/library");
+  const [matchLabs] = useRoute("/infrastructure/laboratories");
+  const [matchSports] = useRoute("/infrastructure/sports-facilities");
+  const [matchBase] = useRoute("/infrastructure");
+
+  let ActiveComponent = Library;
+  let activeLabel = "Library";
+
+  if (matchLibrary || matchBase) { ActiveComponent = Library; activeLabel = "Library"; }
+  else if (matchLabs) { ActiveComponent = Laboratories; activeLabel = "Laboratories"; }
+  else if (matchSports) { ActiveComponent = SportsFacilities; activeLabel = "Sports Facilities"; }
 
   return (
     <div className="min-h-screen flex flex-col">
