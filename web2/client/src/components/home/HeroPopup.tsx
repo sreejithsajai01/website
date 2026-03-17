@@ -89,7 +89,7 @@ export default function HeroPopup() {
               className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl transition-colors mb-3"
               style={{ fontFamily: "'Poppins', sans-serif" }}
             >
-              Apply for Admission <ChevronRight className="w-4 h-4" />
+              Admission Enquiry <ChevronRight className="w-4 h-4" />
             </a>
             <button
               onClick={() => setOpen(false)}

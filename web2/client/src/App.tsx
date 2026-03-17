@@ -8,7 +8,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Academics from "@/pages/Academics";
 import Admissions from "@/pages/Admissions";
-import Facilities from "@/pages/Facilities";
+import Infrastructure from "@/pages/Facilities";
 import Gallery from "@/pages/Gallery";
 import Contact from "@/pages/Contact";
 import Notices from "@/pages/Notices";
@@ -21,7 +21,7 @@ function Router() {
       <Route path="/about" component={About}/>
       <Route path="/academics" component={Academics}/>
       <Route path="/admissions" component={Admissions}/>
-      <Route path="/facilities" component={Facilities}/>
+      <Route path="/infrastructure" component={Infrastructure}/>
       <Route path="/gallery" component={Gallery}/>
       <Route path="/contact" component={Contact}/>
       <Route path="/notices" component={Notices}/>

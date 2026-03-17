@@ -8,7 +8,7 @@ const navLinks = [
   { name: "About Us", href: "/about" },
   { name: "Academics", href: "/academics" },
   { name: "Admissions", href: "/admissions" },
-  { name: "Facilities", href: "/facilities" },
+  { name: "Infrastructure", href: "/infrastructure" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact Us", href: "/contact" },
 ];
@@ -47,7 +47,7 @@ export default function Navbar() {
               SM
             </div>
             <div>
-              <h1 className="text-2xl font-sans font-bold text-primary leading-tight m-0">St. Mary's School</h1>
+              <h1 className="text-2xl font-sans font-bold text-primary leading-tight m-0">St. Mary's CBSE School</h1>
               <p className="text-xs font-medium text-muted-foreground tracking-wide uppercase">To work and serve in Love</p>
             </div>
           </Link>

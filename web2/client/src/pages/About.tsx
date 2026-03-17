@@ -7,18 +7,17 @@ export default function About() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-24">
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-32 bg-primary text-white">
+        <section className="relative py-12 bg-primary text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="text-5xl md:text-7xl font-sans mb-6">About St. Mary's</h1>
+              <h1 className="text-5xl md:text-7xl font-sans mb-6">About St. Mary's CBSE School</h1>
+              <p className="text-xl text-white/80 leading-relaxed mb-4">
+                St. Mary's CBSE School, Vashi is part of The Malankara Orthodox Church Council of Bombay (MOCCB), dedicated to providing quality education that nurtures young minds.
+              </p>
               <p className="text-xl text-white/80 leading-relaxed">
-                St. Mary's CBSE School, Vashi is part of The Malankara Orthodox Church Council of Bombay (MOCCB), dedicated to providing quality education that nurtures young minds.<br/>ST. MARY'S CBSE SCHOOL provides a nurturing and 
-inspiring environment where young learners begin 
-their academic journey with confidence and joy. Our 
-focus is on child-centered learning, strong values, 
-and holistic development.
+               We provides a nurturing and inspiring environment where young learners begin their academic journey with confidence and joy. Our focus is on child-centered learning, strong values, and holistic development.
               </p>
             </div>
           </div>
@@ -49,30 +48,30 @@ and holistic development.
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl md:text-5xl font-sans text-center text-primary mb-16">Our Core Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-8 h-8 text-primary" />
+              <div className="group bg-white p-8 rounded-lg shadow-md text-center border-2 border-transparent hover:border-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                  <BookOpen className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">Excellence</h3>
                 <p className="text-muted-foreground">Striving for the highest standards in academics and character.</p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-primary" />
+              <div className="group bg-white p-8 rounded-lg shadow-md text-center border-2 border-transparent hover:border-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                  <Users className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">Community</h3>
                 <p className="text-muted-foreground">Building strong relationships and fostering collaboration.</p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-primary" />
+              <div className="group bg-white p-8 rounded-lg shadow-md text-center border-2 border-transparent hover:border-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                  <Award className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">Integrity</h3>
                 <p className="text-muted-foreground">Upholding honesty, ethics, and moral principles.</p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-primary" />
+              <div className="group bg-white p-8 rounded-lg shadow-md text-center border-2 border-transparent hover:border-primary hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                  <Heart className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">Compassion</h3>
                 <p className="text-muted-foreground">Caring for others and serving the community.</p>

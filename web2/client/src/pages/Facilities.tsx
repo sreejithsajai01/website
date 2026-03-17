@@ -23,7 +23,7 @@ export default function Facilities() {
         <section className="bg-primary text-white py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="text-5xl md:text-7xl font-sans font-bold text-white mb-6">Our Facilities</h1>
+              <h1 className="text-5xl md:text-7xl font-sans font-bold text-white mb-6">Our Infrastructure</h1>
               <p className="text-xl text-white/80 leading-relaxed">
                 State-of-the-art infrastructure designed to provide the best learning environment for our students.
               </p>
