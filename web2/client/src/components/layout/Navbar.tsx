@@ -142,13 +142,13 @@ export default function Navbar() {
       <div className="bg-primary text-primary-foreground py-2 text-sm">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex gap-4">
-            <a href="mailto:info@stmarys.edu" className="flex items-center gap-2 hover:text-secondary transition-colors">
+            <a href="mailto:cbsestmarysvashi@gmail.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
               <Mail className="h-4 w-4" />
-              <span className="hidden sm:inline">info@stmarys.edu</span>
+              <span className="hidden sm:inline">cbsestmarysvashi@gmail.com</span>
             </a>
-            <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-secondary transition-colors">
+            <a href="tel:02227662725" className="flex items-center gap-2 hover:text-secondary transition-colors">
               <Phone className="h-4 w-4" />
-              <span className="hidden sm:inline">+91 98765 43210</span>
+              <span className="hidden sm:inline">022-27662725</span>
             </a>
           </div>
           <div className="flex gap-4 font-semibold">

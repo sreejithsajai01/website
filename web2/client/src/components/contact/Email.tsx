@@ -1,10 +1,10 @@
 import { Mail } from "lucide-react";
 
 const emails = [
-  { label: "General Enquiries", email: "info@stmarys.edu" },
-  { label: "Admissions", email: "admissions@stmarys.edu" },
-  { label: "Careers", email: "careers@stmarys.edu" },
-  { label: "Principal", email: "principal@stmarys.edu" },
+  { label: "General Enquiries", email: "cbsestmarysvashi@gmail.com" },
+  { label: "Admissions", email: "cbsestmarysvashi@gmail.com" },
+  { label: "Careers", email: "cbsestmarysvashi@gmail.com" },
+  { label: "Principal", email: "cbsestmarysvashi@gmail.com" },
 ];
 
 export default function EmailPage() {

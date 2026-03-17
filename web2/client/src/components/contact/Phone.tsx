@@ -1,9 +1,9 @@
 import { Phone } from "lucide-react";
 
 const numbers = [
-  { label: "Main Office", number: "+91 98765 43210" },
-  { label: "Admissions", number: "+91 98765 43211" },
-  { label: "Principal's Office", number: "+91 98765 43212" },
+  { label: "Main Office", number: "022-27662725" },
+  { label: "Admissions", number: "022-27662725" },
+  { label: "Principal's Office", number: "022-27662725" },
 ];
 
 export default function PhonePage() {
