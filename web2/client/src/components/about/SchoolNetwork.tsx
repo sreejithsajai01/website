@@ -1,10 +1,18 @@
 import { MapPin } from "lucide-react";
 
 const schools = [
-  { name: "St. Mary's CBSE School, Vashi", location: "Vashi, Navi Mumbai, Maharashtra", established: "2000" },
-  { name: "St. Mary's CBSE School, Panvel", location: "Panvel, Navi Mumbai, Maharashtra", established: "2005" },
-  { name: "St. Mary's CBSE School, Kharghar", location: "Kharghar, Navi Mumbai, Maharashtra", established: "2010" },
-  { name: "St. Mary's CBSE School, Nerul", location: "Nerul, Navi Mumbai, Maharashtra", established: "2015" },
+  "St. Mary's ICSE school, Koparkhairane, Navi Mumbai",
+  "St. Thomas English School, Karnik Rd, Kalyan",
+  "St. Mary's School, Valsad, Gujarat",
+  "St. Mary's JNP School, J.N.P.T., Nhava Sheva",
+  "St. Mary's Tejaswini School, Vashi",
+  "Dr. Mar Theophilus ICSE School, Dhanori, Pune",
+  "Gregorian Public School, Roha",
+  "Western College of Commerce & Business Management, Sanpada",
+  "Indira Institute of Business Management, Sanpada",
+  "St. Mary's Public School, DP Road, Khopoli",
+  "St. Mary's School, Tikhi Road, Dhule",
+  "Dr. Mar Theophilus Institute of Management Studies, Sanpada",
 ];
 
 export default function SchoolNetwork() {
@@ -12,28 +20,21 @@ export default function SchoolNetwork() {
     <div>
       <h2 className="text-3xl font-sans font-bold text-primary mb-4">The MOCCB School Network</h2>
       <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-        The Malankara Orthodox Church Council of Bombay (MOCCB) operates a growing network of CBSE-affiliated schools across Navi Mumbai, each committed to the same values of academic excellence, moral integrity, and holistic development.
+        Alongwith St. Mary's Multipurpose High School & Junior College, Vashi, the MOCCB trust manages the following institutions:
       </p>
       <div className="space-y-4">
         {schools.map((school) => (
-          <div key={school.name} className="bg-white rounded-2xl border border-border shadow-sm p-6 flex flex-col sm:flex-row sm:items-center gap-4">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-              <MapPin className="w-6 h-6 text-primary" />
+          <div key={school} className="bg-white rounded-2xl border border-border shadow-sm p-5 flex items-center gap-4">
+            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+              <MapPin className="w-5 h-5 text-primary" />
             </div>
-            <div className="flex-1">
-              <h3 className="font-bold text-primary text-lg">{school.name}</h3>
-              <p className="text-muted-foreground text-sm">{school.location}</p>
-            </div>
-            <div className="text-right shrink-0">
-              <p className="text-xs text-muted-foreground uppercase tracking-wider">Est.</p>
-              <p className="font-bold text-primary">{school.established}</p>
-            </div>
+            <p className="font-medium text-foreground">{school}</p>
           </div>
         ))}
       </div>
       <div className="mt-8 bg-primary/5 rounded-2xl p-6 border border-primary/10">
         <p className="text-muted-foreground leading-relaxed">
-          Each school in the MOCCB network shares the same founding principles and motto — <span className="font-semibold text-primary">"To Work and Serve in Love"</span> — ensuring a consistent, high-quality educational experience for every student across all campuses.
+          Each institution in the MOCCB network shares the same founding principles and motto — <span className="font-semibold text-primary">"Lead us from Darkness to Light"</span> — ensuring a consistent, high-quality educational experience for every student across all campuses.
         </p>
       </div>
     </div>

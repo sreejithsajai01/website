@@ -12,8 +12,11 @@ export default function VisionMission() {
             </div>
             <h3 className="text-2xl font-sans font-bold text-primary">Our Vision</h3>
           </div>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            To be a leader in transforming young minds to become global citizens without losing our cultural heritage.
+          </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            To be a center of educational excellence that empowers students with knowledge, skills, and values to succeed in a rapidly changing world while staying rooted in their cultural and spiritual heritage.
+            To become the premier institution in Navi Mumbai for nurturing and transforming young minds to become successful citizens of the future keeping our cultural heritage intact.
           </p>
         </div>
         <div className="bg-secondary/10 rounded-2xl p-8 border border-secondary/20">
@@ -23,8 +26,11 @@ export default function VisionMission() {
             </div>
             <h3 className="text-2xl font-sans font-bold text-primary">Our Mission</h3>
           </div>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+            Facilitate students to achieve academic excellence along with all round personality development.
+          </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            To provide holistic education that develops academic excellence, moral values, and social responsibility in every student, preparing them to be compassionate leaders of tomorrow.
+            Nurture students to realise their true potential in both academic and extracurricular excess for successful careers.
           </p>
         </div>
       </div>

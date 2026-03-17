@@ -1,25 +1,25 @@
-const labs = [
-  { name: "Physics Laboratory", desc: "Fully equipped with modern instruments for practical experiments aligned with CBSE syllabus." },
-  { name: "Chemistry Laboratory", desc: "Safe and well-ventilated lab with all necessary chemicals and apparatus for hands-on learning." },
-  { name: "Biology Laboratory", desc: "Equipped with microscopes, specimens, and models to support life science education." },
-  { name: "Computer Laboratory", desc: "High-speed internet-connected computers with the latest software for digital literacy and coding." },
+const points = [
+  "Well-maintained Physics, Chemistry, and Biology labs",
+  "Advanced Computer Lab with updated systems",
+  "Focus on experiments, innovation, and real-world application",
+  "Safe and supervised environment for all practical sessions",
 ];
 
 export default function Laboratories() {
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">Laboratories</h2>
+      <h2 className="text-3xl font-sans font-bold text-primary mb-4">Laboratories</h2>
       <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-        Our state-of-the-art laboratories provide students with hands-on learning experiences that complement classroom instruction and spark scientific curiosity.
+        Our laboratories are equipped with modern tools to provide practical, hands-on learning experiences.
       </p>
-      <div className="space-y-4">
-        {labs.map((lab) => (
-          <div key={lab.name} className="bg-primary/5 border border-primary/10 rounded-xl p-5">
-            <h3 className="font-bold text-primary mb-2">{lab.name}</h3>
-            <p className="text-muted-foreground text-sm">{lab.desc}</p>
-          </div>
+      <ul className="space-y-3">
+        {points.map((point) => (
+          <li key={point} className="flex items-start gap-3 text-muted-foreground">
+            <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
+            {point}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
