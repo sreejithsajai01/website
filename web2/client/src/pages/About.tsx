@@ -80,20 +80,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* History */}
-        <section className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-sans text-center text-primary mb-12">Our History</h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Established in 2026, St. Mary's CBSE School, Vashi represents the commitment of The Malankara Orthodox Church Council of Bombay (MOCCB) to provide quality education in Navi Mumbai.
-              </p>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Our school is built on the foundation of academic excellence, moral values, and holistic development. We are affiliated with the Central Board of Secondary Education (CBSE) and follow a curriculum that prepares students for success in the 21st century.
-              </p>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />

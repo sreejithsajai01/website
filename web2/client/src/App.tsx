@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
+import AboutSub from "@/components/about/About";
 import Academics from "@/pages/Academics";
 import Admissions from "@/pages/Admissions";
 import Infrastructure from "@/pages/Facilities";
@@ -19,6 +20,15 @@ function Router() {
     <Switch>
       <Route path="/" component={Home}/>
       <Route path="/about" component={About}/>
+      <Route path="/about/history" component={AboutSub}/>
+      <Route path="/about/school-motto" component={AboutSub}/>
+      <Route path="/about/vision-mission" component={AboutSub}/>
+      <Route path="/about/founder-manager" component={AboutSub}/>
+      <Route path="/about/managing-trustee" component={AboutSub}/>
+      <Route path="/about/asst-managing-trustee" component={AboutSub}/>
+      <Route path="/about/principals-message" component={AboutSub}/>
+      <Route path="/about/management-board" component={AboutSub}/>
+      <Route path="/about/school-network" component={AboutSub}/>
       <Route path="/academics" component={Academics}/>
       <Route path="/admissions" component={Admissions}/>
       <Route path="/infrastructure" component={Infrastructure}/>

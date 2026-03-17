@@ -152,14 +152,6 @@ export default function Enquiry() {
                     <p className="text-muted-foreground text-sm mb-8">Fill in the details below and we'll get back to you shortly.</p>
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div>
-                        <label className="block text-sm font-semibold text-primary mb-1">Student Name <span className="text-red-500">*</span></label>
-                        <input
-                          name="name" required value={form.name} onChange={handleChange}
-                          placeholder="Enter student's full name"
-                          className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
-                        />
-                      </div>
-                      <div>
                         <label className="block text-sm font-semibold text-primary mb-1">Parent Email <span className="text-red-500">*</span></label>
                         <input
                           name="email" type="email" required value={form.email} onChange={handleChange}
@@ -176,9 +168,9 @@ export default function Enquiry() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-primary mb-1">Grade Applying For <span className="text-red-500">*</span></label>
+                        <label className="block text-sm font-semibold text-primary mb-1">Grade Applying For</label>
                         <select
-                          name="grade" required value={form.grade} onChange={handleChange}
+                    
                           className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 bg-white"
                         >
                           <option value="">Select a grade</option>
