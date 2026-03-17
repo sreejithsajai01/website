@@ -16,7 +16,7 @@ export default function MessageSection() {
             <div className="w-12 h-1 bg-secondary"></div>
           </div>
           <h2 className="text-4xl md:text-5xl font-sans font-bold text-primary">
-            Messages from the Desk
+            Vision of Our Founder
           </h2>
         </div>
 

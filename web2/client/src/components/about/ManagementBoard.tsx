@@ -1,34 +1,112 @@
-const members = [
-  { name: "His Grace Mathews Mar Barnabas", role: "Founder Manager" },
-  { name: "Fr. Thomas Kuriakose", role: "Managing Trustee" },
-  { name: "Fr. George Mathew", role: "Asst. Managing Trustee" },
-  { name: "Rev. Fr. Jipson Palatty", role: "Principal" },
-  { name: "Mr. Saji Varghese", role: "Board Member" },
-  { name: "Mrs. Leena Thomas", role: "Board Member" },
-  { name: "Mr. Philip Abraham", role: "Board Member" },
-  { name: "Mrs. Anitha Kurian", role: "Board Member" },
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import moccb1 from "@/assets/images/moccb1.jpeg";
+import moccb2 from "@/assets/images/moccb2.jpeg";
+import moccb3 from "@/assets/images/moccb3.jpeg";
+import vashi1 from "@/assets/images/Vashi School Committee Members1.jpeg";
+import vashi2 from "@/assets/images/Vashi School Committe Members2.jpeg";
+import presidentImg from "@/assets/images/presidentt.jpeg";
+import secretaryImg from "@/assets/images/secre.jpeg";
+import chiefExecutive from "@/assets/images/ChiefExecutiveOfficer.jpeg";
+import boardPresident from "@/assets/images/boardpresident.jpeg";
+import boardmem1 from "@/assets/images/boardmem1.jpeg";
+import boardmem2 from "@/assets/images/boardmem2.jpeg";
+import boardmem3 from "@/assets/images/boardmem3.jpeg";
+import boardmem4 from "@/assets/images/boardmem4.jpeg";
+import boardmem5 from "@/assets/images/boardmem5.jpeg";
+import boardmem6 from "@/assets/images/boardmem6.jpeg";
+import boardmem7 from "@/assets/images/boardmem7.jpeg";
+import boardmem8 from "@/assets/images/boardmem8.jpeg";
+import boardmem9 from "@/assets/images/boardmem9.jpeg";
+import boardmem10 from "@/assets/images/boardmem10.jpeg";
+import boardmem11 from "@/assets/images/boardmem11.jpeg";
+import boardmem12 from "@/assets/images/boardmem12.jpeg";
+import boardmem13 from "@/assets/images/boardmem13.jpeg";
+
+const moccbMembers = [
+  { img: moccb1, name: "Fr. Thomas K Chacko", role: "Secretary" },
+  { img: moccb2, name: "Rev. Fr. Santhosh Varghese", role: "Member" },
+  { img: moccb3, name: "Rev. Fr. Shaji Chacko", role: "Member" },
 ];
 
-export default function ManagementBoard() {
+const vashiMembers = [
+  { img: vashi1, name: "Dr. Peter Philip", role: "Member" },
+  { img: vashi2, name: "Fr. Thomas K Chacko", role: "Member" },
+];
+
+const educationBoardMembers = [
+  
+  
+  { img: boardPresident, name: "H.G Geevarghese Mar Coorilos", role: "President" },
+  { img: presidentImg, name: "H.G. Geevarghese Mar Theophilos", role: "Vice-President" },
+  { img: chiefExecutive, name: "Rev Fr. Abraham Joseph", role: "Chief Executive Officer" },
+  { img: secretaryImg, name: "Fr. Thomas K Chacko", role: "Secretary" },
+  { img: boardmem1, name: "Mr. K. Thomas", role: "Member" },
+  { img: boardmem2, name: "Mr. Jacob Varghese", role: "Member" },
+  { img: boardmem3, name: "Mr. R T Thomas", role: "Member" },
+  { img: boardmem4, name: "Dr. Sunny Pariyaram", role: "Member" },
+  { img: boardmem5, name: "Mr. Alex Varghese", role: "Member" },
+  { img: boardmem6, name: "Mr. George Joseph", role: "Member" },
+  { img: boardmem7, name: "Mr. Chacko Samuel", role: "Member" },
+  { img: boardmem8, name: "Mr. John Mathai", role: "Member" },
+  { img: boardmem9, name: "Mr. Abraham Easo", role: "Member" },
+  { img: boardmem10, name: "Mr. K A Thomas", role: "Member" },
+  { img: boardmem11, name: "Mr. Santhosh Mathai", role: "Member" },
+  { img: boardmem12, name: "Mr. M C Sunny", role: "Member" },
+  { img: boardmem13, name: "Mr. Daniel Binu Varghese", role: "Member" },
+];
+
+const VISIBLE = 5;
+
+function MemberCarousel({ title, members }: { title: string; members: { img: string; name: string; role: string }[] }) {
+  const [start, setStart] = useState(0);
+  const visibleCount = Math.min(VISIBLE, members.length);
+  const visible = members.slice(start, start + visibleCount);
+
   return (
-    <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-8">Management / Board Members</h2>
-      <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-        The Management Board of St. Mary's CBSE School comprises dedicated individuals who bring together their expertise, faith, and commitment to guide the institution towards its vision of educational excellence.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {members.map((m) => (
-          <div key={m.name} className="flex items-center gap-4 bg-primary/5 rounded-xl p-4 border border-primary/10">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg shrink-0">
-              {m.name.split(" ").slice(-1)[0][0]}
+    <div className="mb-8">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-sans font-bold text-primary">{title}</h2>
+        <div className="flex gap-2">
+          <button
+            onClick={() => setStart((s) => Math.max(0, s - 1))}
+            disabled={start === 0}
+            className="w-9 h-9 rounded border border-border flex items-center justify-center hover:bg-primary/10 disabled:opacity-30 transition-colors"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+          <button
+            onClick={() => setStart((s) => Math.min(members.length - visibleCount, s + 1))}
+            disabled={start >= members.length - visibleCount}
+            className="w-9 h-9 rounded border border-border flex items-center justify-center hover:bg-primary/10 disabled:opacity-30 transition-colors"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-4">
+        {visible.map((m, i) => (
+          <div key={i} className="w-48 rounded-lg overflow-hidden shadow-sm">
+            <div className="w-full h-60 overflow-hidden">
+              <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top" />
             </div>
-            <div>
-              <p className="font-bold text-primary">{m.name}</p>
-              <p className="text-sm text-muted-foreground">{m.role}</p>
+            <div className="bg-indigo-50 px-4 py-4 min-h-[80px]">
+              <p className="font-bold text-gray-800 text-base leading-snug">{m.name}</p>
+              {m.role && <p className="text-gray-500 text-sm mt-1">{m.role}</p>}
             </div>
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+export default function ManagementBoard() {
+  return (
+    <div>
+      <MemberCarousel title="MOCCB Members" members={moccbMembers} />
+      <MemberCarousel title="Vashi School Committee Members" members={vashiMembers} />
+      <MemberCarousel title="Education Board Members" members={educationBoardMembers} />
     </div>
   );
 }
