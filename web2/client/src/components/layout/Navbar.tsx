@@ -93,7 +93,7 @@ const navItems = [
   },
 ];
 
-function DropdownItem({ item, onClose }: { item: typeof navItems[0]; onClose: () => void }) {
+function DropdownItem({ item, onClose, isLast }: { item: typeof navItems[0]; onClose: () => void; isLast?: boolean }) {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -112,7 +112,7 @@ function DropdownItem({ item, onClose }: { item: typeof navItems[0]; onClose: ()
       </Link>
       {item.sub.length > 0 && (
         <div
-          className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-border z-50 overflow-hidden transition-all duration-200 origin-top ${
+          className={`absolute top-full ${isLast ? 'right-0' : 'left-0'} mt-1 w-64 bg-white rounded-xl shadow-xl border border-border z-50 overflow-hidden transition-all duration-200 origin-top ${
             open ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"
           }`}
         >
@@ -176,8 +176,8 @@ export default function Navbar() {
             <Link href="/" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors uppercase tracking-wider">
               Home
             </Link>
-            {navItems.map((item) => (
-              <DropdownItem key={item.name} item={item} onClose={() => {}} />
+            {navItems.map((item, index) => (
+              <DropdownItem key={item.name} item={item} onClose={() => {}} isLast={index >= navItems.length - 2} />
             ))}
           </nav>
 
