@@ -6,8 +6,8 @@ export default function ManagingTrustee() {
     <div>
       <h2 className="text-3xl font-sans font-bold text-primary mb-8">President's Message</h2>
       <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
-        <div className="w-48 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-lg shrink-0">
-          <img src={managerImg} alt="Managing Trustee" className="w-full h-auto object-contain" />
+        <div className="w-56 h-64 rounded-[50%] overflow-hidden border-4 border-primary/20 shadow-lg shrink-0">
+          <img src={managerImg} alt="Managing Trustee" className="w-full h-full object-cover object-top" />
         </div>
         <div>
           <h3 className="text-2xl font-sans font-bold text-primary">H.G. Geevarghese Mar Coorilos</h3>
