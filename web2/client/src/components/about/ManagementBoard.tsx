@@ -16,6 +16,14 @@ import moccb13 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.23.50 PM.jpe
 import moccb14 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.24.29 PM.jpeg";
 import vashi1 from "@/assets/images/Vashi School Committee Members1.jpeg";
 import vashi2 from "@/assets/images/Vashi School Committe Members2.jpeg";
+import vashiVicePrincipal from "@/assets/images/WhatsApp Image 2026-03-17 at 7.07.58 PM.jpeg";
+import vashiMem1 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.06.47 PM.jpeg";
+import vashiMem2 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.05.48 PM.jpeg";
+import vashiMem3 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.05.33 PM.jpeg";
+import vashiMem4 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.05.17 PM.jpeg";
+import vashiMem5 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.05.06 PM.jpeg";
+import headmasterPrimary from "@/assets/images/headmasterprimary.jpeg";
+import chiefExecutive1 from "@/assets/images/chiefexecutiveofficer1.jpeg";
 import presidentImg from "@/assets/images/presidentt.jpeg";
 import secretaryImg from "@/assets/images/secre.jpeg";
 import chiefExecutive from "@/assets/images/ChiefExecutiveOfficer.jpeg";
@@ -52,8 +60,16 @@ const moccbMembers = [
 ];
 
 const vashiMembers = [
+  { img: chiefExecutive1, name: "Rev Fr. Abraham Joseph", role: "Chief Executive Officer" },
+  { img: vashiVicePrincipal, name: "Mrs. Sailatha Sudhir", role: "Vice Principal" },
+  { img: headmasterPrimary, name: "Rev. Fr. K.P Varghese", role: "Headmaster Primary" },
   { img: vashi1, name: "Dr. Peter Philip", role: "Member" },
   { img: vashi2, name: "Fr. Thomas K Chacko", role: "Member" },
+  { img: vashiMem1, name: "Mrs. Gracy Mathew", role: "Member" },
+  { img: vashiMem2, name: "Mr. M C Sunny", role: "Member" },
+  { img: vashiMem3, name: "Mr. Santhosh Mathai", role: "Member" },
+  { img: vashiMem4, name: "Mr. Abraham Easo", role: "Member" },
+  { img: vashiMem5, name: "Mr. John Mathai", role: "Member" },
 ];
 
 const educationBoardMembers = [

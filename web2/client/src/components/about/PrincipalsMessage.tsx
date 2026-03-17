@@ -6,8 +6,8 @@ export default function PrincipalsMessage() {
     <div>
       <h2 className="text-3xl font-sans font-bold text-primary mb-8">Principal's Message</h2>
       <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
-        <div className="w-40 h-40 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-lg shrink-0">
-          <img src={principalImg} alt="Principal" className="w-full h-full object-cover" />
+        <div className="w-56 h-64 rounded-[50%] overflow-hidden border-4 border-primary/20 shadow-lg shrink-0">
+          <img src={principalImg} alt="Principal" className="w-full h-full object-cover" style={{ objectPosition: '30% 15%' }} />
         </div>
         <div>
           <h3 className="text-2xl font-sans font-bold text-primary">Fr. Bijumon K.P.</h3>

@@ -1,7 +1,5 @@
 const results = [
-  { year: "2023–24", classX: "98.5%", classXII: "96.2%", topperX: "Anjali Mathew (98%)", topperXII: "Rohan Thomas (97%)" },
-  { year: "2022–23", classX: "97.8%", classXII: "95.5%", topperX: "Priya Varghese (97%)", topperXII: "Arun Philip (96%)" },
-  { year: "2021–22", classX: "96.4%", classXII: "94.8%", topperX: "Sneha Kurian (96%)", topperXII: "Nikhil George (95%)" },
+  { year: "Nill", classX: "Nill", classXII: "Nill", topperX: "Nill", topperXII: "Nill" },
 ];
 
 export default function AcademicResults() {

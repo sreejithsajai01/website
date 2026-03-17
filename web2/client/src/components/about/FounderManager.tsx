@@ -26,11 +26,13 @@ export default function FounderManager() {
 
       {/* Right: photo + caption */}
       <div className="flex flex-col items-center shrink-0 w-64">
-        <img
-          src={founderImg}
-          alt="His Grace Dr. Philipose Mar Theophilos"
-          className="w-full rounded-sm object-cover shadow-md"
-        />
+        <div className="w-56 h-64 rounded-[50%] overflow-hidden border-4 border-primary/20 shadow-md">
+          <img
+            src={founderImg}
+            alt="His Grace Dr. Philipose Mar Theophilos"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
         <p className="mt-3 text-sm text-muted-foreground">Founder Manager</p>
         <p className="text-sm font-semibold text-primary text-center tracking-wide">
           HIS GRACE DR. PHILIPOSE MAR THEOPHILOS
