@@ -1,17 +1,17 @@
-import kidsImg from "@/assets/images/kids-corner.jpg";
-import labChemImg from "@/assets/images/lab-chemistry.jpg";
-import labCompImg from "@/assets/images/lab-computer.jpg";
-import labPhysImg from "@/assets/images/lab-physics.jpg";
-import musicImg from "@/assets/images/music-room.jpg";
-import heroImg from "@/assets/images/school-hero.png";
+import kidsImg from "@/assets/images/WhatsApp Image 2026-03-17 at 8.24.36 PM (1).jpeg";
+import labChemImg from "@/assets/images/WhatsApp Image 2026-03-17 at 8.24.36 PM.jpeg";
+import labCompImg from "@/assets/images/WhatsApp Image 2026-03-17 at 8.25.40 PM.jpeg";
+import labPhysImg from "@/assets/images/WhatsApp Image 2026-03-17 at 8.28.36 PM.jpeg";
+import musicImg from "@/assets/images/WhatsApp Image 2026-03-17 at 8.25.40 PM.jpeg";
+import campusImg from "@/assets/images/school-hero.png";
 
 const photos = [
-  { src: kidsImg, caption: "Kids Corner" },
-  { src: labChemImg, caption: "Chemistry Lab" },
-  { src: labCompImg, caption: "Computer Lab" },
-  { src: labPhysImg, caption: "Physics Lab" },
-  { src: musicImg, caption: "Music Room" },
-  { src: heroImg, caption: "School Campus" },
+  { src: kidsImg },
+  { src: labChemImg },
+  { src: labCompImg },
+  { src: labPhysImg },
+  { src: musicImg },
+  { src: campusImg },
 ];
 
 export default function PhotoGallery() {
@@ -22,17 +22,14 @@ export default function PhotoGallery() {
         A glimpse into life at St. Mary's — our classrooms, labs, events, and campus.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {photos.map((photo) => (
-          <div key={photo.caption} className="rounded-xl overflow-hidden border border-border shadow-sm group">
+        {photos.map((photo, index) => (
+          <div key={index} className="rounded-xl overflow-hidden border border-border shadow-sm group">
             <div className="h-48 overflow-hidden">
               <img
                 src={photo.src}
-                alt={photo.caption}
+                alt="Gallery"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
-            </div>
-            <div className="px-4 py-2 bg-white">
-              <p className="text-sm font-medium text-primary">{photo.caption}</p>
             </div>
           </div>
         ))}

@@ -1,8 +1,19 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import moccb1 from "@/assets/images/moccb1.jpeg";
-import moccb2 from "@/assets/images/moccb2.jpeg";
-import moccb3 from "@/assets/images/moccb3.jpeg";
+import moccb1 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.14.49 PM.jpeg";
+import moccb2 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.15.10 PM.jpeg";
+import moccb3 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.15.46 PM.jpeg";
+import moccb4 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.16.12 PM.jpeg";
+import moccb5 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.16.55 PM.jpeg";
+import moccb6 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.18.05 PM.jpeg";
+import moccb7 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.18.33 PM.jpeg";
+import moccb8 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.19.14 PM.jpeg";
+import moccb9 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.20.11 PM.jpeg";
+import moccb10 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.20.59 PM.jpeg";
+import moccb11 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.21.41 PM.jpeg";
+import moccb12 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.22.19 PM.jpeg";
+import moccb13 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.23.50 PM.jpeg";
+import moccb14 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.24.29 PM.jpeg";
 import vashi1 from "@/assets/images/Vashi School Committee Members1.jpeg";
 import vashi2 from "@/assets/images/Vashi School Committe Members2.jpeg";
 import presidentImg from "@/assets/images/presidentt.jpeg";
@@ -24,9 +35,20 @@ import boardmem12 from "@/assets/images/boardmem12.jpeg";
 import boardmem13 from "@/assets/images/boardmem13.jpeg";
 
 const moccbMembers = [
-  { img: moccb1, name: "Fr. Thomas K Chacko", role: "Secretary" },
-  { img: moccb2, name: "Rev. Fr. Santhosh Varghese", role: "Member" },
-  { img: moccb3, name: "Rev. Fr. Shaji Chacko", role: "Member" },
+  { img: moccb1, name: "H.G Geevarghese Mar Coorilos", role: "President" },
+  { img: moccb2, name: "Fr. Thomas K Chacko", role: "Secretary" },
+  { img: moccb3, name: "Rev. Fr. Santhosh Varghese", role: "Member" },
+  { img: moccb4, name: "Rev. Fr. Shaji Chacko", role: "Member" },
+  { img: moccb5, name: "Mr. R T Thomas", role: "Member" },
+  { img: moccb6, name: "Mr. K. Thomas", role: "Member" },
+  { img: moccb7, name: "Mr. K A Thomas", role: "Member" },
+  { img: moccb8, name: "Dr. Peter Philip", role: "Member" },
+  { img: moccb9, name: "Mr. Sajeev P Rajan", role: "Member" },
+  { img: moccb10, name: "Mr. Thomas Philip", role: "Member" },
+  { img: moccb11, name: "Mr. Joseph Abraham", role: "Member" },
+  { img: moccb12, name: "Mr. A G Babu", role: "Member" },
+  { img: moccb13, name: "Mr. P V Varghese", role: "Member" },
+  { img: moccb14, name: "Mr. Blesson Oomen", role: "Member" },
 ];
 
 const vashiMembers = [
@@ -35,8 +57,6 @@ const vashiMembers = [
 ];
 
 const educationBoardMembers = [
-  
-  
   { img: boardPresident, name: "H.G Geevarghese Mar Coorilos", role: "President" },
   { img: presidentImg, name: "H.G. Geevarghese Mar Theophilos", role: "Vice-President" },
   { img: chiefExecutive, name: "Rev Fr. Abraham Joseph", role: "Chief Executive Officer" },
@@ -64,8 +84,8 @@ function MemberCarousel({ title, members }: { title: string; members: { img: str
   const visible = members.slice(start, start + visibleCount);
 
   return (
-    <div className="mb-8">
-      <div className="flex items-center justify-between mb-6">
+    <div className="mb-12">
+      <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-sans font-bold text-primary">{title}</h2>
         <div className="flex gap-2">
           <button
@@ -84,14 +104,14 @@ function MemberCarousel({ title, members }: { title: string; members: { img: str
           </button>
         </div>
       </div>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-8 justify-center">
         {visible.map((m, i) => (
-          <div key={i} className="w-48 rounded-lg overflow-hidden shadow-sm">
-            <div className="w-full h-60 overflow-hidden">
+          <div key={i} className="flex flex-col items-center">
+            <div className="w-40 h-40 rounded-full overflow-hidden shadow-lg border-4 border-indigo-100 mb-4">
               <img src={m.img} alt={m.name} className="w-full h-full object-cover object-top" />
             </div>
-            <div className="bg-indigo-50 px-4 py-4 min-h-[80px]">
-              <p className="font-bold text-gray-800 text-base leading-snug">{m.name}</p>
+            <div className="text-center">
+              <p className="font-bold text-gray-800 text-base">{m.name}</p>
               {m.role && <p className="text-gray-500 text-sm mt-1">{m.role}</p>}
             </div>
           </div>

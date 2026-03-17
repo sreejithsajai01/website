@@ -1,5 +1,3 @@
-import { Link } from "wouter";
-
 export default function OnlineRegistration() {
   return (
     <div>
@@ -9,12 +7,14 @@ export default function OnlineRegistration() {
       </p>
       <div className="bg-primary/5 border border-primary/10 rounded-2xl p-8 text-center">
         <p className="text-muted-foreground mb-6 text-lg">Click below to access the online admission enquiry form.</p>
-        <Link
-          href="/enquiry"
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScAFnsEDCHib5d6f3cN1YQKhHTHGsiLW9CDPNz0DupKaDWzsw/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-primary text-white font-bold px-8 py-3 rounded-xl hover:bg-primary/90 transition-colors"
         >
           Go to Enquiry Form
-        </Link>
+        </a>
       </div>
       <div className="mt-8 space-y-3">
         <h3 className="font-bold text-primary">Documents Required at the Time of Registration</h3>

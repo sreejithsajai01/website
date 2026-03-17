@@ -29,8 +29,8 @@ export default function MessageSection() {
             
             <div className="flex flex-col md:flex-row gap-8 items-start">
               {/* Left: Image */}
-              <div className="w-48 h-48 rounded-2xl overflow-hidden border-4 border-white shadow-xl flex-shrink-0">
-                <img src={founderImg} alt="His Grace Dr. Philipose Mar Theophilos" className="w-full h-full object-cover" />
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl flex-shrink-0">
+                <img src={founderImg} alt="His Grace Dr. Philipose Mar Theophilos" className="w-full h-full object-cover object-top" />
               </div>
               
               {/* Right: Content */}
