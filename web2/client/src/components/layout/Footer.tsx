@@ -40,7 +40,7 @@ export default function Footer() {
               {[
                 { name: "About School", href: "/about" },
                 { name: "Admission Procedure", href: "/admissions/process" },
-                { name: "Fee Structure", href: "/admissions/process" },
+                
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-primary-foreground/80 hover:text-secondary text-sm transition-colors flex items-center gap-2">

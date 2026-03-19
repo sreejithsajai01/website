@@ -74,27 +74,31 @@ export default function AdmissionProcess() {
       <h2 className="text-3xl font-sans font-bold text-primary mb-2">Admission Process</h2>
       <p className="text-muted-foreground text-base mb-6">Step-by-Step Process:</p>
 
-      {/* Admissions Open Banner */}
-      <div className="flex flex-col items-center mb-8">
-        <div className="bg-amber-500 text-white font-bold text-lg px-8 py-2 rounded-full mb-2 shadow">Admissions Open</div>
-        <div className="bg-primary text-white font-extrabold text-4xl px-10 py-3 rounded-2xl shadow-lg tracking-wide">2026–2027</div>
-      </div>
-
       {/* Steps */}
-      <div className="bg-amber-400 rounded-3xl p-6 mb-12 space-y-4">
+      <div className="bg-primary/5 border border-primary/10 rounded-3xl p-6 mb-12 space-y-2">
         {steps.map((s, i) => {
           const isLeft = i % 2 === 0;
-          const stepColors = ["text-amber-700", "text-blue-400", "text-green-700", "text-pink-500"];
           return (
-            <div key={i} className={`flex items-center gap-3 ${isLeft ? "flex-row" : "flex-row-reverse"}`}>
-              {/* Number Badge */}
-              <span className={`text-6xl font-extrabold shrink-0 drop-shadow-lg ${stepColors[i]} [text-shadow:2px_2px_0_#fff,-2px_-2px_0_#fff,2px_-2px_0_#fff,-2px_2px_0_#fff]`}>
-                {i + 1}
-              </span>
-              {/* Step Bar */}
-              <div className="flex-1 bg-primary text-white font-bold text-base px-6 py-4 rounded-full shadow-md">
-                {s.title}
+            <div key={i}>
+              <div className={`flex items-center gap-4 ${isLeft ? "flex-row" : "flex-row-reverse"}`}>
+                {/* Number Badge */}
+                <span className="text-6xl font-extrabold shrink-0 text-primary/30 leading-none select-none">
+                  {i + 1}
+                </span>
+                {/* Step Pill */}
+                <div className="flex-1 bg-primary/70 text-primary-foreground font-bold text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg cursor-pointer">
+                  {s.title}
+                </div>
               </div>
+              {/* Dashed connector arrow */}
+              {i < steps.length - 1 && (
+                <div className={`flex ${i % 2 === 0 ? "justify-end pr-4" : "justify-start pl-4"}`}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-primary/40">
+                    <path d="M12 2 Q18 12 12 22" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" fill="none"/>
+                    <path d="M9 19 L12 22 L15 19" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                  </svg>
+                </div>
+              )}
             </div>
           );
         })}
