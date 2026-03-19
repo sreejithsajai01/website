@@ -42,7 +42,7 @@ export default function AboutSection() {
                 </div>
               </a>
 
-              <a href="/contact/map" className="group bg-muted/50 p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-border flex flex-col items-center justify-center text-center gap-3">
+              <a href="/contact/Address" className="group bg-muted/50 p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-border flex flex-col items-center justify-center text-center gap-3">
                 <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-green-600 group-hover:scale-110 group-hover:bg-green-600 group-hover:text-white transition-all">
                   <Map className="w-7 h-7" />
                 </div>
