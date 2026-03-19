@@ -40,10 +40,10 @@ export default function AdmissionEnquiryPopup() {
 
           {/* Content Layer */}
           <div className="relative z-10 h-full flex flex-col items-center justify-center px-8 text-center">
-            <h2 className="text-white text-2xl md:text-3xl font-bold mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <h2 className="text-white text-2xl md:text-3xl font-bold mb-3">
              Enquiry 2026-2027
             </h2>
-            <p className="text-white/90 text-sm md:text-base mb-6 max-w-xl" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <p className="text-white/90 text-sm md:text-base mb-6 max-w-xl">
               Join St. Mary's CBSE School and be part of a legacy of excellence
             </p>
 
@@ -53,7 +53,6 @@ export default function AdmissionEnquiryPopup() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-blue-600 hover:bg-white/90 font-bold py-2 px-8 rounded-lg transition-all duration-300 hover:shadow-lg"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Enquiry Form
             </a>

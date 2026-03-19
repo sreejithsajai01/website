@@ -28,6 +28,7 @@ function Router() {
 
       {/* About */}
       <Route path="/about" component={About} />
+      <Route path="/about/about" component={AboutSub} />
       <Route path="/about/history" component={AboutSub} />
       <Route path="/about/school-motto" component={AboutSub} />
       <Route path="/about/vision-mission" component={AboutSub} />

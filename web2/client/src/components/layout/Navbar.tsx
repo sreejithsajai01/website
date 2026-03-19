@@ -9,7 +9,6 @@ const navItems = [
     href: "/about/about",
     sub: [
       { name: "About", href: "/about/about" },
-      { name: "School Motto", href: "/about/school-motto" },
       { name: "Vision & Mission", href: "/about/vision-mission" },
       { name: "President's Message", href: "/about/managing-trustee" },
       { name: "Principal's Message", href: "/about/principals-message" },
@@ -21,21 +20,18 @@ const navItems = [
     name: "Academics",
     href: "/academics",
     sub: [
-      { name: "Curriculum", href: "/academics/curriculum" },
     ],
   },
   {
     name: "Admissions",
     href: "/admissions",
-    sub: [
-      { name: "Admission Process", href: "/admissions/process" },
-    ],
+    sub: [ ],
   },
   {
     name: "Infrastructure",
     href: "/infrastructure",
     sub: [
-      { name: "Facilities", href: "/infrastructure" },
+    
     ],
   },
   {
@@ -110,7 +106,7 @@ export default function Navbar() {
             </a>
           </div>
           <div className="flex gap-4 font-semibold">
-            <Link href="/login" className="hover:text-secondary transition-colors"></Link>
+            <Link href="/login" className="hover:text-secondary transition-colors">Student Login</Link>
             <Link href="/enquiry" className="hover:text-secondary transition-colors text-secondary"></Link>
           </div>
         </div>

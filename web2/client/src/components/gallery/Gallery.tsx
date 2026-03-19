@@ -20,9 +20,6 @@ export default function Gallery() {
           <div className="bg-white rounded-2xl border border-border shadow-sm p-8 lg:p-10">
             <PhotoGallery />
           </div>
-          <div className="bg-white rounded-2xl border border-border shadow-sm p-8 lg:p-10">
-            <VideoGallery />
-          </div>
         </div>
       </main>
       <Footer />

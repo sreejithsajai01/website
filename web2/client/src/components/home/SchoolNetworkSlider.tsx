@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
-import stMarysICSE from "@/assets/images/St. Mary's ICSE school, Koparkhairane, Navi Mumbai.jpeg";
-import stThomasEnglish from "@/assets/images/St. Thomas English School, Karnik Rd, Kalyan.jpeg";
-import stMarysValsad from "@/assets/images/St. Mary's School, Valsad, Gujarat.jpeg";
-import stMarysJNP from "@/assets/images/St. Mary's JNP School, J.N.P.T., Nhava Sheva.jpeg";
-import stMarysTejaswini from "@/assets/images/St. Mary's Tejaswini School, Vashi.jpeg";
-import drMarTheophilusPune from "@/assets/images/Dr. Mar Theophilus ICSE School, Dhanori, Pune.jpeg";
-import gregorianPublic from "@/assets/images/Gregorian Public School, Roha.jpeg";
-import westernCollege from "@/assets/images/Western College of Commerce & Business Management, Sanpada.jpeg";
-import indiraInstitute from "@/assets/images/Indira Institute of Business Management, Sanpada..jpeg";
-import stMarysKhopoli from "@/assets/images/St. Mary's Public School, DP Road, Khopoli..jpeg";
-import stMarysDhule from "@/assets/images/St. Mary's School,Tikhi Road, Dhule..jpeg";
-import drMarTheophilusIMS from "@/assets/images/Dr. Mar Theophilus Institute of Management Studies, Sanpada.jpeg";
+import stMarysICSE from "@/assets/images/stmarys-icse-koparkhairane.jpeg";
+import stThomasEnglish from "@/assets/images/stthomas-english-kalyan.jpeg";
+import stMarysValsad from "@/assets/images/stmarys-valsad.jpeg";
+import stMarysJNP from "@/assets/images/stmarys-jnp-nhavasheva.jpeg";
+import stMarysTejaswini from "@/assets/images/stmarys-tejaswini-vashi.jpeg";
+import drMarTheophilusPune from "@/assets/images/drmar-theophilus-pune.jpeg";
+import gregorianPublic from "@/assets/images/gregorian-public-roha.jpeg";
+import westernCollege from "@/assets/images/western-college-sanpada.jpeg";
+import indiraInstitute from "@/assets/images/indira-institute-sanpada.jpeg";
+import stMarysKhopoli from "@/assets/images/stmarys-public-khopoli.jpeg";
+import stMarysDhule from "@/assets/images/stmarys-dhule.jpeg";
+import drMarTheophilusIMS from "@/assets/images/drmar-theophilus-ims-sanpada.jpeg";
 
 interface School {
   id: number;
@@ -147,8 +147,8 @@ export default function SchoolNetworkSlider() {
     <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-serif font-bold text-primary mb-4 animate-[fadeInUp_0.8s_ease-out]" style={{ fontFamily: "'Poppins', sans-serif" }}>Our School Network</h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto animate-[fadeInUp_0.8s_ease-out_0.2s_both]" style={{ fontFamily: "'Poppins', sans-serif" }}>
+          <h2 className="text-4xl font-serif font-bold text-primary mb-4 animate-[fadeInUp_0.8s_ease-out]">Our School Network</h2>
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
             Explore our branches across different locations
           </p>
         </div>
