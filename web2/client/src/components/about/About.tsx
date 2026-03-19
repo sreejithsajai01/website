@@ -19,7 +19,7 @@ const subPages = [
   { label: "President's Message", path: "/about/managing-trustee", Component: ManagingTrustee },
   { label: "Secretary's Message", path: "/about/asst-managing-trustee", Component: AsstManagingTrustee },
   { label: "Principal's Message", path: "/about/principals-message", Component: PrincipalsMessage },
-  { label: "Management / Board Members", path: "/about/management-board", Component: ManagementBoard },
+  { label: "Management Team", path: "/about/management-team", Component: ManagementBoard },
   { label: "The MOCCB School Network", path: "/about/school-network", Component: SchoolNetwork },
 ];
 
@@ -31,7 +31,7 @@ export default function About() {
   const [matchManaging] = useRoute("/about/managing-trustee");
   const [matchAsst] = useRoute("/about/asst-managing-trustee");
   const [matchPrincipal] = useRoute("/about/principals-message");
-  const [matchBoard] = useRoute("/about/management-board");
+  const [matchBoard] = useRoute("/about/management-team");
   const [matchNetwork] = useRoute("/about/school-network");
 
   let ActiveComponent = History;
@@ -44,7 +44,7 @@ export default function About() {
   else if (matchManaging) { ActiveComponent = ManagingTrustee; activeLabel = "President Message"; }
   else if (matchAsst) { ActiveComponent = AsstManagingTrustee; activeLabel = "Secretary Message"; }
   else if (matchPrincipal) { ActiveComponent = PrincipalsMessage; activeLabel = "Principal's Message"; }
-  else if (matchBoard) { ActiveComponent = ManagementBoard; activeLabel = "Management / Board Members"; }
+  else if (matchBoard) { ActiveComponent = ManagementBoard; activeLabel = "Management Team"; }
   else if (matchNetwork) { ActiveComponent = SchoolNetwork; activeLabel = "The MOCCB School Network"; }
 
   return (

@@ -1,14 +1,18 @@
 const info = [
-  { label: "Name of School", value: "St. Mary's CBSE School" },
+  { label: "Name of School", value: "St. Mary's CBSE School, Vashi" },
   { label: "Affiliation No.", value: "1100234" },
   { label: "School Code", value: "56789" },
   { label: "Address", value: "Sector 15, Vashi, Navi Mumbai, Maharashtra – 400703" },
-  { label: "Principal", value: "Rev. Fr. Jipson Palatty" },
-  { label: "Contact No.", value: "+91 98765 43210" },
-  { label: "Email", value: "info@stmarys.edu" },
-  { label: "Year of Establishment", value: "2000" },
+  { label: "Principal", value: "Fr. Bijumon K.P." },
+  { label: "Contact No.", value: "022-27662725" },
+  { label: "Email", value: "cbsestmarysvashi@gmail.com" },
+  { label: "Year of Establishment", value: "2026" },
   { label: "Status of School", value: "Co-Educational" },
   { label: "Affiliation Status", value: "Permanent" },
+  { label: "Board", value: "CBSE" },
+  { label: "Founder Manager", value: "Late Lamented Arch Bishop Dr. Philipose Mar Theophilus" },
+  { label: "Managing Organization", value: "Malankara Orthodox Church Council of Bombay (MOCCB)" },
+  { label: "School Motto", value: "Lead me from Darkness to Light" },
 ];
 
 export default function GeneralInformation() {

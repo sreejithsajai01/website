@@ -26,14 +26,24 @@ export default function FounderManager() {
 
       {/* Right: photo + caption */}
       <div className="flex flex-col items-center shrink-0 w-64">
-        <div className="w-56 h-64 rounded-[50%] overflow-hidden border-4 border-primary/20 shadow-md">
-          <img
-            src={founderImg}
-            alt="His Grace Dr. Philipose Mar Theophilos"
-            className="w-full h-full object-cover object-top"
-          />
+        {/* Consolidated Ring Effect - Yellow and White */}
+        <div className="relative w-64 h-72 flex items-center justify-center">
+          {/* Outer Yellow Ring */}
+          <div className="absolute w-64 h-64 rounded-full border-8 border-yellow-400 shadow-lg"></div>
+          
+          {/* Inner White Ring */}
+          <div className="absolute w-56 h-56 rounded-full border-4 border-white shadow-md"></div>
+          
+          {/* Image Container */}
+          <div className="relative w-56 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-md z-10">
+            <img
+              src={founderImg}
+              alt="His Grace Dr. Philipose Mar Theophilos"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
         </div>
-        <p className="mt-3 text-sm text-muted-foreground">Founder Manager</p>
+        <p className="mt-6 text-sm text-muted-foreground">Founder Manager</p>
         <p className="text-sm font-semibold text-primary text-center tracking-wide">
           HIS GRACE DR. PHILIPOSE MAR THEOPHILOS
         </p>

@@ -24,9 +24,10 @@ import vashiMem4 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.05.17 PM.j
 import vashiMem5 from "@/assets/images/WhatsApp Image 2026-03-17 at 7.05.06 PM.jpeg";
 import headmasterPrimary from "@/assets/images/headmasterprimary.jpeg";
 import chiefExecutive1 from "@/assets/images/chiefexecutiveofficer1.jpeg";
-import presidentImg from "@/assets/images/presidentt.jpeg";
-import secretaryImg from "@/assets/images/secre.jpeg";
-import chiefExecutive from "@/assets/images/ChiefExecutiveOfficer.jpeg";
+import presidentImg from "@/assets/images/H.G.Geevarghese Mar Coorilos Metropolitan crop.jpg";
+import vicePresidentImg from "@/assets/images/H.G. Dr. Geevarghese Mar Theophilos Metropolitan crop.JPG";
+import chiefExecutive from "@/assets/images/Rev Fr. Abraham Joseph.jpg";
+import secretaryImg from "@/assets/images/Fr. Thomas K Chacko.jpeg";
 import boardPresident from "@/assets/images/boardpresident.jpeg";
 import boardmem1 from "@/assets/images/boardmem1.jpeg";
 import boardmem2 from "@/assets/images/boardmem2.jpeg";
@@ -43,8 +44,8 @@ import boardmem12 from "@/assets/images/boardmem12.jpeg";
 import boardmem13 from "@/assets/images/boardmem13.jpeg";
 
 const moccbMembers = [
-  { img: moccb1, name: "H.G Geevarghese Mar Coorilos", role: "President" },
-  { img: moccb2, name: "Fr. Thomas K Chacko", role: "Secretary" },
+  { img: presidentImg, name: "H.G Geevarghese Mar Coorilos", role: "President" },
+  { img: secretaryImg, name: "Rev. Fr. Thomas K Chacko", role: "Secretary" },
   { img: moccb3, name: "Rev. Fr. Santhosh Varghese", role: "Member" },
   { img: moccb4, name: "Rev. Fr. Shaji Chacko", role: "Member" },
   { img: moccb5, name: "Mr. R T Thomas", role: "Member" },
@@ -73,23 +74,10 @@ const vashiMembers = [
 ];
 
 const educationBoardMembers = [
-  { img: boardPresident, name: "H.G Geevarghese Mar Coorilos", role: "President" },
-  { img: presidentImg, name: "H.G. Geevarghese Mar Theophilos", role: "Vice-President" },
-  { img: chiefExecutive, name: "Rev Fr. Abraham Joseph", role: "Chief Executive Officer" },
-  { img: secretaryImg, name: "Fr. Thomas K Chacko", role: "Secretary" },
-  { img: boardmem1, name: "Mr. K. Thomas", role: "Member" },
-  { img: boardmem2, name: "Mr. Jacob Varghese", role: "Member" },
-  { img: boardmem3, name: "Mr. R T Thomas", role: "Member" },
-  { img: boardmem4, name: "Dr. Sunny Pariyaram", role: "Member" },
-  { img: boardmem5, name: "Mr. Alex Varghese", role: "Member" },
-  { img: boardmem6, name: "Mr. George Joseph", role: "Member" },
-  { img: boardmem7, name: "Mr. Chacko Samuel", role: "Member" },
-  { img: boardmem8, name: "Mr. John Mathai", role: "Member" },
-  { img: boardmem9, name: "Mr. Abraham Easo", role: "Member" },
-  { img: boardmem10, name: "Mr. K A Thomas", role: "Member" },
-  { img: boardmem11, name: "Mr. Santhosh Mathai", role: "Member" },
-  { img: boardmem12, name: "Mr. M C Sunny", role: "Member" },
-  { img: boardmem13, name: "Mr. Daniel Binu Varghese", role: "Member" },
+  { img: presidentImg, name: "H. G. Geevarghese Mar Coorilos", role: "President" },
+  { img: vicePresidentImg, name: "H. G. Geevarghese Mar Theophilos", role: "Vice-President" },
+  { img: chiefExecutive, name: "Rev. Fr. Abraham Joseph", role: "Chief Executive Officer" },
+  { img: secretaryImg, name: "Rev. Fr. Thomas K Chacko", role: "Secretary" },
 ];
 
 const VISIBLE = 5;
@@ -140,9 +128,7 @@ function MemberCarousel({ title, members }: { title: string; members: { img: str
 export default function ManagementBoard() {
   return (
     <div>
-      <MemberCarousel title="MOCCB Members" members={moccbMembers} />
-      <MemberCarousel title="Vashi School Committee Members" members={vashiMembers} />
-      <MemberCarousel title="Education Board Members" members={educationBoardMembers} />
+      <MemberCarousel title="Management Team" members={educationBoardMembers} />
     </div>
   );
 }

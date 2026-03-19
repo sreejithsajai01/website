@@ -20,7 +20,7 @@ export default function SchoolNetwork() {
     <div>
       <h2 className="text-3xl font-sans font-bold text-primary mb-4">The MOCCB School Network</h2>
       <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-        Alongwith St. Mary's Multipurpose High School & Junior College, Vashi, the MOCCB trust manages the following institutions:
+        Along with St. Mary's Multipurpose High School & Junior College, Vashi, the MOCCB trust manages the following institutions:
       </p>
       <div className="space-y-4">
         {schools.map((school) => (

@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import heroImg from "@/assets/images/school-hero.png";
-import heroImg2 from "@/assets/images/school-hero1.png";
 import { Button } from "@/components/ui/button";
-import HeroPopup from "./HeroPopup";
+import AdmissionEnquiryPopup from "./AdmissionEnquiryPopup";
 
-const slides = [heroImg, heroImg2];
+const slides = [heroImg];
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
@@ -33,15 +32,13 @@ export default function HeroSlider() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <h2 className="text-secondary font-bold text-lg md:text-xl mb-2 tracking-widest uppercase">Welcome to</h2>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-white mb-6 drop-shadow-lg">
-              St. Mary's CBSE School
-            </h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-white mb-6 drop-shadow-lg whitespace-nowrap">St. Mary's CBSE School</h1>
             <p className="text-xl md:text-2xl text-white/90 font-sans italic mb-8 drop-shadow-md">
-              "To work and serve in Love"
+              "Spreading Light"
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Button size="lg" className="bg-secondary text-primary hover:bg-white text-lg px-8 font-bold">
-                Virtual Tour
+              <Button size="lg" className="bg-secondary text-primary hover:bg-white text-lg px-8 font-bold" onClick={() => navigate("/about/vision-mission")}>
+                Explore More
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 bg-transparent/20 backdrop-blur-sm font-bold" onClick={() => navigate("/enquiry")}>
                 Admission Enquiry
@@ -52,17 +49,19 @@ export default function HeroSlider() {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition-all ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
-          />
-        ))}
-      </div>
+      {slides.length > 1 && (
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-3 h-3 rounded-full transition-all ${i === current ? "bg-white scale-125" : "bg-white/50"}`}
+            />
+          ))}
+        </div>
+      )}
 
-      <HeroPopup />
+      <AdmissionEnquiryPopup />
     </div>
   );
 }

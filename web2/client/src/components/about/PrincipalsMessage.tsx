@@ -6,24 +6,35 @@ export default function PrincipalsMessage() {
     <div>
       <h2 className="text-3xl font-sans font-bold text-primary mb-8">Principal's Message</h2>
       <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
-        <div className="w-56 h-64 rounded-[50%] overflow-hidden border-4 border-primary/20 shadow-lg shrink-0">
-          <img src={principalImg} alt="Principal" className="w-full h-full object-cover" style={{ objectPosition: '30% 15%' }} />
+        {/* Image with Yellow and White Ring */}
+        <div className="relative w-64 h-72 flex items-center justify-center shrink-0">
+          {/* Outer Yellow Ring */}
+          <div className="absolute w-64 h-64 rounded-full border-8 border-yellow-400 shadow-lg"></div>
+          
+          {/* Inner White Ring */}
+          <div className="absolute w-56 h-56 rounded-full border-4 border-white shadow-md"></div>
+          
+          {/* Image Container */}
+          <div className="relative w-56 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-md z-10">
+            <img src={principalImg} alt="Principal" className="w-full h-full object-cover" style={{ objectPosition: '30% 15%' }} />
+          </div>
         </div>
         <div>
           <h3 className="text-2xl font-sans font-bold text-primary">Fr. Bijumon K.P.</h3>
           <p className="text-muted-foreground font-medium mt-1">(Fr. K.P. Varghese)</p>
           <p className="text-secondary font-bold text-sm tracking-widest uppercase mt-1 mb-4">Principal, St. Mary's CBSE School</p>
           <div className="flex items-start gap-3 bg-primary/5 rounded-xl p-4 border-l-4 border-primary">
-            <Quote className="w-6 h-6 text-primary shrink-0 mt-1" />
+            <Quote className="w-6 h-6 text-primary shrink-0 mt-1 rotate-180" />
             <p className="text-muted-foreground italic leading-relaxed">
-              "It is with profound pride and a deep sense of responsibility that I address the students, parents, staff, alumni, and well-wishers of St. Mary's Multipurpose High School & Jr. College, Vashi."
+              It is with profound pride and a deep sense of responsibility that I address the students, parents, staff, alumni, and well-wishers of St. Mary's Multipurpose High School & Jr. College, Vashi.
             </p>
+            <Quote className="w-6 h-6 text-primary shrink-0 mt-1" />
           </div>
         </div>
       </div>
       <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
         <p>
-          Since its inception in 1986, our institution has been steadfast in its pursuit of excellence in education and character formation. Over the decades, St. Mary's has evolved into a dynamic and distinguished centre of learning, presently nurturing more than 6,000 students. Our enduring commitment is guided by our noble motto, <span className="font-semibold text-primary">"Lead me from darkness to light,"</span> which reflects our mission to enlighten minds, cultivate virtues, and prepare young individuals for meaningful participation in society.
+          Since its inception in 1986, our institution has been steadfast in its pursuit of excellence in education and character formation. Over the decades, St. Mary's has evolved into a dynamic and distinguished centre of learning, presently nurturing more than 6,000 students. Our enduring commitment is guided by our noble motto, <span className="font-semibold text-primary">"Lead me from Darkness to Light.,"</span> which reflects our mission to enlighten minds, cultivate virtues, and prepare young individuals for meaningful participation in society.
         </p>
         <p>
           We firmly believe that education is not merely the acquisition of knowledge, but the holistic development of the human person. At St. Mary's, we strive to foster intellectual competence, moral integrity, social awareness, and spiritual growth. Through a carefully structured academic curriculum complemented by co-curricular and value-oriented programmes, we endeavour to equip our students with the skills, discipline, and resilience required to meet the demands of a rapidly changing world.

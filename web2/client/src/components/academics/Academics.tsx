@@ -5,12 +5,14 @@ import Curriculum from "./Curriculum";
 import PrimarySchool from "./PrimarySchool";
 import MiddleSchool from "./MiddleSchool";
 import SeniorSecondary from "./SeniorSecondary";
+import Calendar from "./Calendar";
 
 export default function Academics() {
   const [matchCurriculum] = useRoute("/academics/curriculum");
   const [matchPrimary] = useRoute("/academics/primary-school");
   const [matchMiddle] = useRoute("/academics/middle-school");
   const [matchSenior] = useRoute("/academics/senior-secondary");
+  const [matchCalendar] = useRoute("/calendar");
   const [matchBase] = useRoute("/academics");
 
   let ActiveComponent = Curriculum;
@@ -20,6 +22,7 @@ export default function Academics() {
   else if (matchPrimary) { ActiveComponent = PrimarySchool; activeLabel = "Primary School"; }
   else if (matchMiddle) { ActiveComponent = MiddleSchool; activeLabel = "Middle School"; }
   else if (matchSenior) { ActiveComponent = SeniorSecondary; activeLabel = "Senior Secondary"; }
+  else if (matchCalendar) { ActiveComponent = Calendar; activeLabel = "Event Calendar"; }
 
   return (
     <div className="min-h-screen flex flex-col">

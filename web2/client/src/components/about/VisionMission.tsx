@@ -34,23 +34,6 @@ export default function VisionMission() {
           </p>
         </div>
       </div>
-      <div className="mt-8">
-        <h3 className="text-xl font-bold text-primary mb-4">Core Objectives</h3>
-        <ul className="space-y-3">
-          {[
-            "Foster intellectual curiosity and a love for lifelong learning",
-            "Instill strong moral values and ethical conduct",
-            "Encourage creativity, critical thinking, and innovation",
-            "Build a culture of inclusivity, respect, and empathy",
-            "Prepare students for national and global challenges",
-          ].map((obj) => (
-            <li key={obj} className="flex items-start gap-3 text-muted-foreground">
-              <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
-              {obj}
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   );
 }

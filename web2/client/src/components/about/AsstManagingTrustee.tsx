@@ -1,22 +1,33 @@
 import assisImg from "@/assets/images/moccb1.jpeg";
-  import { Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 export default function AsstManagingTrustee() {
   return (
     <div>
       <h2 className="text-3xl font-sans font-bold text-primary mb-8">Secretary's Message</h2>
       <div className="flex flex-col sm:flex-row gap-8 items-start mb-8">
-        <div className="w-56 h-64 rounded-[50%] overflow-hidden border-4 border-primary/20 shadow-lg shrink-0">
-          <img src={assisImg} alt="Asst. Managing Trustee" className="w-full h-full object-cover object-top" />
+        {/* Image with Yellow and White Ring */}
+        <div className="relative w-64 h-72 flex items-center justify-center shrink-0">
+          {/* Outer Yellow Ring */}
+          <div className="absolute w-64 h-64 rounded-full border-8 border-yellow-400 shadow-lg"></div>
+          
+          {/* Inner White Ring */}
+          <div className="absolute w-56 h-56 rounded-full border-4 border-white shadow-md"></div>
+          
+          {/* Image Container */}
+          <div className="relative w-56 h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-md z-10">
+            <img src={assisImg} alt="Asst. Managing Trustee" className="w-full h-full object-cover object-top" />
+          </div>
         </div>
         <div>
           <h3 className="text-2xl font-sans font-bold text-primary">Fr. Thomas K Chacko</h3>
           <p className="text-secondary font-bold text-sm tracking-widest uppercase mt-1 mb-1"></p>
           <p className="text-secondary font-bold text-sm tracking-widest uppercase mb-4"> Secretary of MOCCB</p>
           <div className="flex items-start gap-3 bg-primary/5 rounded-xl p-4 border-l-4 border-primary">
-            <Quote className="w-6 h-6 text-primary shrink-0 mt-1" />
-            <p className="text-muted-foreground italic leading-relaxed">
-              "Every child deserves a nurturing environment where they can discover their potential and grow into confident, compassionate individuals."
+            <Quote className="w-6 h-6 text-primary shrink-0 mt-1 rotate-180" />
+            <p className="text-muted-foreground italic leading-relaxed flex items-end gap-2">
+              <span>Every child deserves a nurturing environment where they can discover their potential and grow into confident, compassionate individuals.</span>
+              <Quote className="w-6 h-6 text-primary shrink-0 flex-shrink-0" />
             </p>
           </div>
         </div>

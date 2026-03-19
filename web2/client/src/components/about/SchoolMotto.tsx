@@ -7,7 +7,7 @@ export default function SchoolMotto() {
       <h2 className="text-3xl font-sans font-bold text-primary mb-6">Motto of the School</h2>
       <div className="flex items-center gap-4 bg-primary/5 border-l-4 border-primary rounded-xl p-6 mb-8">
         <Heart className="w-10 h-10 text-primary shrink-0" />
-        <p className="text-2xl font-sans font-bold text-primary italic">LEAD US FROM DARKNESS TO LIGHT</p>
+        <p className="text-2xl font-sans font-bold text-primary italic">Spreading Light.</p>
       </div>
       <p className="text-muted-foreground text-lg leading-relaxed mb-10">
         Our motto encapsulates the very spirit of St. Mary's — a commitment to diligent work, selfless service, and unconditional love for one another and the community.

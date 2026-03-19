@@ -23,14 +23,29 @@ export default function MessageSection() {
         {/* Founder Message */}
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg border border-border/50 p-8 md:p-10 relative group hover:-translate-y-2 transition-transform duration-300">
+            {/* Opening Quote - Top Left */}
             <div className="absolute -top-6 -left-6 bg-primary text-secondary p-4 rounded-full shadow-lg">
+              <Quote className="w-8 h-8 rotate-180" />
+            </div>
+
+            {/* Closing Quote - Bottom Right */}
+            <div className="absolute -bottom-6 -right-6 bg-primary text-secondary p-4 rounded-full shadow-lg">
               <Quote className="w-8 h-8" />
             </div>
             
             <div className="flex flex-col md:flex-row gap-8 items-start">
-              {/* Left: Image */}
-              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl flex-shrink-0">
-                <img src={founderImg} alt="His Grace Dr. Philipose Mar Theophilos" className="w-full h-full object-cover object-top" />
+              {/* Left: Image with Yellow and White Ring */}
+              <div className="relative w-56 h-64 flex items-center justify-center flex-shrink-0">
+                {/* Outer Yellow Ring */}
+                <div className="absolute w-56 h-56 rounded-full border-8 border-yellow-400 shadow-lg"></div>
+                
+                {/* Inner White Ring */}
+                <div className="absolute w-48 h-48 rounded-full border-4 border-white shadow-md"></div>
+                
+                {/* Image Container */}
+                <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl z-10">
+                  <img src={founderImg} alt="His Grace Dr. Philipose Mar Theophilos" className="w-full h-full object-cover object-top" />
+                </div>
               </div>
               
               {/* Right: Content */}

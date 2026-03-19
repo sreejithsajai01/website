@@ -35,7 +35,7 @@ function Router() {
       <Route path="/about/managing-trustee" component={AboutSub} />
       <Route path="/about/asst-managing-trustee" component={AboutSub} />
       <Route path="/about/principals-message" component={AboutSub} />
-      <Route path="/about/management-board" component={AboutSub} />
+      <Route path="/about/management-team" component={AboutSub} />
       <Route path="/about/school-network" component={AboutSub} />
 
       {/* Academics */}

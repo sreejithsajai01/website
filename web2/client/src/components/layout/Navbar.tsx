@@ -1,21 +1,19 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+import schoolLogo from "../../assets/images/school.png";
 
 const navItems = [
   {
     name: "About Us",
-    href: "/about",
+    href: "/about/about",
     sub: [
-      { name: "History", href: "/about/history" },
+      { name: "About", href: "/about/about" },
       { name: "School Motto", href: "/about/school-motto" },
       { name: "Vision & Mission", href: "/about/vision-mission" },
-      { name: "Founder Manager — MOCCB", href: "/about/founder-manager" },
       { name: "President's Message", href: "/about/managing-trustee" },
-      { name: "Secretary's Message", href: "/about/asst-managing-trustee" },
       { name: "Principal's Message", href: "/about/principals-message" },
-      { name: "Management / Board Members", href: "/about/management-board" },
-      { name: "The MOCCB School Network", href: "/about/school-network" },
+      { name: "Management Team", href: "/about/management-team" },
     ],
   },
   {
@@ -23,9 +21,6 @@ const navItems = [
     href: "/academics",
     sub: [
       { name: "Curriculum", href: "/academics/curriculum" },
-      { name: "Primary School", href: "/academics/primary-school" },
-      { name: "Middle School", href: "/academics/middle-school" },
-      { name: "Senior Secondary", href: "/academics/senior-secondary" },
     ],
   },
   {
@@ -33,53 +28,19 @@ const navItems = [
     href: "/admissions",
     sub: [
       { name: "Admission Process", href: "/admissions/process" },
-      { name: "Eligibility", href: "/admissions/eligibility" },
-      { name: "Fee Structure", href: "/admissions/fee-structure" },
-      { name: "Online Registration / Enquiry Form", href: "/admissions/online-registration" },
     ],
   },
   {
     name: "Infrastructure",
     href: "/infrastructure",
     sub: [
-      { name: "Library", href: "/infrastructure/library" },
-      { name: "Laboratories", href: "/infrastructure/laboratories" },
-      { name: "Sports Facilities", href: "/infrastructure/sports-facilities" },
+      { name: "Facilities", href: "/infrastructure" },
     ],
   },
   {
     name: "Gallery",
     href: "/gallery",
-    sub: [
-      { name: "Photo Gallery", href: "/gallery/photos" },
-      { name: "Video Gallery", href: "/gallery/videos" },
-    ],
-  },
-  {
-    name: "Disclosure",
-    href: "/disclosure",
-    sub: [
-      { name: "General Information", href: "/disclosure/general-information" },
-      { name: "Staff Details", href: "/disclosure/staff-details" },
-      { name: "Infrastructure Details", href: "/disclosure/infrastructure-details" },
-      { name: "Academic Results", href: "/disclosure/academic-results" },
-    ],
-  },
-  {
-    name: "Careers",
-    href: "/careers",
-    sub: [
-      { name: "Open Positions", href: "/careers/open-positions" },
-    ],
-  },
-  {
-    name: "Student Life",
-    href: "/student-life",
-    sub: [
-      { name: "Clubs", href: "/student-life/clubs" },
-      { name: "Sports", href: "/student-life/sports" },
-      { name: "Activities", href: "/student-life/activities" },
-    ],
+    sub: [],
   },
   {
     name: "Contact Us",
@@ -103,14 +64,15 @@ function DropdownItem({ item, onClose, isLast }: { item: typeof navItems[0]; onC
     >
       <Link
         href={item.href}
-        className="flex items-center gap-1 text-sm font-semibold text-foreground/80 hover:text-primary transition-colors uppercase tracking-wider whitespace-nowrap py-2"
+        className="flex items-center gap-1 text-xs font-semibold text-foreground/80 hover:text-yellow-500 transition-colors uppercase tracking-wider whitespace-nowrap py-2 px-1 relative group"
       >
         {item.name}
-        {item.sub.length > 0 && (
+        {item.sub?.length > 0 && (
           <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
         )}
+        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
       </Link>
-      {item.sub.length > 0 && (
+      {item.sub?.length > 0 && (
         <div
           className={`absolute top-full ${isLast ? 'right-0' : 'left-0'} w-64 bg-white rounded-xl shadow-xl border border-border z-50 overflow-hidden transition-all duration-200 origin-top ${
             open ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-95 pointer-events-none"
@@ -152,29 +114,34 @@ export default function Navbar() {
             </a>
           </div>
           <div className="flex gap-4 font-semibold">
-            <Link href="/login" className="hover:text-secondary transition-colors">Student Login</Link>
-            <Link href="/enquiry" className="hover:text-secondary transition-colors text-secondary">Pay Fee Online</Link>
+            <Link href="/login" className="hover:text-secondary transition-colors"></Link>
+            <Link href="/enquiry" className="hover:text-secondary transition-colors text-secondary"></Link>
           </div>
         </div>
       </div>
 
       {/* Main Nav */}
-      <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-secondary font-sans font-bold text-2xl shadow-md border-2 border-secondary">
-              SM
+      <div className="w-full px-2 sm:px-4">
+        <div className="flex h-auto py-2 items-center justify-between gap-2">
+          <Link href="/" className="flex items-center gap-1.5 flex-shrink-0 min-w-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
+              <img
+                src={schoolLogo}
+                alt="St. Mary's CBSE School Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div>
-              <h1 className="text-2xl font-sans font-bold text-primary leading-tight m-0">St. Mary's School</h1>
-              <p className="text-xs font-medium text-muted-foreground tracking-wide uppercase">To work and serve in Love</p>
+            <div className="flex flex-col justify-center min-w-0">
+              <h1 className="text-xs sm:text-sm lg:text-base font-sans font-bold text-primary leading-tight m-0">St. Mary's CBSE School</h1>
+              <p className="text-xs font-medium text-muted-foreground tracking-wide uppercase leading-tight hidden sm:block">Spreading Light</p>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex gap-5 items-center">
-            <Link href="/" className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors uppercase tracking-wider">
+          <nav className="hidden md:flex gap-1 lg:gap-2 items-center ml-auto flex-shrink-0">
+            <Link href="/" className="text-xs font-semibold text-foreground/80 hover:text-yellow-500 transition-colors uppercase tracking-wider whitespace-nowrap px-1 relative group py-2">
               Home
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             {navItems.map((item, index) => (
               <DropdownItem key={item.name} item={item} onClose={() => {}} isLast={index >= navItems.length - 2} />
@@ -182,7 +149,7 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden p-2 text-foreground" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden p-2 text-foreground flex-shrink-0" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -208,7 +175,7 @@ export default function Navbar() {
                   {item.name}
                   <ChevronDown className={`w-4 h-4 transition-transform ${mobileOpen === item.name ? "rotate-180" : ""}`} />
                 </button>
-                {mobileOpen === item.name && (
+                {mobileOpen === item.name && item.sub && (
                   <div className="pl-4 flex flex-col border-l-2 border-primary/20 ml-4 mb-2">
                     {item.sub.map((sub) => (
                       <Link

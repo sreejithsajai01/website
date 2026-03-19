@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CalendarDays, Map, Building2, PlayCircle, UserCheck, Blend, Target } from "lucide-react";
+import { ArrowRight, CalendarDays, Map, BookOpen, PlayCircle, UserCheck, Blend, Target } from "lucide-react";
 import schoolHero from "@/assets/images/school-hero.png";
 
 export default function AboutSection() {
@@ -10,13 +10,13 @@ export default function AboutSection() {
           
           {/* Quick Links / Status Cards - Left Side */}
           <div className="lg:col-span-3 grid grid-cols-2 lg:grid-cols-1 gap-4">
-            <a href="/tour" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-border flex flex-col items-center justify-center text-center gap-3">
+            <a href="/about/vision-mission" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-border flex flex-col items-center justify-center text-center gap-3">
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all">
-                <PlayCircle className="w-7 h-7" />
+                <Target className="w-7 h-7" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground">360° Virtual</h3>
-                <p className="text-sm text-muted-foreground">School Tour</p>
+                <h3 className="font-bold text-foreground">Vision & Mission</h3>
+                <p className="text-sm text-muted-foreground">Our Goals</p>
               </div>
             </a>
             
@@ -26,21 +26,21 @@ export default function AboutSection() {
               </div>
               <div>
                 <h3 className="font-bold text-foreground">Event Calendar</h3>
-                <p className="text-sm text-muted-foreground">2025-2026</p>
+                <p className="text-sm text-muted-foreground">2026-2027</p>
               </div>
             </a>
 
-            <a href="/facilities" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-border flex flex-col items-center justify-center text-center gap-3">
+            <a href="/academics/curriculum" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-border flex flex-col items-center justify-center text-center gap-3">
               <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                <Building2 className="w-7 h-7" />
+                <BookOpen className="w-7 h-7" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground">Our Facilities</h3>
-                <p className="text-sm text-muted-foreground">Explore Campus</p>
+                <h3 className="font-bold text-foreground">Curriculum</h3>
+                <p className="text-sm text-muted-foreground">CBSE Program</p>
               </div>
             </a>
 
-            <a href="/direction" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-border flex flex-col items-center justify-center text-center gap-3">
+            <a href="/contact/map" className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-border flex flex-col items-center justify-center text-center gap-3">
               <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-green-600 group-hover:scale-110 group-hover:bg-green-600 group-hover:text-white transition-all">
                 <Map className="w-7 h-7" />
               </div>
@@ -58,13 +58,6 @@ export default function AboutSection() {
               <h4 className="text-primary font-bold uppercase tracking-wider text-sm">About Us</h4>
             </div>
             
-            <h2 className="text-3xl md:text-5xl font-sans font-bold text-primary mb-6 leading-tight">
-              St. Mary's School,<br/> Vashi, Navi Mumbai
-            </h2> 
-            
-            <blockquote className="border-l-4 border-secondary pl-4 py-2 italic text-xl text-muted-foreground mb-8 font-sans">
-              "The journey of a thousand miles begins with a single step." ~Lao Tzu
-            </blockquote>
             
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-border relative">
               {/* Decorative element */}
@@ -73,34 +66,17 @@ export default function AboutSection() {
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="md:w-2/3">
                   <p className="text-foreground/80 leading-relaxed mb-6">
-                   St. Mary's CBSE School, Vashi is part of The Malankara Orthodox Church Council of Bombay (MOCCB)
+                  St. Mary's CBSE School is inspired by the motto  "Spreading Light" - reflecting our belief that education illuminates the path of growth and success. At St. Mary's, we guide children towards wisdom, character, and purpose through empowering their young minds with knowledge and by helping them to grow into responsible individuals who can think critically, act ethically, and thus be an asset to the society.
                   </p>
                   
-                  <ul className="space-y-4 mb-8">
-                    <li className="flex items-center gap-3 text-foreground font-medium">
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span className="font-bold text-xs">01</span>
-                      </div>
-                      Founded in 2026
-                    </li>
-                    <li className="flex items-center gap-3 text-foreground font-medium">
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span className="font-bold text-xs">02</span>
-                      </div>
-                      Affiliated to CBSE
-                    </li>
-                    <li className="flex items-center gap-3 text-foreground font-medium">
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <span className="font-bold text-xs">03</span>
-                      </div>
-                      Located in Vashi, Navi Mumbai
-                    </li>
-                  </ul>
+                   
                   
-                  <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 shadow-md hover:shadow-lg transition-all group">
-                    Know More About School
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <a href="/about/history">
+                    <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 shadow-md hover:shadow-lg transition-all group">
+                      Continue Reading 
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
                 </div>
                 
                 <div className="md:w-1/3 flex flex-col gap-4 justify-center">

@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Footer() {
@@ -12,19 +12,19 @@ export default function Footer() {
               <div className="w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center text-primary font-sans font-bold text-xl">
                 SM
               </div>
-              <h2 className="text-xl font-sans font-bold text-primary-foreground m-0">St. Mary's School</h2>
+              <h2 className="text-xl font-sans font-bold text-primary-foreground m-0">St. Mary's CBSE School</h2>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              St. Mary's CBSE School Vashi is a privately run Christian minority Institution managed by The Malankara Orthodox Church Council of Bombay (MOCCB). We are committed to providing quality education and nurturing the overall development of our students.
+              St Mary's CBSE School Vashi is run by The Malankara Orthodox Church Council of Bombay (MOCCB) which manages and operates the St. Mary's Group of Institutions in various parts of Maharashtra & Gujarat. We are committed to providing quality education and nurturing the overall development of our students.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <a href="#" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
                 <Facebook className="w-4 h-4" />
               </a>
               <a href="#" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/stmaryscbsevashi" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
                 <Instagram className="w-4 h-4" />
               </a>
               <a href="#" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
@@ -39,11 +39,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "About School", href: "/about" },
-                { name: "Principal's Message", href: "/principal-message" },
-                { name: "Admission Procedure", href: "/admission" },
-                { name: "Fee Structure", href: "/fee" },
-                { name: "School Calendar", href: "/calendar" },
-                { name: "Mandatory Public Disclosure", href: "/mandatory-disclosure" },
+                { name: "Admission Procedure", href: "/admissions/process" },
+                { name: "Fee Structure", href: "/admissions/process" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-primary-foreground/80 hover:text-secondary text-sm transition-colors flex items-center gap-2">
@@ -59,11 +56,6 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6 text-secondary uppercase tracking-wider">Important Links</h3>
             <ul className="space-y-3">
               {[
-                { name: "CBSE Website", href: "#" },
-                { name: "National Education Policy", href: "#" },
-                { name: "Student Login", href: "/login" },
-                { name: "Alumni Registration", href: "/alumni" },
-                { name: "Careers", href: "/careers" },
                 { name: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
@@ -81,19 +73,27 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-primary-foreground/80 text-sm">
                 <MapPin className="w-5 h-5 text-secondary shrink-0" />
-                <span>
-                  St. Mary's CBSE School,<br />
-                  Vashi,<br />
-                  Navi Mumbai - 400703 (Maharashtra)
-                </span>
+                <a href="https://maps.google.com/?q=Dr.+Mar+Theophilus+Marg+Sector+10A+Vashi+Navi+Mumbai" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
+                  Dr. Mar Theophilus Marg,<br />
+                  Sector 10A, Vashi,<br />
+                  Navi Mumbai - 400703
+                </a>
               </li>
               <li className="flex gap-3 text-primary-foreground/80 text-sm items-center">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />
-                <span>+91 98765 43210, +91 98765 43211</span>
+                <a href="tel:022-27662725" className="hover:text-secondary transition-colors">022-27662725</a>
               </li>
               <li className="flex gap-3 text-primary-foreground/80 text-sm items-center">
                 <Mail className="w-5 h-5 text-secondary shrink-0" />
-                <a href="mailto:info@stmarys.edu" className="hover:text-secondary transition-colors">info@stmarys.edu</a>
+                <a href="mailto:cbsestmarysvashi@gmail.com" className="hover:text-secondary transition-colors">cbsestmarysvashi@gmail.com</a>
+              </li>
+              <li className="flex gap-3 text-primary-foreground/80 text-sm items-center">
+                <Globe className="w-5 h-5 text-secondary shrink-0" />
+                <a href="https://stmarysvashi.in" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">stmarysvashi.in</a>
+              </li>
+              <li className="flex gap-3 text-primary-foreground/80 text-sm items-center">
+                <Instagram className="w-5 h-5 text-secondary shrink-0" />
+                <a href="https://www.instagram.com/stmaryscbsevashi" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">stmaryscbsevashi</a>
               </li>
             </ul>
           </div>

@@ -1,20 +1,23 @@
 import { useRoute } from "wouter";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Facilities from "./Facilities";
 import Library from "./Library";
 import Laboratories from "./Laboratories";
 import SportsFacilities from "./SportsFacilities";
 
 export default function Infrastructure() {
+  const [matchFacilities] = useRoute("/infrastructure/facilities");
   const [matchLibrary] = useRoute("/infrastructure/library");
   const [matchLabs] = useRoute("/infrastructure/laboratories");
   const [matchSports] = useRoute("/infrastructure/sports-facilities");
   const [matchBase] = useRoute("/infrastructure");
 
-  let ActiveComponent = Library;
-  let activeLabel = "Library";
+  let ActiveComponent = Facilities;
+  let activeLabel = "Facilities";
 
-  if (matchLibrary || matchBase) { ActiveComponent = Library; activeLabel = "Library"; }
+  if (matchFacilities || matchBase) { ActiveComponent = Facilities; activeLabel = "Facilities"; }
+  else if (matchLibrary) { ActiveComponent = Library; activeLabel = "Library"; }
   else if (matchLabs) { ActiveComponent = Laboratories; activeLabel = "Laboratories"; }
   else if (matchSports) { ActiveComponent = SportsFacilities; activeLabel = "Sports Facilities"; }
 

@@ -44,7 +44,7 @@ export default function HeroPopup() {
             {/* Badge */}
             <div className="inline-flex items-center gap-1 bg-secondary text-primary text-xs font-bold px-3 py-1 rounded-full mt-3">
               <Sparkles className="w-3 h-3" />
-              CBSE Affiliated
+              CBSE School
             </div>
           </div>
 
@@ -69,7 +69,7 @@ export default function HeroPopup() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Poppins', sans-serif" }}>Call us</p>
-                  <p className="text-sm font-bold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>+91 98765 43210</p>
+                    <p className="text-sm font-bold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>022-27662725</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 bg-muted/40 rounded-xl px-4 py-3">
@@ -78,7 +78,7 @@ export default function HeroPopup() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Poppins', sans-serif" }}>Email us</p>
-                  <p className="text-sm font-bold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>info@stmarys.edu</p>
+                  <p className="text-sm font-bold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>cbsestmarysvashi@gmail.com</p>
                 </div>
               </div>
             </div>
