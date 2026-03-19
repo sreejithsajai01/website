@@ -10,6 +10,7 @@ import AsstManagingTrustee from "./AsstManagingTrustee";
 import PrincipalsMessage from "./PrincipalsMessage";
 import ManagementBoard from "./ManagementBoard";
 import SchoolNetwork from "./SchoolNetwork";
+import EventCalendar from "./EventCalendar";
 
 const subPages = [
   { label: "History", path: "/about/history", Component: History },
@@ -21,6 +22,7 @@ const subPages = [
   { label: "Principal's Message", path: "/about/principals-message", Component: PrincipalsMessage },
   { label: "Management Team", path: "/about/management-team", Component: ManagementBoard },
   { label: "The MOCCB School Network", path: "/about/school-network", Component: SchoolNetwork },
+  { label: "Event Calendar", path: "/about/event-calendar", Component: EventCalendar },
 ];
 
 export default function About() {
@@ -33,6 +35,7 @@ export default function About() {
   const [matchPrincipal] = useRoute("/about/principals-message");
   const [matchBoard] = useRoute("/about/management-team");
   const [matchNetwork] = useRoute("/about/school-network");
+  const [matchCalendar] = useRoute("/about/event-calendar");
 
   let ActiveComponent = History;
   let activeLabel = "History";
@@ -46,6 +49,7 @@ export default function About() {
   else if (matchPrincipal) { ActiveComponent = PrincipalsMessage; activeLabel = "Principal's Message"; }
   else if (matchBoard) { ActiveComponent = ManagementBoard; activeLabel = "Management Team"; }
   else if (matchNetwork) { ActiveComponent = SchoolNetwork; activeLabel = "The MOCCB School Network"; }
+  else if (matchCalendar) { ActiveComponent = EventCalendar; activeLabel = "Event Calendar"; }
 
   return (
     <div className="min-h-screen flex flex-col">

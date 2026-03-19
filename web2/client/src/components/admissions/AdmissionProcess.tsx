@@ -2,18 +2,18 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const steps = [
-  { title: "Fill the Admission Form online", desc: "Complete the online admission form with accurate details of the student and parents/guardians." },
-  { title: "Submit the Required Documents", desc: "Upload or submit all necessary documents including birth certificate, photographs, and previous academic records." },
-  { title: "Parent Interaction", desc: "A scheduled meeting with parents to discuss the child's background, expectations, and school policies." },
-  { title: "Confirmation of Admission", desc: "Selected candidates will receive admission confirmation from the school upon successful completion of the process." },
+  { title: "Fill the Admission Form online" },
+  { title: "Submit the Required Documents" },
+  { title: "Parent Interaction" },
+  { title: "Confirmation of Admission" },
 ];
 
 const ageCriteria = [
-  { grade: "Nursery", age: "Child should have completed 3 years", dateRange: "(born between 01.07.2022 to 30.06.2023)" },
-  { grade: "LKG (Lower Kindergarten)", age: "Child should have completed 4 years", dateRange: "(born between 01.07.2021 to 30.06.2022)" },
-  { grade: "UKG (Upper Kindergarten)", age: "Child should have completed 5 years", dateRange: "(born between 01.07.2020 to 30.06.2021)" },
-  { grade: "Class I", age: "Child should have completed 6 years", dateRange: "(born between 01.07.2019 to 30.06.2020)" },
-  { grade: "Class II", age: "Child should have successfully completed Class I from a recognized school", dateRange: "" },
+  { grade: "Nursery", age: "3 years", dateRange: "(born between 01.07.2022 to 30.06.2023)" },
+  { grade: "LKG (Lower Kindergarten)", age: "4 years", dateRange: "(born between 01.07.2021 to 30.06.2022)" },
+  { grade: "UKG (Upper Kindergarten)", age: "5 years", dateRange: "(born between 01.07.2020 to 30.06.2021)" },
+  { grade: "Class I", age: "6 years", dateRange: "(born between 01.07.2019 to 30.06.2020)" },
+  { grade: "Class II", age: "Successfully completed Class I from a recognized school", dateRange: "" },
 ];
 
 const requiredDocuments = [

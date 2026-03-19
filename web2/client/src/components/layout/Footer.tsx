@@ -56,6 +56,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6 text-secondary uppercase tracking-wider">Important Links</h3>
             <ul className="space-y-3">
               {[
+                { name: "Student Login", href: "/student-login" },
                 { name: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>

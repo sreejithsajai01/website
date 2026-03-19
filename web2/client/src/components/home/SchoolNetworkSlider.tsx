@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
-import s1 from "@/assets/images/s1.jpeg";
-import s2 from "@/assets/images/s2.jpeg";
-import s3 from "@/assets/images/s3.jpeg";
-import s4 from "@/assets/images/s4.jpeg";
-import s5 from "@/assets/images/s5.jpeg";
-import s6 from "@/assets/images/s6.jpeg";
-import s8 from "@/assets/images/s8.jpeg";
-import s9 from "@/assets/images/s9.jpeg";
-import s10 from "@/assets/images/s10.jpeg";
-import s11 from "@/assets/images/s11.jpeg";
-import s12 from "@/assets/images/s12.jpeg";
+import stMarysICSE from "@/assets/images/stmarys-icse-koparkhairane.jpeg";
+import stThomasEnglish from "@/assets/images/stthomas-english-kalyan.jpeg";
+import stMarysValsad from "@/assets/images/stmarys-valsad.jpeg";
+import stMarysJNP from "@/assets/images/stmarys-jnp-nhavasheva.jpeg";
+import stMarysTejaswini from "@/assets/images/stmarys-tejaswini-vashi.jpeg";
+import drMarTheophilusPune from "@/assets/images/drmar-theophilus-pune.jpeg";
+import gregorianPublic from "@/assets/images/gregorian-public-roha.jpeg";
+import westernCollege from "@/assets/images/western-college-sanpada.jpeg";
+import indiraInstitute from "@/assets/images/indira-institute-sanpada.jpeg";
+import stMarysKhopoli from "@/assets/images/stmarys-public-khopoli.jpeg";
+import stMarysDhule from "@/assets/images/stmarys-dhule.jpeg";
+import drMarTheophilusIMS from "@/assets/images/drmar-theophilus-ims-sanpada.jpeg";
 
 interface School {
   id: number;
@@ -24,79 +25,79 @@ const schoolsData: School[] = [
   {
     id: 1,
     name: "St. Mary's ICSE School",
-    image: s1,
+    image: stMarysICSE,
     location: "Koparkhairane, Navi Mumbai",
     website: "https://www.stmarysicsekk.com/",
   },
   {
     id: 2,
     name: "St. Thomas English School",
-    image: s2,
+    image: stThomasEnglish,
     location: "Karnik Rd, Kalyan",
   },
   {
     id: 3,
     name: "St. Mary's School",
-    image: s3,
+    image: stMarysValsad,
     location: "Valsad, Gujarat",
   },
   {
     id: 4,
     name: "St. Mary's JNP School",
-    image: s4,
+    image: stMarysJNP,
     location: "J.N.P.T., Nhava Sheva",
   },
   {
     id: 5,
     name: "St. Mary's Tejaswini School",
-    image: s5,
+    image: stMarysTejaswini,
     location: "Vashi",
     website: "https://marianvashi.com/",
   },
   {
     id: 6,
     name: "Dr. Mar Theophilus ICSE School",
-    image: s6,
+    image: drMarTheophilusPune,
     location: "Dhanori, Pune",
     website: "https://martheophilusschool.org/",
   },
   {
     id: 7,
     name: "Gregorian Public School",
-    image: s8,
+    image: gregorianPublic,
     location: "Roha",
     website: "https://gregorianpublicschool.in/",
   },
   {
     id: 8,
     name: "Western College of Commerce & Business Management",
-    image: s2,
+    image: westernCollege,
     location: "Sanpada",
     website: "https://www.wccbm.ac.in/",
   },
   {
     id: 9,
     name: "Indira Institute of Business Management",
-    image: s9,
+    image: indiraInstitute,
     location: "Sanpada",
     website: "https://www.indiraiibm.edu.in/",
   },
   {
     id: 10,
     name: "St. Mary's Public School",
-    image: s10,
+    image: stMarysKhopoli,
     location: "DP Road, Khopoli",
   },
   {
     id: 11,
     name: "St. Mary's School",
-    image: s11,
+    image: stMarysDhule,
     location: "Tikhi Road, Dhule",
   },
   {
     id: 12,
     name: "Dr. Mar Theophilus Institute of Management Studies",
-    image: s12,
+    image: drMarTheophilusIMS,
     location: "Sanpada",
     website: "https://dmtims.edu.in/",
   },
@@ -146,8 +147,8 @@ export default function SchoolNetworkSlider() {
     <section className="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-serif font-bold text-primary mb-4 animate-[fadeInUp_0.8s_ease-out]" style={{ fontFamily: "'Poppins', sans-serif" }}>Our School Network</h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto animate-[fadeInUp_0.8s_ease-out_0.2s_both]" style={{ fontFamily: "'Poppins', sans-serif" }}>
+          <h2 className="text-4xl font-serif font-bold text-primary mb-4 animate-[fadeInUp_0.8s_ease-out]">Our School Network</h2>
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto animate-[fadeInUp_0.8s_ease-out_0.2s_both]">
             Explore our branches across different locations
           </p>
         </div>

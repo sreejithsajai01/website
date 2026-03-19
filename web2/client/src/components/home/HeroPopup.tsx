@@ -34,10 +34,10 @@ export default function HeroPopup() {
             <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
               <GraduationCap className="w-8 h-8 text-primary" />
             </div>
-            <h2 className="text-white text-2xl font-bold leading-tight" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <h2 className="text-white text-2xl font-bold leading-tight">
               Admissions Open
             </h2>
-            <p className="text-white/80 text-sm mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <p className="text-white/80 text-sm mt-1">
               Academic Year 2026 – 2027
             </p>
 
@@ -57,7 +57,7 @@ export default function HeroPopup() {
 
           {/* Body */}
           <div className="px-8 pb-8 border-none" style={{ marginTop: '-1px' }}>
-            <p className="text-muted-foreground text-sm text-center mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <p className="text-muted-foreground text-sm text-center mb-6">
               Join St. Mary's CBSE School and be part of a legacy of excellence, values, and holistic growth.
             </p>
 
@@ -68,8 +68,8 @@ export default function HeroPopup() {
                   <Phone className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Poppins', sans-serif" }}>Call us</p>
-                    <p className="text-sm font-bold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>022-27662725</p>
+                  <p className="text-xs text-muted-foreground">Call us</p>
+                    <p className="text-sm font-bold text-primary">022-27662725</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 bg-muted/40 rounded-xl px-4 py-3">
@@ -77,8 +77,8 @@ export default function HeroPopup() {
                   <Mail className="w-4 h-4 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Poppins', sans-serif" }}>Email us</p>
-                  <p className="text-sm font-bold text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>cbsestmarysvashi@gmail.com</p>
+                  <p className="text-xs text-muted-foreground">Email us</p>
+                  <p className="text-sm font-bold text-primary">cbsestmarysvashi@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -87,14 +87,12 @@ export default function HeroPopup() {
             <a
               href="/enquiry"
               className="flex items-center justify-center gap-2 w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl transition-colors mb-3"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Admission Enquiry <ChevronRight className="w-4 h-4" />
             </a>
             <button
               onClick={() => setOpen(false)}
               className="w-full text-sm text-muted-foreground hover:text-primary transition-colors py-1"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               Maybe later
             </button>

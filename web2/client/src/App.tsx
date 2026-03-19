@@ -28,6 +28,7 @@ function Router() {
 
       {/* About */}
       <Route path="/about" component={About} />
+      <Route path="/about/about" component={AboutSub} />
       <Route path="/about/history" component={AboutSub} />
       <Route path="/about/school-motto" component={AboutSub} />
       <Route path="/about/vision-mission" component={AboutSub} />
@@ -37,6 +38,7 @@ function Router() {
       <Route path="/about/principals-message" component={AboutSub} />
       <Route path="/about/management-team" component={AboutSub} />
       <Route path="/about/school-network" component={AboutSub} />
+      <Route path="/about/event-calendar" component={AboutSub} />
 
       {/* Academics */}
       <Route path="/academics" component={AcademicsSub} />

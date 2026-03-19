@@ -53,16 +53,16 @@ const facilities = [
 
 export default function FacilitiesSection() {
   return (
-    <section id="facilities" className="py-24 bg-muted/30" style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <section id="facilities" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
 
         <div className="max-w-4xl mx-auto text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="w-12 h-1 bg-secondary"></div>
-            <h4 className="text-primary font-bold uppercase tracking-wider text-sm" style={{ fontFamily: "'Poppins', sans-serif" }}>Our Campus</h4>
+            <h4 className="text-primary font-bold uppercase tracking-wider text-sm">Our Campus</h4>
             <div className="w-12 h-1 bg-secondary"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-6">
             Facilities
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
@@ -81,7 +81,7 @@ export default function FacilitiesSection() {
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-all">
                   <Icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                <h3 className="text-xl font-bold text-primary mb-3">
                   {facility.name}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">

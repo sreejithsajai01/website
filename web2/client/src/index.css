@@ -63,7 +63,7 @@
   
   --radius: 0.5rem;
   
-  --font-sans: 'Poppins', sans-serif;
+  --font-sans: 'Lora', serif;
   --font-serif: 'Playfair Display', serif;
 }
 
@@ -100,13 +100,13 @@
 @layer base {
   * {
     @apply border-border;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lora', serif;
   }
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lora', serif;
     @apply tracking-tight;
   }
 }
