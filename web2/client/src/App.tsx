@@ -37,6 +37,7 @@ function Router() {
       <Route path="/about/principals-message" component={AboutSub} />
       <Route path="/about/management-team" component={AboutSub} />
       <Route path="/about/school-network" component={AboutSub} />
+      <Route path="/about/event-calendar" component={AboutSub} />
 
       {/* Academics */}
       <Route path="/academics" component={AcademicsSub} />

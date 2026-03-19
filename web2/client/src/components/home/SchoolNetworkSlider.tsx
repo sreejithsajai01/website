@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
-import s1 from "@/assets/images/s1.jpeg";
-import s2 from "@/assets/images/s2.jpeg";
-import s3 from "@/assets/images/s3.jpeg";
-import s4 from "@/assets/images/s4.jpeg";
-import s5 from "@/assets/images/s5.jpeg";
-import s6 from "@/assets/images/s6.jpeg";
-import s8 from "@/assets/images/s8.jpeg";
-import s9 from "@/assets/images/s9.jpeg";
-import s10 from "@/assets/images/s10.jpeg";
-import s11 from "@/assets/images/s11.jpeg";
-import s12 from "@/assets/images/s12.jpeg";
+import stMarysICSE from "@/assets/images/St. Mary's ICSE school, Koparkhairane, Navi Mumbai.jpeg";
+import stThomasEnglish from "@/assets/images/St. Thomas English School, Karnik Rd, Kalyan.jpeg";
+import stMarysValsad from "@/assets/images/St. Mary's School, Valsad, Gujarat.jpeg";
+import stMarysJNP from "@/assets/images/St. Mary's JNP School, J.N.P.T., Nhava Sheva.jpeg";
+import stMarysTejaswini from "@/assets/images/St. Mary's Tejaswini School, Vashi.jpeg";
+import drMarTheophilusPune from "@/assets/images/Dr. Mar Theophilus ICSE School, Dhanori, Pune.jpeg";
+import gregorianPublic from "@/assets/images/Gregorian Public School, Roha.jpeg";
+import westernCollege from "@/assets/images/Western College of Commerce & Business Management, Sanpada.jpeg";
+import indiraInstitute from "@/assets/images/Indira Institute of Business Management, Sanpada..jpeg";
+import stMarysKhopoli from "@/assets/images/St. Mary's Public School, DP Road, Khopoli..jpeg";
+import stMarysDhule from "@/assets/images/St. Mary's School,Tikhi Road, Dhule..jpeg";
+import drMarTheophilusIMS from "@/assets/images/Dr. Mar Theophilus Institute of Management Studies, Sanpada.jpeg";
 
 interface School {
   id: number;
@@ -24,79 +25,79 @@ const schoolsData: School[] = [
   {
     id: 1,
     name: "St. Mary's ICSE School",
-    image: s1,
+    image: stMarysICSE,
     location: "Koparkhairane, Navi Mumbai",
     website: "https://www.stmarysicsekk.com/",
   },
   {
     id: 2,
     name: "St. Thomas English School",
-    image: s2,
+    image: stThomasEnglish,
     location: "Karnik Rd, Kalyan",
   },
   {
     id: 3,
     name: "St. Mary's School",
-    image: s3,
+    image: stMarysValsad,
     location: "Valsad, Gujarat",
   },
   {
     id: 4,
     name: "St. Mary's JNP School",
-    image: s4,
+    image: stMarysJNP,
     location: "J.N.P.T., Nhava Sheva",
   },
   {
     id: 5,
     name: "St. Mary's Tejaswini School",
-    image: s5,
+    image: stMarysTejaswini,
     location: "Vashi",
     website: "https://marianvashi.com/",
   },
   {
     id: 6,
     name: "Dr. Mar Theophilus ICSE School",
-    image: s6,
+    image: drMarTheophilusPune,
     location: "Dhanori, Pune",
     website: "https://martheophilusschool.org/",
   },
   {
     id: 7,
     name: "Gregorian Public School",
-    image: s8,
+    image: gregorianPublic,
     location: "Roha",
     website: "https://gregorianpublicschool.in/",
   },
   {
     id: 8,
     name: "Western College of Commerce & Business Management",
-    image: s2,
+    image: westernCollege,
     location: "Sanpada",
     website: "https://www.wccbm.ac.in/",
   },
   {
     id: 9,
     name: "Indira Institute of Business Management",
-    image: s9,
+    image: indiraInstitute,
     location: "Sanpada",
     website: "https://www.indiraiibm.edu.in/",
   },
   {
     id: 10,
     name: "St. Mary's Public School",
-    image: s10,
+    image: stMarysKhopoli,
     location: "DP Road, Khopoli",
   },
   {
     id: 11,
     name: "St. Mary's School",
-    image: s11,
+    image: stMarysDhule,
     location: "Tikhi Road, Dhule",
   },
   {
     id: 12,
     name: "Dr. Mar Theophilus Institute of Management Studies",
-    image: s12,
+    image: drMarTheophilusIMS,
     location: "Sanpada",
     website: "https://dmtims.edu.in/",
   },

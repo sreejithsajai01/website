@@ -14,6 +14,7 @@ const navItems = [
       { name: "President's Message", href: "/about/managing-trustee" },
       { name: "Principal's Message", href: "/about/principals-message" },
       { name: "Management Team", href: "/about/management-team" },
+      { name: "Event Calendar", href: "/about/event-calendar" },
     ],
   },
   {
