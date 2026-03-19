@@ -106,8 +106,8 @@ export default function Navbar() {
             </a>
           </div>
           <div className="flex gap-4 font-semibold">
-            <Link href="/login" className="hover:text-secondary transition-colors">Student Login</Link>
-            <Link href="/enquiry" className="hover:text-secondary transition-colors text-secondary"></Link>
+            <Link href="/coming-soon" className="hover:text-secondary transition-colors text-secondary">Student Login</Link>
+            <Link href="/coming-soon" className="hover:text-secondary transition-colors text-secondary">Pay Fee Online</Link>
           </div>
         </div>
       </div>

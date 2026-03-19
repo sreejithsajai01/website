@@ -8,11 +8,8 @@ import kidsImg from "@/assets/images/kids-corner.jpg";
 import computerImg from "@/assets/images/lab-computer.jpg";
 import musicImg from "@/assets/images/music-room.jpg";
 
-const grades = [
-  "Nursery", "LKG", "UKG",
-  "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5",
-  "Grade 6", "Grade 7", "Grade 8", "Grade 9", "Grade 10",
-];
+const classOptions = ["NURSERY", "L.K.G.", "U.K.G.", "CLASS 1", "CLASS 2"];
+const lastClassOptions = ["PRE-NURSERY / PLAY GROUP", "NURSERY", "L.K.G", "U.K.G", "CLASS 1"];
 
 const highlights = [
   { icon: Users, title: "Expert Teachers", desc: "Highly qualified and experienced faculty dedicated to every student's growth.", img: kidsImg },
@@ -22,15 +19,15 @@ const highlights = [
 ];
 
 const stats = [
-  { value: "1200+", label: "Students Enrolled" },
-  { value: "98%", label: "Board Pass Rate" },
-  { value: "80+", label: "Expert Faculty" },
-  { value: "25+", label: "Years of Excellence" },
+  { value: "New", label: "CBSE Institution" },
+  { value: "1986", label: "Legacy Since" },
+  { value: "Expert", label: "Dedicated Faculty" },
+  { value: "Holistic", label: "Development Focus" },
 ];
 
 export default function Enquiry() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", phone: "", grade: "", message: "" });
+  const [form, setForm] = useState({ parentName: "", studentName: "", classApplying: "", lastSchool: "", lastClass: "", email: "", phone: "", address: "" });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -113,15 +110,15 @@ export default function Enquiry() {
               <div>
                 <h2 className="text-4xl font-sans font-bold text-primary mb-6">Begin Your Journey With Us</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  St. Mary's CBSE School has been shaping young minds for over 25 years. Our holistic approach to education ensures every student excels academically, socially, and personally.
+                  St. Mary's CBSE School (proposed CBSE) is a newly established sister institution of St. Mary's Multipurpose High School & Junior College, Vashi, founded in 1986. Guided by our motto "Spreading Light", we are committed to shaping confident, curious, and compassionate learners for the future.
                 </p>
                 <div className="space-y-4 mb-10">
                   {[
-                    "CBSE affiliated curriculum with experienced faculty",
-                    "Safe, inclusive and inspiring campus environment",
-                    "Dedicated labs for Science, Computer & Arts",
-                    "Sports, music and extracurricular programs",
-                    "Regular parent-teacher engagement sessions",
+                    "Proposed CBSE curriculum with experienced faculty",
+                    "Nurturing and forward-thinking learning environment",
+                    "Inquiry-based learning and real-world application",
+                    "Balanced focus on academics and co-curricular activities",
+                    "Values-based education and leadership development",
                   ].map((point) => (
                     <div key={point} className="flex items-start gap-3">
                       <Award className="w-5 h-5 text-primary shrink-0 mt-0.5" />
@@ -132,7 +129,7 @@ export default function Enquiry() {
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img src={kidsImg} alt="School atmosphere" className="w-full h-56 object-cover" />
                   <div className="bg-primary px-6 py-4">
-                    <p className="text-white font-semibold text-sm">"To work and serve in Love" — Our guiding motto since inception.</p>
+                    <p className="text-white font-semibold text-sm">"Spreading Light" — Our guiding motto for the future.</p>
                   </div>
                 </div>
               </div>
@@ -152,7 +149,51 @@ export default function Enquiry() {
                     <p className="text-muted-foreground text-sm mb-8">Fill in the details below and we'll get back to you shortly.</p>
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div>
-                        <label className="block text-sm font-semibold text-primary mb-1">Parent Email <span className="text-red-500">*</span></label>
+                        <label className="block text-sm font-semibold text-primary mb-1">Name of the Parent <span className="text-red-500">*</span></label>
+                        <input
+                          name="parentName" type="text" required value={form.parentName} onChange={handleChange}
+                          placeholder="Enter parent name"
+                          className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-primary mb-1">Name of the Student <span className="text-red-500">*</span></label>
+                        <input
+                          name="studentName" type="text" required value={form.studentName} onChange={handleChange}
+                          placeholder="Enter student name"
+                          className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-primary mb-1">Class - Applying for ? <span className="text-red-500">*</span></label>
+                        <select
+                          name="classApplying" required value={form.classApplying} onChange={handleChange}
+                          className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 bg-white"
+                        >
+                          <option value="">Select a class</option>
+                          {classOptions.map((c) => <option key={c} value={c}>{c}</option>)}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-primary mb-1">LAST SCHOOL ATTENDED :</label>
+                        <input
+                          name="lastSchool" type="text" value={form.lastSchool} onChange={handleChange}
+                          placeholder="Enter last school name"
+                          className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-primary mb-1">LAST CLASS ATTENDED</label>
+                        <select
+                          name="lastClass" value={form.lastClass} onChange={handleChange}
+                          className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 bg-white"
+                        >
+                          <option value="">Select last class</option>
+                          {lastClassOptions.map((c) => <option key={c} value={c}>{c}</option>)}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-semibold text-primary mb-1">Email <span className="text-red-500">*</span></label>
                         <input
                           name="email" type="email" required value={form.email} onChange={handleChange}
                           placeholder="Enter email address"
@@ -160,7 +201,7 @@ export default function Enquiry() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-primary mb-1">Phone Number <span className="text-red-500">*</span></label>
+                        <label className="block text-sm font-semibold text-primary mb-1">Phone number <span className="text-red-500">*</span></label>
                         <input
                           name="phone" type="tel" required value={form.phone} onChange={handleChange}
                           placeholder="Enter phone number"
@@ -168,20 +209,10 @@ export default function Enquiry() {
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-semibold text-primary mb-1">Grade Applying For</label>
-                        <select
-                    
-                          className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 bg-white"
-                        >
-                          <option value="">Select a grade</option>
-                          {grades.map((g) => <option key={g} value={g}>{g}</option>)}
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-sm font-semibold text-primary mb-1">Message (Optional)</label>
+                        <label className="block text-sm font-semibold text-primary mb-1">Address of the student <span className="text-red-500">*</span></label>
                         <textarea
-                          name="message" rows={3} value={form.message} onChange={handleChange}
-                          placeholder="Any additional questions or information..."
+                          name="address" rows={3} required value={form.address} onChange={handleChange}
+                          placeholder="Enter student address"
                           className="w-full border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 resize-none"
                         />
                       </div>

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, FileEdit, Upload, Users, CheckCircle } from "lucide-react";
 
 const steps = [
-  { title: "Fill the Admission Form online" },
-  { title: "Submit the Required Documents" },
-  { title: "Parent Interaction" },
-  { title: "Confirmation of Admission" },
+  { title: "Fill the Admission Form online", icon: FileEdit, color: "bg-blue-500" },
+  { title: "Submit the Required Documents", icon: Upload, color: "bg-green-500" },
+  { title: "Parent Interaction", icon: Users, color: "bg-purple-500" },
+  { title: "Confirmation of Admission", icon: CheckCircle, color: "bg-orange-500" },
 ];
 
 const ageCriteria = [
@@ -78,15 +78,16 @@ export default function AdmissionProcess() {
       <div className="bg-primary/5 border border-primary/10 rounded-3xl p-6 mb-12 space-y-2">
         {steps.map((s, i) => {
           const isLeft = i % 2 === 0;
+          const Icon = s.icon;
           return (
             <div key={i}>
               <div className={`flex items-center gap-4 ${isLeft ? "flex-row" : "flex-row-reverse"}`}>
-                {/* Number Badge */}
-                <span className="text-6xl font-extrabold shrink-0 text-primary/30 leading-none select-none">
-                  {i + 1}
-                </span>
+                {/* Icon Badge */}
+                <div className={`${s.color} w-16 h-16 rounded-full flex items-center justify-center shrink-0 shadow-lg`}>
+                  <Icon className="w-8 h-8 text-white" />
+                </div>
                 {/* Step Pill */}
-                <div className="flex-1 bg-primary/70 text-primary-foreground font-bold text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:bg-primary/90 hover:scale-[1.02] hover:shadow-lg cursor-pointer">
+                <div className={`max-w-md ${s.color} text-white font-bold text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer`}>
                   {s.title}
                 </div>
               </div>
@@ -133,14 +134,11 @@ export default function AdmissionProcess() {
       <p className="text-muted-foreground text-base mb-6">
         Parents are required to submit the following documents at the time of admission:
       </p>
-      <div className="space-y-3 mb-12">
+      <ul className="list-disc list-inside space-y-2 mb-12 text-muted-foreground">
         {requiredDocuments.map((doc, i) => (
-          <div key={i} className="flex items-start gap-3 bg-primary/5 border border-primary/10 rounded-xl p-4">
-            <span className="w-2 h-2 rounded-full bg-primary mt-1.5 shrink-0" />
-            <p className="text-muted-foreground text-sm">{doc}</p>
-          </div>
+          <li key={i}>{doc}</li>
         ))}
-      </div>
+      </ul>
 
       {/* FAQ Section */}
       <h2 className="text-3xl font-sans font-bold text-primary mb-6">Frequently Asked Questions</h2>

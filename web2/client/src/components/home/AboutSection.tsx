@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CalendarDays, Map, BookOpen, PlayCircle, UserCheck, Blend, Target } from "lucide-react";
 import schoolHero from "@/assets/images/school-hero.png";
+import { TypeAnimation } from "react-type-animation";
 
 export default function AboutSection() {
   return (
@@ -56,7 +57,21 @@ export default function AboutSection() {
             <div className="lg:col-span-9">
               <div className="mb-4 flex items-center gap-2">
                 <div className="w-12 h-1 bg-secondary"></div>
-                <h4 className="text-primary font-bold uppercase tracking-wider text-sm">About Us</h4>
+                <h4 className="text-primary font-bold uppercase tracking-wider text-sm">
+                  <TypeAnimation
+                    sequence={[
+                      'About Us',
+                      2000,
+                      'Our Story',
+                      2000,
+                      'Our Mission',
+                      2000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  />
+                </h4>
               </div>
               
               <div className="bg-muted/30 p-8 rounded-2xl border border-border relative">
@@ -66,7 +81,11 @@ export default function AboutSection() {
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-2/3">
                     <p className="text-foreground/80 leading-relaxed mb-6">
-                    St. Mary's CBSE School is inspired by the motto  "Spreading Light" - reflecting our belief that education illuminates the path of growth and success. At St. Mary's, we guide children towards wisdom, character, and purpose through empowering their young minds with knowledge and by helping them to grow into responsible individuals who can think critically, act ethically, and thus be an asset to the society.
+                      St. Mary's CBSE School is inspired by the motto "Spreading Light" - reflecting our belief that education illuminates the path of growth and success. At St. Mary's, we guide children towards wisdom, character, and purpose through empowering their young minds with knowledge and by helping them to grow into responsible individuals who can think critically, act ethically, and thus be an asset to the society.
+                    </p>
+                    
+                    <p className="text-foreground/70 leading-relaxed mb-8 text-sm">
+                      We provide a nurturing environment where students develop academically, socially, and emotionally. Our dedicated faculty and modern facilities ensure every child receives quality education that prepares them for future challenges.
                     </p>
                     
                     <a href="/about/history">

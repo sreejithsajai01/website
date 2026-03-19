@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import ComingSoon from "@/components/ui/coming-soon";
 
 import About from "@/pages/About";
 import AboutSub from "@/components/about/About";
@@ -91,6 +92,7 @@ function Router() {
 
       <Route path="/notices" component={Notices} />
       <Route path="/enquiry" component={Enquiry} />
+      <Route path="/coming-soon" component={ComingSoon} />
       <Route component={NotFound} />
     </Switch>
   );
