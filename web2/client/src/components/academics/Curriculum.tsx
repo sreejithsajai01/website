@@ -1,11 +1,11 @@
 const levels = [
   { 
-    title: "Mary Dale PRE-PRIMARY SCHOOL", 
+    title: "Mary Dale Pre-Primary School", 
     detail: "Nursery, Jr.K.G, Sr.K.G.",
     description: "Early childhood education focusing on play-based learning and foundational skills development."
   },
   { 
-    title: "PRIMARY SCHOOL", 
+    title: "Primary School", 
     detail: "Std. 1 to Std. 2 ",
     description: "Strong foundation in English, Mathematics, and Environmental Science with integrated art, music, and physical education."
   },
