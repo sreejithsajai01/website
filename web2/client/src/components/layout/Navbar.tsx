@@ -44,13 +44,8 @@ const navItems = [
   },
   {
     name: "Contact Us",
-    href: "/contact",
-    sub: [
-      { name: "Address", href: "/contact/address" },
-      { name: "Phone", href: "/contact/phone" },
-      { name: "Email", href: "/contact/email" },
-      { name: "Map", href: "/contact/map" },
-    ],
+    href: "/contact/address",
+    sub: [],
   },
 ];
 
