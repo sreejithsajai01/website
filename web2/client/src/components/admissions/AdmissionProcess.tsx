@@ -73,26 +73,31 @@ export default function AdmissionProcess() {
       {/* Admission Process */}
       <h2 className="text-3xl font-sans font-bold text-primary mb-2">Admission Process</h2>
       <p className="text-muted-foreground text-base mb-6">Step-by-Step Process:</p>
-      <div className="space-y-4 mb-12">
-        {steps.map((s, i) => (
-          <div key={i} className="flex gap-5 items-start bg-primary/5 border border-primary/10 rounded-xl p-5">
-            <span className="text-3xl font-bold text-primary/20 shrink-0">{String(i + 1).padStart(2, "0")}</span>
-            <div>
-              <h3 className="font-bold text-primary mb-1">{s.title}</h3>
-              {s.desc && <p className="text-muted-foreground text-sm">{s.desc}</p>}
-              {s.bullets && (
-                <ul className="space-y-1 mt-1">
-                  {s.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-muted-foreground text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-              )}
+
+      {/* Admissions Open Banner */}
+      <div className="flex flex-col items-center mb-8">
+        <div className="bg-amber-500 text-white font-bold text-lg px-8 py-2 rounded-full mb-2 shadow">Admissions Open</div>
+        <div className="bg-primary text-white font-extrabold text-4xl px-10 py-3 rounded-2xl shadow-lg tracking-wide">2026–2027</div>
+      </div>
+
+      {/* Steps */}
+      <div className="bg-amber-400 rounded-3xl p-6 mb-12 space-y-4">
+        {steps.map((s, i) => {
+          const isLeft = i % 2 === 0;
+          const stepColors = ["text-amber-700", "text-blue-400", "text-green-700", "text-pink-500"];
+          return (
+            <div key={i} className={`flex items-center gap-3 ${isLeft ? "flex-row" : "flex-row-reverse"}`}>
+              {/* Number Badge */}
+              <span className={`text-6xl font-extrabold shrink-0 drop-shadow-lg ${stepColors[i]} [text-shadow:2px_2px_0_#fff,-2px_-2px_0_#fff,2px_-2px_0_#fff,-2px_2px_0_#fff]`}>
+                {i + 1}
+              </span>
+              {/* Step Bar */}
+              <div className="flex-1 bg-primary text-white font-bold text-base px-6 py-4 rounded-full shadow-md">
+                {s.title}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Age Criteria */}
