@@ -40,6 +40,8 @@ export default function Footer() {
               {[
                 { name: "About School", href: "/about" },
                 { name: "Admission Procedure", href: "/admissions/process" },
+                { name: "Enquiry", href: "/enquiry" },
+                { name: "Event Calender", href: "/about/event-calendar" },
                 
               ].map((link) => (
                 <li key={link.name}>
@@ -58,8 +60,6 @@ export default function Footer() {
               {[
                 { name: "Student Login", href: "/student-login" },
                 { name: "Contact Us", href: "/contact" },
-                { name: "Enquiry", href: "/enquiry" },
-                { name: "Event-calender", href: "/about/event-calendar" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-primary-foreground/80 hover:text-secondary text-sm transition-colors flex items-center gap-2">

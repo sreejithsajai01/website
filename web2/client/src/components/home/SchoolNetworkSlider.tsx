@@ -34,6 +34,7 @@ const schoolsData: School[] = [
     name: "St. Thomas English School",
     image: stThomasEnglish,
     location: "Karnik Rd, Kalyan",
+    website: "https://stthomasenglishschoolkalyanwest.com/",
   },
   {
     id: 3,

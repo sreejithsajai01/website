@@ -28,7 +28,7 @@ const navItems = [
     sub: [ ],
   },
   {
-    name: "Infrastructure",
+    name: "Facilities",
     href: "/infrastructure",
     sub: [
     

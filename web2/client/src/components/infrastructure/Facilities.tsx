@@ -84,7 +84,7 @@ export default function Facilities() {
 
       <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-6">
         <p className="text-muted-foreground text-base leading-relaxed">
-          At St. Mary's School, every facility is designed with one goal in mind — to create an environment where children can learn with curiosity, grow with confidence, and move from darkness to light through knowledge and values.
+          At St. Mary's CBSE School, every facility is designed with one goal in mind — to create an environment where children can learn with curiosity, grow with confidence, and move from darkness to light through knowledge and values.
         </p>
       </div>
     </div>

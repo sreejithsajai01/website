@@ -1,10 +1,8 @@
 import { Bell, ChevronRight } from "lucide-react";
 
 const notices = [
-  { id: 1, date: "15 Mar 2026", title: "CBSE Stream Introduction - Admission Form Deadline Today", isNew: true },
-  { id: 2, date: "01 Mar 2026", title: "CBSE Stream Launch from Academic Year 2026-2027 (Nursery to Std II)", isNew: true },
-  { id: 3, date: "06 Nov 2025", title: "Result Of SM Talentia 2025 Inter School Competition", isNew: false },
-  { id: 4, date: "14 Jun 2025", title: "Circular and timetables CBSE 2025", isNew: false },
+  { id: 1, date: "15 Mar 2026", title: "Admission for Academic Year 2026-27 is open ", isNew: true },
+
 ];
 
 export default function NoticeBoard() {

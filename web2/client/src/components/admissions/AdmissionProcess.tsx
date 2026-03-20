@@ -1,11 +1,15 @@
 import { useState } from "react";
-import { ChevronDown, FileEdit, Upload, Users, CheckCircle } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import number1 from "../../assets/images/number1.png";
+import number2 from "../../assets/images/number2.png";
+import number3 from "../../assets/images/number3.png";
+import number4 from "../../assets/images/number4.png";
 
 const steps = [
-  { title: "Fill the Admission Form online", icon: FileEdit, color: "bg-blue-500" },
-  { title: "Submit the Required Documents", icon: Upload, color: "bg-green-500" },
-  { title: "Parent Interaction", icon: Users, color: "bg-purple-500" },
-  { title: "Confirmation of Admission", icon: CheckCircle, color: "bg-orange-500" },
+  { title: "Fill the Admission Form online", image: number1, color: "bg-white border-2 border-red-500", textColor: "text-gray-800" },
+  { title: "Submit the Required Documents", image: number2, color: "bg-white border-2 border-red-300", textColor: "text-gray-800" },
+  { title: "Parent Interaction", image: number3, color: "bg-white border-2 border-orange-400", textColor: "text-gray-800" },
+  { title: "Confirmation of Admission", image: number4, color: "bg-white border-2 border-yellow-400", textColor: "text-gray-800" },
 ];
 
 const ageCriteria = [
@@ -75,25 +79,23 @@ export default function AdmissionProcess() {
       <p className="text-muted-foreground text-base mb-6">Step-by-Step Process:</p>
 
       {/* Steps */}
-      <div className="bg-primary/5 border border-primary/10 rounded-3xl p-6 mb-12 space-y-2">
+      <div className="bg-primary/5 border border-primary/10 rounded-3xl p-6 mb-12 space-y-4">
         {steps.map((s, i) => {
-          const isLeft = i % 2 === 0;
-          const Icon = s.icon;
           return (
             <div key={i}>
-              <div className={`flex items-center gap-4 ${isLeft ? "flex-row" : "flex-row-reverse"}`}>
-                {/* Icon Badge */}
-                <div className={`${s.color} w-16 h-16 rounded-full flex items-center justify-center shrink-0 shadow-lg`}>
-                  <Icon className="w-8 h-8 text-white" />
+              <div className="flex items-center gap-4">
+                {/* Image Badge */}
+                <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0">
+                  <img src={s.image} alt={`Step ${i + 1}`} className="w-full h-full object-contain" />
                 </div>
                 {/* Step Pill */}
-                <div className={`max-w-md ${s.color} text-white font-bold text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer`}>
+                <div className={`w-80 ${s.color} ${s.textColor} font-semibold text-sm px-5 py-3 rounded-full shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer`}>
                   {s.title}
                 </div>
               </div>
               {/* Dashed connector arrow */}
               {i < steps.length - 1 && (
-                <div className={`flex ${i % 2 === 0 ? "justify-end pr-4" : "justify-start pl-4"}`}>
+                <div className="flex justify-start pl-7">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-primary/40">
                     <path d="M12 2 Q18 12 12 22" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" fill="none"/>
                     <path d="M9 19 L12 22 L15 19" stroke="currentColor" strokeWidth="1.5" fill="none"/>
