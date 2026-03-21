@@ -4,13 +4,13 @@ const facilities = [
   {
     id: 1,
     name: "Smart Classrooms",
-    description: "Our classrooms are spacious, well-ventilated, and equipped with modern digital teaching tools that make learning interactive, engaging, and easy to understand.",
+    description: "Our classrooms are spacious, well-ventilated and equipped with modern digital teaching tools that make learning interactive, engaging, and easy to understand.",
     icon: Monitor,
   },
   {
     id: 2,
     name: "Early Childhood Learning Spaces",
-    description: "We have specially designed learning areas for Nursery, LKG, and UKG focus on activity-based learning, creativity, and exploration, helping young learners develop curiosity and confidence.",
+    description: "We have specially designed learning areas for Nursery, LKG and UKG focus on activity-based learning, creativity and exploration, helping young learners develop curiosity and confidence.",
     icon: Baby,
   },
   {
@@ -22,19 +22,19 @@ const facilities = [
   {
     id: 4,
     name: "Creative Arts & Activity Programs",
-    description: "Students participate in a variety of co-curricular activities including art, music, dance, storytelling, and creative expression to nurture their talents and confidence.",
+    description: "Students participate in a variety of co-curricular activities including art, music, dance, storytelling and creative expression to nurture their talents and confidence.",
     icon: Palette,
   },
   {
     id: 5,
     name: "Safe & Secure Campus",
-    description: "We prioritize the safety of our students; and thus our campus is monitored and maintained with strict safety measures to ensure a secure and child-friendly environment.",
+    description: "We prioritize the safety of our students and thus our campus is monitored and maintained with strict safety measures to ensure a secure and child-friendly environment.",
     icon: Shield,
   },
   {
     id: 6,
     name: "Sports & Play Areas",
-    description: "Our well-maintained indoor and outdoor play spaces encourage physical activity, teamwork, and healthy development.",
+    description: "Our well-maintained indoor and outdoor play spaces encourage physical activity, teamwork and healthy development.",
     icon: Dumbbell,
   },
   {
@@ -46,7 +46,7 @@ const facilities = [
   {
     id: 8,
     name: "Parent-School Communication",
-    description: "In the spirit of partnership with the parents, our communication channels ensure they stay informed about their child's progress and school activities.",
+    description: "In the spirit of partnership with parents, our communication channels ensure that they stay informed about their child's progress and school activities.",
     icon: MessageCircle,
   },
 ];

@@ -28,7 +28,7 @@ const schoolsData: School[] = [
   // State Board
   {
     id: 1,
-    name: "St Mary's Multipurpose School & Junior College",
+    name: "St. Mary's Multipurpose School & Junior College",
     image: multipurpose,
     location: "Vashi",
     website: "https://marianvashi.com/",
@@ -36,7 +36,7 @@ const schoolsData: School[] = [
   },
   {
     id: 2,
-    name: "St Thomas English School",
+    name: "St. Thomas English School",
     image: stThomasEnglish,
     location: "Kalyan",
     website: "https://stthomasenglishschoolkalyanwest.com/",
@@ -44,21 +44,21 @@ const schoolsData: School[] = [
   },
   {
     id: 3,
-    name: "St Mary's JNP School",
+    name: "St. Mary's JNP School",
     image: stMarysJNP,
     location: "JNPT URAN",
     board: 'State',
   },
   {
     id: 4,
-    name: "St Mary's English High School",
+    name: "St. Mary's English High School",
     image: stMarysValsad,
     location: "Valsad",
     board: 'State',
   },
   {
     id: 5,
-    name: "St Thomas Public School",
+    name: "St. Thomas Public School",
     location: "Pune",
     website: "https://stthomaspublicschool.in/",
     image: stthomaspune,
@@ -66,7 +66,7 @@ const schoolsData: School[] = [
   },
   {
     id: 6,
-    name: "St Mary’s Tejaswini School",
+    name: "St. Mary’s Tejaswini School",
     image: stMarysTejaswini,
     location: "Vashi",
     board: 'State',
@@ -74,7 +74,7 @@ const schoolsData: School[] = [
   // ICSE
   {
     id: 7,
-    name: "St Mary's ICSE School",
+    name: "St. Mary's ICSE School",
     image: stMarysICSE,
     location: "Koparkhairane, Navi Mumbai",
     website: "https://www.stmarysicsekk.com/",
@@ -82,7 +82,7 @@ const schoolsData: School[] = [
   },
   {
     id: 8,
-    name: "Dr Mar Theophilus School",
+    name: "Dr. Mar Theophilus School",
     image: drMarTheophilusPune,
     location: "Dhanori, Pune",
     website: "https://martheophilusschool.org/",
@@ -91,14 +91,14 @@ const schoolsData: School[] = [
   // CBSE
   {
     id: 9,
-    name: "St Mary's Public School",
+    name: "St. Mary's Public School",
     image: stMarysKhopoli,
     location: "Khopoli",
     board: 'CBSE',
   },
   {
     id: 10,
-    name: "St Mary's School",
+    name: "St. Mary's School",
     image: stMarysDhule,
     location: "Dhule",
     board: 'CBSE',
@@ -130,7 +130,7 @@ const schoolsData: School[] = [
   },
   {
     id: 14,
-    name: "Dr Mar Theophilus Institute of Management Studies (DMTIMS)",
+    name: "Dr. Mar Theophilus Institute of Management Studies (DMTIMS)",
     image: drMarTheophilusIMS,
     location: "Sanpada",
     website: "https://dmtims.edu.in/",
