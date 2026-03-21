@@ -42,7 +42,7 @@ export default function Footer() {
                 { name: "About School", href: "/about/vision-mission" },
                 { name: "Admission Procedure", href: "/admissions/process" },
                 { name: "Enquiry", href: "/enquiry" },
-                { name: "Event Calender", href: "/about/event-calendar" },
+                { name: "Event Calendar", href: "/about/event-calendar" },
                 
               ].map((link) => (
                 <li key={link.name}>

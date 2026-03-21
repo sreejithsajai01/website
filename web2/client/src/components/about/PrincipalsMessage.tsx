@@ -19,7 +19,9 @@ export default function PrincipalsMessage() {
           </div>
         </div>
         <div>
-          <h3 className="text-2xl font-sans font-bold text-primary">Fr. Bijumon K. P. </h3>
+          <h3 className="text-2xl font-sans font-bold text-primary">Rev. Fr. Bijumon K. P. </h3>
+          <p className="text-muted-foreground font-medium mt-1">(Fr. K.P. Varghese)</p>
+
           <p className="text-secondary font-bold text-sm tracking-widest uppercase mt-1 mb-4">Principal, St. Mary's CBSE School</p>
           <div className="flex items-start gap-3 bg-primary/5 rounded-xl p-4 border-l-4 border-primary">
             <Quote className="w-6 h-6 text-primary shrink-0 mt-1 rotate-180" />
@@ -46,7 +48,7 @@ export default function PrincipalsMessage() {
         <p style={{ fontFamily: 'Poppins' }}>
           May the light of wisdom continue to guide our path and strengthen our resolve in fulfilling the noble mission of education.
         </p>
-        <p className="font-bold text-primary">Fr. Bijumon K. P. </p>
+        <p className="font-bold text-primary"></p>
       </div>
     </div>
   );
