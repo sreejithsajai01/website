@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { X } from "lucide-react";
 import bgImage from "@/assets/images/school-hero.png";
 
 export default function AdmissionEnquiryPopup() {
   const [open, setOpen] = useState(true);
+  const [, navigate] = useLocation();
 
   if (!open) return null;
 
@@ -48,14 +50,12 @@ export default function AdmissionEnquiryPopup() {
             </p>
 
             {/* Single Button */}
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScAFnsEDCHib5d6f3cN1YQKhHTHGsiLW9CDPNz0DupKaDWzsw/viewform?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => { setOpen(false); navigate("/enquiry"); }}
               className="bg-white text-blue-600 hover:bg-white/90 font-bold py-2 px-8 rounded-lg transition-all duration-300 hover:shadow-lg"
             >
               Enquiry Form
-            </a>
+            </button>
           </div>
         </div>
       </div>
