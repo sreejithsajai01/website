@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Globe, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 import { Link } from "wouter";
+import schoolLogo from "@/assets/images/school.png";
 
 export default function Footer() {
   return (
@@ -9,13 +10,13 @@ export default function Footer() {
           {/* About Column */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center text-primary font-sans font-bold text-xl">
-                SM
+              <div className="w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center overflow-hidden">
+                <img src={schoolLogo} alt="School Logo" className="w-full h-full object-contain" />
               </div>
               <h2 className="text-xl font-sans font-bold text-primary-foreground m-0">St. Mary's CBSE School</h2>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
-              St Mary's CBSE School Vashi is run by The Malankara Orthodox Church Council of Bombay (MOCCB) which manages and operates the St. Mary's Group of Institutions in various parts of Maharashtra & Gujarat. We are committed to providing quality education and nurturing the overall development of our students.
+              St. Mary's CBSE School Vashi is run by The Malankara Orthodox Church Council of Bombay (MOCCB) which manages and operates the St. Mary's Group of Institutions in various parts of Maharashtra & Gujarat. We are committed to providing quality education and nurturing the overall development of our students.
             </p>
             <div className="flex gap-3">
               <a href="#" className="w-8 h-8 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors">
@@ -38,7 +39,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6 text-secondary uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-3">
               {[
-                { name: "About School", href: "/about" },
+                { name: "About School", href: "/about/vision-mission" },
                 { name: "Admission Procedure", href: "/admissions/process" },
                 { name: "Enquiry", href: "/enquiry" },
                 { name: "Event Calender", href: "/about/event-calendar" },
@@ -107,7 +108,7 @@ export default function Footer() {
             © {new Date().getFullYear()} St. Mary's School. All Rights Reserved.
           </p>
           <p className="text-primary-foreground/60 text-sm">
-            Designed & Developed by <a href="https://www.aionpixel.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">Aionpixel Technologies Pvt. Ltd</a>
+            Designed & Developed by <a href="https://www.aionpixel.com/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">Aionpixel Technologies Pvt. Ltd. </a>
           </p>
         </div>
       </div>

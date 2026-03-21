@@ -54,7 +54,7 @@ export default function Enquiry() {
                 <Star className="w-4 h-4" /> Admissions Open 2025–2026
               </div>
               <h1 className="text-5xl md:text-7xl font-sans font-bold text-white mb-6">Admission Enquiry</h1>
-              <p className="text-xl text-white/80 leading-relaxed">
+              <p className="text-xl text-white/80 leading-relaxed" style={{ fontFamily: 'Poppins' }}>
                 Take the first step towards a world-class education. Fill in the form and our team will reach out to you within 24 hours.
               </p>
             </div>
@@ -68,7 +68,9 @@ export default function Enquiry() {
               {stats.map((s) => (
                 <div key={s.label}>
                   <p className="text-3xl font-bold text-primary">{s.value}</p>
-                  <p className="text-sm text-primary/70 font-medium mt-1">{s.label}</p>
+                  <p className="text-sm text-primary/70 font-medium mt-1" style={{ fontFamily: 'Poppins' }}>
+                    {s.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -79,8 +81,10 @@ export default function Enquiry() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <h2 className="text-4xl md:text-5xl font-sans font-bold text-primary mb-4">Why Choose St. Mary's?</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">A nurturing environment where every child is inspired to learn, grow, and lead.</p>
+              <h2 className="text-4xl md:text-5xl font-sans font-bold text-primary mb-4">Why Choose St. Mary's CBSE School?</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto" style={{ fontFamily: 'Poppins' }}>
+                A nurturing environment where every child is inspired to learn, grow and lead.
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {highlights.map(({ icon: Icon, title, desc, img }) => (
@@ -93,7 +97,9 @@ export default function Enquiry() {
                       <Icon className="w-5 h-5 text-primary" />
                     </div>
                     <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{desc}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed" style={{ fontFamily: 'Poppins' }}>
+                      {desc}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -109,10 +115,10 @@ export default function Enquiry() {
               {/* Left — Info */}
               <div>
                 <h2 className="text-4xl font-sans font-bold text-primary mb-6">Begin Your Journey With Us</h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                <p className="text-muted-foreground text-lg leading-relaxed mb-8" style={{ fontFamily: 'Poppins' }}>
                   St. Mary's CBSE School (proposed CBSE) is a newly established sister institution of St. Mary's Multipurpose High School & Junior College, Vashi, founded in 1986. Guided by our motto "Spreading Light", we are committed to shaping confident, curious, and compassionate learners for the future.
                 </p>
-                <div className="space-y-4 mb-10">
+                <div className="space-y-4 mb-10" style={{ fontFamily: 'Poppins' }}>
                   {[
                     "Proposed CBSE curriculum with experienced faculty",
                     "Nurturing and forward-thinking learning environment",
@@ -122,14 +128,18 @@ export default function Enquiry() {
                   ].map((point) => (
                     <div key={point} className="flex items-start gap-3">
                       <Award className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <p className="text-muted-foreground">{point}</p>
+                      <p className="text-muted-foreground" style={{ fontFamily: 'Poppins' }}>
+                        {point}
+                      </p>
                     </div>
                   ))}
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                   <img src={kidsImg} alt="School atmosphere" className="w-full h-56 object-cover" />
                   <div className="bg-primary px-6 py-4">
-                    <p className="text-white font-semibold text-sm">"Spreading Light" — Our guiding motto for the future.</p>
+                    <p className="text-white font-semibold text-sm" style={{ fontFamily: 'Poppins' }}>
+                      "Spreading Light" — Our guiding motto for the future.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -146,7 +156,9 @@ export default function Enquiry() {
                 ) : (
                   <>
                     <h3 className="text-2xl font-sans font-bold text-primary mb-2">Enquiry Form</h3>
-                    <p className="text-muted-foreground text-sm mb-8">Fill in the details below and we'll get back to you shortly.</p>
+                    <p className="text-muted-foreground text-sm mb-8" style={{ fontFamily: 'Poppins' }}>
+                      Fill in the details below and we'll get back to you shortly.
+                    </p>
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div>
                         <label className="block text-sm font-semibold text-primary mb-1">Name of the Parent <span className="text-red-500">*</span></label>

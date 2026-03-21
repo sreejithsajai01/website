@@ -76,8 +76,8 @@ const vashiMembers = [
 const educationBoardMembers = [
   { img: presidentImg, name: "H. G. Geevarghese Mar Coorilos", role: "President" },
   { img: vicePresidentImg, name: "H. G. Geevarghese Mar Theophilos", role: "Vice-President" },
+    { img: secretaryImg, name: "Rev. Fr. Thomas K Chacko", role: "Secretary" },
   { img: chiefExecutive, name: "Rev. Fr. Abraham Joseph", role: "Chief Executive Officer" },
-  { img: secretaryImg, name: "Rev. Fr. Thomas K Chacko", role: "Secretary" },
 ];
 
 const VISIBLE = 5;
@@ -128,7 +128,7 @@ function MemberCarousel({ title, members }: { title: string; members: { img: str
 export default function ManagementBoard() {
   return (
     <div>
-      <MemberCarousel title="Management Team" members={educationBoardMembers} />
+      <MemberCarousel  members={educationBoardMembers} />
     </div>
   );
 }

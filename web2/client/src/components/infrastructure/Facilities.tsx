@@ -54,9 +54,8 @@ const facilities = [
 export default function Facilities() {
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">Facilities</h2>
       
-      <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+      <p className="text-muted-foreground text-lg leading-relaxed mb-8" style={{ fontFamily: 'Poppins' }}>
         We believe that a child's environment plays a vital role in shaping their learning journey. Hence we have thoughtfully designed our campus to provide a safe, stimulating, and future-ready learning space that supports both academic excellence and holistic development. As a branch of St. Mary's Multipurpose High School, we combine trusted educational values with modern facilities suited for today's learners.
       </p>
 
@@ -74,7 +73,7 @@ export default function Facilities() {
               <h3 className="text-xl font-bold text-primary mb-3">
                 {facility.name}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed font-sans" style={{ fontFamily: 'Poppins' }}>
                 {facility.description}
               </p>
             </div>
@@ -83,7 +82,7 @@ export default function Facilities() {
       </div>
 
       <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-6">
-        <p className="text-muted-foreground text-base leading-relaxed">
+        <p className="text-muted-foreground text-base leading-relaxed font-sans" style={{ fontFamily: 'Poppins' }}>
           At St. Mary's CBSE School, every facility is designed with one goal in mind — to create an environment where children can learn with curiosity, grow with confidence, and move from darkness to light through knowledge and values.
         </p>
       </div>

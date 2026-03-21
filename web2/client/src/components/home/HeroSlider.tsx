@@ -32,7 +32,7 @@ export default function HeroSlider() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <h2 className="text-secondary font-bold text-lg md:text-xl mb-2 tracking-widest uppercase">Welcome to</h2>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-white mb-6 drop-shadow-lg whitespace-nowrap">St. Mary's CBSE School</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-bold text-white mb-6 drop-shadow-lg">St. Mary's CBSE School</h1>
             <p className="text-xl md:text-2xl text-white/90 font-sans italic mb-8 drop-shadow-md">
               "Spreading Light"
             </p>

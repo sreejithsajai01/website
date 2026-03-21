@@ -6,12 +6,11 @@ export default function Address() {
 
       {/* Address */}
       <div>
-        <h2 className="text-3xl font-sans font-bold text-primary mb-6">Address</h2>
         <div className="flex items-start gap-4 bg-primary/5 border border-primary/10 rounded-xl p-6 mb-6">
           <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
           <div>
             <p className="font-bold text-primary text-lg">St. Mary's CBSE School</p>
-            <p className="text-muted-foreground mt-1">Dr Mar Theophilus Marg, Juhu Nagar,</p>
+            <p className="text-muted-foreground mt-1">Dr. Mar Theophilus Marg, Juhu Nagar,</p>
             <p className="text-muted-foreground">Sector 10A, Vashi, Navi Mumbai,</p>
             <p className="text-muted-foreground">Maharashtra – 400703</p>
             <p className="text-muted-foreground">India</p>
@@ -37,7 +36,7 @@ export default function Address() {
           <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shrink-0">
             <Phone className="w-5 h-5 text-white" />
           </div>
-          <a href="tel:02227662725" className="font-bold text-primary hover:underline text-lg">
+          <a href="tel:02227662725" className="font-bold text-primary hover:underline text-lg break-all">
             022-27662725
           </a>
         </div>
@@ -50,7 +49,7 @@ export default function Address() {
           <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shrink-0">
             <Mail className="w-5 h-5 text-white" />
           </div>
-          <a href="mailto:cbsestmarysvashi@gmail.com" className="font-bold text-primary hover:underline text-lg">
+          <a href="mailto:cbsestmarysvashi@gmail.com" className="font-bold text-primary hover:underline text-lg break-all">
             cbsestmarysvashi@gmail.com
           </a>
         </div>
@@ -63,7 +62,7 @@ export default function Address() {
           <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shrink-0">
             <Globe className="w-5 h-5 text-white" />
           </div>
-          <a href="https://stmarysvashi.in" target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline text-lg">
+          <a href="https://stmarysvashi.in" target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline text-lg break-all">
             stmarysvashi.in
           </a>
         </div>
@@ -76,7 +75,7 @@ export default function Address() {
           <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center shrink-0">
             <Instagram className="w-5 h-5 text-white" />
           </div>
-          <a href="https://www.instagram.com/stmaryscbsevashi" target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline text-lg">
+          <a href="https://www.instagram.com/stmaryscbsevashi" target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline text-lg break-all">
             stmaryscbsevashi
           </a>
         </div>

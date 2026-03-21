@@ -44,7 +44,7 @@ export default function About() {
   else if (matchMotto) { ActiveComponent = SchoolMotto; activeLabel = "School Motto"; }
   else if (matchVision) { ActiveComponent = VisionMission; activeLabel = "Vision & Mission"; }
   else if (matchFounder) { ActiveComponent = FounderManager; activeLabel = "Founder Manager — MOCCB"; }
-  else if (matchManaging) { ActiveComponent = ManagingTrustee; activeLabel = "President Message"; }
+  else if (matchManaging) { ActiveComponent = ManagingTrustee; activeLabel = "President's Message"; }
   else if (matchAsst) { ActiveComponent = AsstManagingTrustee; activeLabel = "Secretary Message"; }
   else if (matchPrincipal) { ActiveComponent = PrincipalsMessage; activeLabel = "Principal's Message"; }
   else if (matchBoard) { ActiveComponent = ManagementBoard; activeLabel = "Management Team"; }
@@ -60,9 +60,9 @@ export default function About() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-secondary font-semibold uppercase tracking-widest text-sm mb-2">About Us</p>
             <h1 className="text-5xl md:text-6xl font-sans font-bold text-white mb-4">{activeLabel}</h1>
-            <p className="text-white/70 text-lg">St. Mary's CBSE School — Vashi, Navi Mumbai</p>
           </div>
         </section>
+
 
         {/* Body */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

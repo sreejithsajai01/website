@@ -29,11 +29,11 @@ export default function History() {
     }
     
     if (parts.length === 0) {
-      return <p key={i} className="text-gray-800 text-base leading-relaxed">{paragraph}</p>;
+      return <p key={i} className="text-gray-800 text-base leading-relaxed" style={{ fontFamily: 'Poppins' }}>{paragraph}</p>;
     }
     
     return (
-      <p key={i} className="text-gray-800 text-base leading-relaxed">
+      <p key={i} className="text-gray-800 text-base leading-relaxed" style={{ fontFamily: 'Poppins' }}>
         {parts.map((part, idx) => 
           part.bold ? <span key={idx} className="font-bold">{part.text}</span> : part.text
         )}
@@ -43,7 +43,6 @@ export default function History() {
 
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">ABOUT US</h2>
       <div className="space-y-4">
         {content.map((paragraph, i) => renderParagraph(paragraph, i))}
       </div>

@@ -3,7 +3,6 @@ import { Target, Eye } from "lucide-react";
 export default function VisionMission() {
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-8">Vision &amp; Mission</h2>
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-primary/5 rounded-2xl p-8 border border-primary/10">
           <div className="flex items-center gap-3 mb-4">
@@ -12,11 +11,8 @@ export default function VisionMission() {
             </div>
             <h3 className="text-2xl font-sans font-bold text-primary">Our Vision</h3>
           </div>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            To be a leader in transforming young minds to become global citizens without losing our cultural heritage.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            To become the premier institution in Navi Mumbai for nurturing and transforming young minds to become successful citizens of the future keeping our cultural heritage intact.
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4" style={{ fontFamily: 'Poppins' }}>
+           We envision a learning community where every child discovers their unique potential and grows into a responsible and future-ready individual
           </p>
         </div>
         <div className="bg-secondary/10 rounded-2xl p-8 border border-secondary/20">
@@ -26,12 +22,31 @@ export default function VisionMission() {
             </div>
             <h3 className="text-2xl font-sans font-bold text-primary">Our Mission</h3>
           </div>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Facilitate students to achieve academic excellence along with all round personality development.
+          <p className="text-muted-foreground text-lg leading-relaxed mb-4" style={{ fontFamily: 'Poppins' }}>
+            To nurture confident, compassionate and competent learners by providing a strong academic foundation rooted in integrity, discipline and moral excellence.
           </p>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            Nurture students to realise their true potential in both academic and extracurricular excess for successful careers.
-          </p>
+          <ul className="space-y-2">
+            <li className="text-muted-foreground text-lg leading-relaxed flex items-start" style={{ fontFamily: 'Poppins' }}>
+              <span className="mr-2">•</span>
+              <span>Spread the light of knowledge through quality education.</span>
+            </li>
+            <li className="text-muted-foreground text-lg leading-relaxed flex items-start" style={{ fontFamily: 'Poppins' }}>
+              <span className="mr-2">•</span>
+              <span>Spread the light of values by nurturing honesty and respect.</span>
+            </li>
+            <li className="text-muted-foreground text-lg leading-relaxed flex items-start" style={{ fontFamily: 'Poppins' }}>
+              <span className="mr-2">•</span>
+              <span>Spread the light of confidence by encouraging independent thinking.</span>
+            </li>
+            <li className="text-muted-foreground text-lg leading-relaxed flex items-start" style={{ fontFamily: 'Poppins' }}>
+              <span className="mr-2">•</span>
+              <span>Spread the light of creativity through joyful learning.</span>
+            </li>
+            <li className="text-muted-foreground text-lg leading-relaxed flex items-start" style={{ fontFamily: 'Poppins' }}>
+              <span className="mr-2">•</span>
+              <span>Spread the light of innovation through modern teaching methods and AI-based learning tools.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

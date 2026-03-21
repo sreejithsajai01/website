@@ -41,7 +41,6 @@ export default function EventCalendar() {
 
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">Event Calendar</h2>
       <p className="text-muted-foreground text-base mb-8">Academic Year 2026-2027</p>
 
       <div className="bg-white border border-border rounded-xl p-6 shadow-sm max-w-4xl mx-auto">

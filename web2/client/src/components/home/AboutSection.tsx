@@ -65,7 +65,7 @@ export default function AboutSection() {
                 
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-2/3">
-                    <p className="text-foreground/80 leading-relaxed mb-6">
+                    <p className="text-foreground/80 leading-relaxed mb-6" style={{ fontFamily: 'Poppins' }}>
                     St. Mary's CBSE School is inspired by the motto  "Spreading Light" - reflecting our belief that education illuminates the path of growth and success. At St. Mary's, we guide children towards wisdom, character, and purpose through empowering their young minds with knowledge and by helping them to grow into responsible individuals who can think critically, act ethically, and thus be an asset to the society.
                     </p>
                     

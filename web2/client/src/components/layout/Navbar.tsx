@@ -6,9 +6,9 @@ import schoolLogo from "../../assets/images/school.png";
 const navItems = [
   {
     name: "About Us",
-    href: "/about/about",
+    href: "/about/history",
     sub: [
-      { name: "About", href: "/about/about" },
+      { name: "History", href: "/about/history" },
       { name: "Vision & Mission", href: "/about/vision-mission" },
       { name: "President's Message", href: "/about/managing-trustee" },
       { name: "Principal's Message", href: "/about/principals-message" },
@@ -19,30 +19,22 @@ const navItems = [
   {
     name: "Academics",
     href: "/academics",
-    sub: [
-    ],
   },
   {
     name: "Admissions",
     href: "/admissions",
-    sub: [ ],
   },
   {
     name: "Facilities",
     href: "/infrastructure",
-    sub: [
-    
-    ],
   },
   {
     name: "Gallery",
     href: "/gallery",
-    sub: [],
   },
   {
     name: "Contact Us",
     href: "/contact/address",
-    sub: [],
   },
 ];
 
@@ -160,14 +152,24 @@ export default function Navbar() {
             </Link>
             {navItems.map((item) => (
               <div key={item.name} className="border-b border-border">
-                <button
-                  onClick={() => setMobileOpen(mobileOpen === item.name ? null : item.name)}
-                  className="w-full flex items-center justify-between text-sm font-semibold text-foreground hover:text-primary transition-colors uppercase px-4 py-3"
-                >
-                  {item.name}
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileOpen === item.name ? "rotate-180" : ""}`} />
-                </button>
-                {mobileOpen === item.name && item.sub && (
+                <div className="flex items-center">
+                  <Link
+                    href={item.href}
+                    className="flex-1 text-sm font-semibold text-foreground hover:text-primary transition-colors uppercase px-4 py-3"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.sub?.length > 0 && (
+                    <button
+                      onClick={() => setMobileOpen(mobileOpen === item.name ? null : item.name)}
+                      className="px-4 py-3 text-foreground hover:text-primary transition-colors"
+                    >
+                      <ChevronDown className={`w-4 h-4 transition-transform ${mobileOpen === item.name ? "rotate-180" : ""}`} />
+                    </button>
+                  )}
+                </div>
+                {mobileOpen === item.name && item.sub && item.sub.length > 0 && (
                   <div className="pl-4 flex flex-col border-l-2 border-primary/20 ml-4 mb-2">
                     {item.sub.map((sub) => (
                       <Link

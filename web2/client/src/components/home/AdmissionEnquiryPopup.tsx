@@ -41,7 +41,7 @@ export default function AdmissionEnquiryPopup() {
           {/* Content Layer */}
           <div className="relative z-10 h-full flex flex-col items-center justify-center px-8 text-center">
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-3">
-             Enquiry 2026-2027
+             Academic Year 2026-2027
             </h2>
             <p className="text-white/90 text-sm md:text-base mb-6 max-w-xl">
               Join St. Mary's CBSE School and be part of a legacy of excellence

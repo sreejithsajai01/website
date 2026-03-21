@@ -18,7 +18,7 @@ export default function Academics() {
   let ActiveComponent = Curriculum;
   let activeLabel = "Curriculum";
 
-  if (matchCurriculum || matchBase) { ActiveComponent = Curriculum; activeLabel = "Curriculum"; }
+  if (matchCurriculum || matchBase) { ActiveComponent = Curriculum; activeLabel = "CBSE Curriculum"; }
   else if (matchPrimary) { ActiveComponent = PrimarySchool; activeLabel = "Primary School"; }
   else if (matchMiddle) { ActiveComponent = MiddleSchool; activeLabel = "Middle School"; }
   else if (matchSenior) { ActiveComponent = SeniorSecondary; activeLabel = "Senior Secondary"; }
@@ -32,7 +32,6 @@ export default function Academics() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-secondary font-semibold uppercase tracking-widest text-sm mb-2">Academics</p>
             <h1 className="text-5xl md:text-6xl font-sans font-bold text-white mb-4">{activeLabel}</h1>
-            <p className="text-white/70 text-lg">St. Mary's CBSE School — Vashi, Navi Mumbai</p>
           </div>
         </section>
 

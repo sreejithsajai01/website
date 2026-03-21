@@ -12,7 +12,6 @@ export default function Gallery() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-secondary font-semibold uppercase tracking-widest text-sm mb-2">Gallery</p>
             <h1 className="text-5xl md:text-6xl font-sans font-bold text-white mb-4">Gallery</h1>
-            <p className="text-white/70 text-lg">St. Mary's CBSE School — Vashi, Navi Mumbai</p>
           </div>
         </section>
 

@@ -75,11 +75,10 @@ export default function AdmissionProcess() {
   return (
     <div>
       {/* Admission Process */}
-      <h2 className="text-3xl font-sans font-bold text-primary mb-2">Admission Process</h2>
-      <p className="text-muted-foreground text-base mb-6">Step-by-Step Process:</p>
+      <h2 className="text-3xl font-sans font-bold text-primary mb-2" style={{ fontFamily: 'Poppins' }}>Step-by-Step Process</h2>
 
       {/* Steps */}
-      <div className="bg-primary/5 border border-primary/10 rounded-3xl p-6 mb-12 space-y-4">
+      <div className="bg-primary/5 border border-primary/10 rounded-3xl p-6 mb-12 space-y-4" style={{ fontFamily: 'Poppins' }}>
         {steps.map((s, i) => {
           return (
             <div key={i}>
@@ -89,7 +88,7 @@ export default function AdmissionProcess() {
                   <img src={s.image} alt={`Step ${i + 1}`} className="w-full h-full object-contain" />
                 </div>
                 {/* Step Pill */}
-                <div className={`w-80 ${s.color} ${s.textColor} font-semibold text-sm px-5 py-3 rounded-full shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-lg cursor-pointer`}>
+                <div className={`w-80 ${s.color} ${s.textColor} font-semibold text-sm px-5 py-3 rounded-full shadow-md`} style={{ fontFamily: 'Poppins' }}>
                   {s.title}
                 </div>
               </div>
@@ -108,23 +107,31 @@ export default function AdmissionProcess() {
       </div>
 
       {/* Age Criteria */}
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">Age Criteria</h2>
-      <p className="text-muted-foreground text-base mb-6">(as per academic year guidelines):</p>
-      <div className="overflow-x-auto mb-12">
+      <h2 className="text-3xl font-sans font-bold text-primary mb-1" style={{ fontFamily: 'Poppins' }}>Age Criteria</h2>
+      <p className="text-muted-foreground text-base mb-2" style={{ fontFamily: 'Poppins' }}>
+        (as per academic year guidelines):
+        </p>
+      <div className="overflow-x-auto mb-12" style={{ fontFamily: 'Poppins' }}>
         <table className="w-full border-collapse border border-border rounded-xl overflow-hidden">
           <thead>
             <tr className="bg-primary text-primary-foreground">
-              <th className="border border-border p-4 text-left font-semibold">Grade</th>
-              <th className="border border-border p-4 text-left font-semibold">Age Requirement</th>
-              <th className="border border-border p-4 text-left font-semibold">Date of Birth Range</th>
+              <th className="border border-border p-4 text-left font-semibold" style={{ fontFamily: 'Poppins' }}>Grade</th>
+              <th className="border border-border p-4 text-left font-semibold" style={{ fontFamily: 'Poppins' }}>Age Requirement</th>
+              <th className="border border-border p-4 text-left font-semibold" style={{ fontFamily: 'Poppins' }}>Date of Birth Range</th>
             </tr>
           </thead>
           <tbody>
             {ageCriteria.map((row, i) => (
               <tr key={row.grade} className={i % 2 === 0 ? "bg-white" : "bg-primary/5"}>
-                <td className="border border-border p-4 font-semibold text-primary">{row.grade}</td>
-                <td className="border border-border p-4 text-muted-foreground text-sm">{row.age}</td>
-                <td className="border border-border p-4 text-primary/70 text-sm">{row.dateRange || "—"}</td>
+                <td className="border border-border p-4 font-semibold text-primary" style={{ fontFamily: 'Poppins' }}>
+                  {row.grade}
+                </td>
+                <td className="border border-border p-4 text-muted-foreground text-sm" style={{ fontFamily: 'Poppins' }}>
+                  {row.age}
+                </td>
+                <td className="border border-border p-4 text-primary/70 text-sm" style={{ fontFamily: 'Poppins' }}>
+                  {row.dateRange || "—"}
+                </td>
               </tr>
             ))}
           </tbody>
@@ -132,18 +139,18 @@ export default function AdmissionProcess() {
       </div>
 
       {/* Required Documents */}
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">Required Documents</h2>
-      <p className="text-muted-foreground text-base mb-6">
+      <h2 className="text-3xl font-sans font-bold text-primary mb-2" style={{ fontFamily: 'Poppins' }}>Required Documents</h2>
+      <p className="text-muted-foreground text-base mb-2" style={{ fontFamily: 'Poppins' }}>
         Parents are required to submit the following documents at the time of admission:
       </p>
-      <ul className="list-disc list-inside space-y-2 mb-12 text-muted-foreground">
+      <ul className="list-disc list-inside space-y-2 mb-12 text-muted-foreground" style={{ fontFamily: 'Poppins' }}>
         {requiredDocuments.map((doc, i) => (
           <li key={i}>{doc}</li>
         ))}
       </ul>
 
       {/* FAQ Section */}
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">Frequently Asked Questions</h2>
+      <h2 className="text-3xl font-sans font-bold text-primary mb-6" style={{ fontFamily: 'Poppins' }}>Frequently Asked Questions</h2>
       <div className="space-y-3">
         {faqs.map((faq, i) => (
           <div key={i} className="border border-border rounded-xl overflow-hidden">
@@ -151,12 +158,14 @@ export default function AdmissionProcess() {
               onClick={() => setOpenFaq(openFaq === i ? null : i)}
               className="w-full flex items-center justify-between gap-4 p-5 text-left hover:bg-primary/5 transition-colors"
             >
-              <h3 className="font-semibold text-primary">{faq.question}</h3>
+              <h3 className="font-semibold text-primary" style={{ fontFamily: 'Poppins' }}>
+                {faq.question}
+              </h3>
               <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform ${openFaq === i ? "rotate-180" : ""}`} />
             </button>
             {openFaq === i && (
               <div className="px-5 pb-5 pt-0">
-                <p className="text-muted-foreground text-sm leading-relaxed">{faq.answer}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed" style={{ fontFamily: 'Poppins' }}>{faq.answer}</p>
               </div>
             )}
           </div>

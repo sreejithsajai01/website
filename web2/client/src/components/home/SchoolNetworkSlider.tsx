@@ -12,95 +12,129 @@ import indiraInstitute from "@/assets/images/indira-institute-sanpada.jpeg";
 import stMarysKhopoli from "@/assets/images/stmarys-public-khopoli.jpeg";
 import stMarysDhule from "@/assets/images/stmarys-dhule.jpeg";
 import drMarTheophilusIMS from "@/assets/images/drmar-theophilus-ims-sanpada.jpeg";
+import stthomaspune from "@/assets/images/stthomas-pune.jpeg";
+import multipurpose from "@/assets/images/muti-purpose.jpg";
 
 interface School {
   id: number;
   name: string;
-  image: string;
+  image?: string;
   location: string;
   website?: string;
+  board: 'State' | 'ICSE' | 'CBSE' | 'Management';
 }
 
 const schoolsData: School[] = [
+  // State Board
   {
     id: 1,
-    name: "St. Mary's ICSE School",
-    image: stMarysICSE,
-    location: "Koparkhairane, Navi Mumbai",
-    website: "https://www.stmarysicsekk.com/",
+    name: "St Mary's Multipurpose School & Junior College",
+    image: multipurpose,
+    location: "Vashi",
+    website: "https://marianvashi.com/",
+    board: 'State',
   },
   {
     id: 2,
-    name: "St. Thomas English School",
+    name: "St Thomas English School",
     image: stThomasEnglish,
-    location: "Karnik Rd, Kalyan",
+    location: "Kalyan",
     website: "https://stthomasenglishschoolkalyanwest.com/",
+    board: 'State',
   },
   {
     id: 3,
-    name: "St. Mary's School",
-    image: stMarysValsad,
-    location: "Valsad, Gujarat",
+    name: "St Mary's JNP School",
+    image: stMarysJNP,
+    location: "JNPT URAN",
+    board: 'State',
   },
   {
     id: 4,
-    name: "St. Mary's JNP School",
-    image: stMarysJNP,
-    location: "J.N.P.T., Nhava Sheva",
+    name: "St Mary's English High School",
+    image: stMarysValsad,
+    location: "Valsad",
+    board: 'State',
   },
   {
     id: 5,
-    name: "St. Mary's Tejaswini School",
-    image: stMarysTejaswini,
-    location: "Vashi",
-    website: "https://marianvashi.com/",
+    name: "St Thomas Public School",
+    location: "Pune",
+    website: "https://stthomaspublicschool.in/",
+    image: stthomaspune,
+    board: 'State',
   },
   {
     id: 6,
-    name: "Dr. Mar Theophilus ICSE School",
+    name: "St Mary’s Tejaswini School",
+    image: stMarysTejaswini,
+    location: "Vashi",
+    board: 'State',
+  },
+  // ICSE
+  {
+    id: 7,
+    name: "St Mary's ICSE School",
+    image: stMarysICSE,
+    location: "Koparkhairane, Navi Mumbai",
+    website: "https://www.stmarysicsekk.com/",
+    board: 'ICSE',
+  },
+  {
+    id: 8,
+    name: "Dr Mar Theophilus School",
     image: drMarTheophilusPune,
     location: "Dhanori, Pune",
     website: "https://martheophilusschool.org/",
+    board: 'ICSE',
+  },
+  // CBSE
+  {
+    id: 9,
+    name: "St Mary's Public School",
+    image: stMarysKhopoli,
+    location: "Khopoli",
+    board: 'CBSE',
   },
   {
-    id: 7,
+    id: 10,
+    name: "St Mary's School",
+    image: stMarysDhule,
+    location: "Dhule",
+    board: 'CBSE',
+  },
+  {
+    id: 11,
     name: "Gregorian Public School",
     image: gregorianPublic,
     location: "Roha",
     website: "https://gregorianpublicschool.in/",
+    board: 'CBSE',
   },
+  // Management Colleges
   {
-    id: 8,
-    name: "Western College of Commerce & Business Management",
-    image: westernCollege,
-    location: "Sanpada",
-    website: "https://www.wccbm.ac.in/",
-  },
-  {
-    id: 9,
-    name: "Indira Institute of Business Management",
+    id: 12,
+    name: "Indira Institute of Business Management (IIBM)",
     image: indiraInstitute,
     location: "Sanpada",
     website: "https://www.indiraiibm.edu.in/",
+    board: 'Management',
   },
   {
-    id: 10,
-    name: "St. Mary's Public School",
-    image: stMarysKhopoli,
-    location: "DP Road, Khopoli",
+    id: 13,
+    name: "Western College of Commerce & Business Management (WCCBM)",
+    image: westernCollege,
+    location: "Sanpada",
+    website: "https://www.wccbm.ac.in/",
+    board: 'Management',
   },
   {
-    id: 11,
-    name: "St. Mary's School",
-    image: stMarysDhule,
-    location: "Tikhi Road, Dhule",
-  },
-  {
-    id: 12,
-    name: "Dr. Mar Theophilus Institute of Management Studies",
+    id: 14,
+    name: "Dr Mar Theophilus Institute of Management Studies (DMTIMS)",
     image: drMarTheophilusIMS,
     location: "Sanpada",
     website: "https://dmtims.edu.in/",
+    board: 'Management',
   },
 ];
 
@@ -119,6 +153,26 @@ export default function SchoolNetworkSlider() {
       setCenterIndex((prev) => (prev + 1) % schoolsData.length);
     } else {
       setCenterIndex((prev) => (prev - 1 + schoolsData.length) % schoolsData.length);
+    }
+  };
+
+  const getBorderColor = (board: string) => {
+    switch (board) {
+      case 'State': return 'border-yellow-400';
+      case 'ICSE': return 'border-blue-500';
+      case 'CBSE': return 'border-yellow-400';
+      case 'Management': return 'border-blue-500';
+      default: return 'border-white';
+    }
+  };
+
+  const getTagColor = (board: string) => {
+    switch (board) {
+      case 'State': return 'bg-yellow-400 text-black';
+      case 'ICSE': return 'bg-blue-500 text-white';
+      case 'CBSE': return 'bg-yellow-400 text-black';
+      case 'Management': return 'bg-blue-500 text-white';
+      default: return 'bg-gray-500 text-white';
     }
   };
 
@@ -189,15 +243,28 @@ export default function SchoolNetworkSlider() {
                     }}
                   >
                     <div className={`relative w-72 h-80 rounded-2xl overflow-hidden shadow-2xl border-4 ${
-                      isCenter ? 'border-yellow-400' : 'border-white'
-                    } transition-all duration-500 ${
-                      isCenter ? 'hover:shadow-yellow-400/50' : ''
-                    }`}>
-                      <img
-                        src={school.image}
-                        alt={school.name}
-                        className="w-full h-full object-cover"
-                      />
+                      isCenter ? getBorderColor(school.board) : 'border-white'
+                    } transition-all duration-500`}>
+                      {/* Board Tag */}
+                      <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold z-10 ${
+                        getTagColor(school.board)
+                      }`}>
+                        {school.board}
+                      </div>
+                      
+                      {school.image ? (
+                        <img
+                          src={school.image}
+                          alt={school.name}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                          <div className="text-center p-6">
+                            <div className="text-4xl font-bold text-gray-400 mb-2">{school.name.charAt(0)}</div>
+                          </div>
+                        </div>
+                      )}
                       <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300 ${
                         isCenter ? 'opacity-100' : 'opacity-60'
                       }`}></div>

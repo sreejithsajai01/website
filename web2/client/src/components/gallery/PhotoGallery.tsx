@@ -8,7 +8,6 @@ const photos = [
 export default function PhotoGallery() {
   return (
     <div>
-      <h2 className="text-3xl font-sans font-bold text-primary mb-6">Photo Gallery</h2>
       <p className="text-muted-foreground text-lg leading-relaxed mb-8">
         
       </p>
