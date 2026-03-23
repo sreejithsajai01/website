@@ -19,7 +19,7 @@ echo Deploying to Google Cloud Run...
 gcloud run deploy st-marys-school ^
   --image=asia-south1-docker.pkg.dev/yahweh-488009/cortex-erp/web2:latest ^
   --platform=managed ^
-  --region=asia-south1 ^
+  --region=us-central1 ^
   --port=5000 ^
   --min-instances=0 ^
   --max-instances=5 ^

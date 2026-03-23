@@ -50,12 +50,14 @@ export default function AdmissionEnquiryPopup() {
             </p>
 
             {/* Single Button */}
-            <button
-              onClick={() => { setOpen(false); navigate("/enquiry"); }}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScAFnsEDCHib5d6f3cN1YQKhHTHGsiLW9CDPNz0DupKaDWzsw/viewform?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-blue-600 hover:bg-white/90 font-bold py-2 px-8 rounded-lg transition-all duration-300 hover:shadow-lg"
             >
               Enquiry Form
-            </button>
+            </a>
           </div>
         </div>
       </div>
