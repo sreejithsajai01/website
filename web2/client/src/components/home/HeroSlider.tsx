@@ -40,7 +40,7 @@ export default function HeroSlider() {
               <Button size="lg" className="bg-secondary text-primary hover:bg-white text-lg px-8 font-bold" onClick={() => navigate("/about/vision-mission")}>
                 Explore More
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 bg-transparent/20 backdrop-blur-sm font-bold" onClick={() => navigate("/enquiry")}>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8 bg-transparent/20 backdrop-blur-sm font-bold" onClick={() => navigate("/coming-soon")}>
                 Admission Enquiry
               </Button>
             </div>

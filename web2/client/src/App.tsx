@@ -21,6 +21,7 @@ import ContactSub from "@/components/contact/Contact";
 
 import Notices from "@/pages/Notices";
 import Enquiry from "@/pages/Enquiry";
+import ChatBot from "@/components/chatbot/ChatBot";
 
 function Router() {
   return (
@@ -104,6 +105,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <ChatBot />
       </TooltipProvider>
     </QueryClientProvider>
   );

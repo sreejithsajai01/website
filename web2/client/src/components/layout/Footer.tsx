@@ -39,9 +39,9 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6 text-secondary uppercase tracking-wider">Quick Links</h3>
             <ul className="space-y-3">
               {[
-                { name: "About School", href: "/about/vision-mission" },
+                { name: "About School", href: "/about/history" },
                 { name: "Admission Procedure", href: "/admissions/process" },
-                { name: "Enquiry", href: "/enquiry" },
+                { name: "Enquiry", href: "/coming-soon" },
                 { name: "Event Calendar", href: "/about/event-calendar" },
                 
               ].map((link) => (
