@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="St. Mary's CBSE School - Spreading Light. Quality education in Vashi, Navi Mumbai.">
+    <meta property="og:title" content="St. Mary's CBSE School">
+    <meta property="og:description" content="Welcome to St. Mary's CBSE School - Spreading Light.">
+    <meta property="og:type" content="website">
+    <title>St. Mary's CBSE School - Spreading Light</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div>
+                <a href="mailto:cbsestmarysvashi@gmail.com"><i class="fas fa-envelope"></i><span class="link-text"> cbsestmarysvashi@gmail.com</span></a>
+                <a href="tel:02227662725"><i class="fas fa-phone"></i><span class="link-text"> 022-27662725</span></a>
+            </div>
+            <div>
+                <a href="#">Student Login</a>
+                <a href="#">Pay Fee Online</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar container">
+            <div class="logo">
+                <img src="images/school.png" alt="St. Mary's CBSE School Logo">
+                <div class="logo-text">
+                    <h1>St. Mary's CBSE School</h1>
+                    <p>Spreading Light</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about-history.html">About Us <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="about-history.html">History</a>
+                        <a href="about-vision.html">Vision & Mission</a>
+                        <a href="about-president.html">President's Message</a>
+                        <a href="about-principal.html">Principal's Message</a>
+                        <a href="about-management.html">Management Team</a>
+                        <a href="about-calendar.html">Event Calendar</a>
+                    </div>
+                </li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/school-hero.png" alt="St. Mary's CBSE School" class="hero-img">
+        <div class="hero-overlay"></div>
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <h2>Welcome to</h2>
+            <h1>St. Mary's CBSE School</h1>
+            <p>"Spreading Light"</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="about-history.html" class="btn btn-primary">Explore More</a>
+                <a href="admissions.html" class="btn btn-outline">Admission Enquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Enquiry Popup -->
+    <div id="admissionPopup" class="popup-overlay">
+        <div class="popup-container">
+            <button class="popup-close" onclick="closePopup()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-content">
+                <h2>Academic Year 2026-2027</h2>
+                <p>Join St. Mary's CBSE School and be part of a legacy of excellence</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScAFnsEDCHib5d6f3cN1YQKhHTHGsiLW9CDPNz0DupKaDWzsw/viewform?usp=sharing" target="_blank" rel="noopener noreferrer" class="popup-btn">
+                    Enquiry Form
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notice Board -->
+    <div class="notice-board">
+        <div class="container">
+            <div class="notice-label"><i class="fas fa-bell"></i> Notice Board</div>
+            <div class="notice-content">
+                <div class="notice-marquee">
+                    <div class="notice-item">
+                        <span class="notice-date">15 Mar 2026</span>
+                        <span>Admission for Academic Year 2026-27 is open</span>
+                        <span style="background: red; color: white; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: bold;">NEW</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="quick-links">
+                    <a href="about-vision.html" class="quick-link-card">
+                        <div class="icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Vision & Mission</h3>
+                        <p>Our Goals</p>
+                    </a>
+                    <a href="about-calendar.html" class="quick-link-card">
+                        <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Event Calendar</h3>
+                        <p>2026-2027</p>
+                    </a>
+                    <a href="academics.html" class="quick-link-card">
+                        <div class="icon"><i class="fas fa-book-open"></i></div>
+                        <h3>Curriculum</h3>
+                        <p>CBSE</p>
+                    </a>
+                    <a href="contact.html" class="quick-link-card">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Get Direction</h3>
+                        <p>Location Map</p>
+                    </a>
+                </div>
+                <div class="about-content">
+                    <h3>About Us</h3>
+                    <p>St. Mary's CBSE School is inspired by the motto "Spreading Light" - reflecting our belief that education illuminates the path of growth and success. At St. Mary's, we guide children towards wisdom, character, and purpose through empowering their young minds with knowledge and by helping them to grow into responsible individuals who can think critically, act ethically, and thus be an asset to the society.</p>
+                    <a href="about.html" class="btn btn-primary">Continue Reading →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Network Slider -->
+    <section class="network-slider">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our School Network</h2>
+                <p>Explore our branches across different locations</p>
+            </div>
+            <div class="slider-container">
+                <div class="slider-track">
+                    <div class="school-card" data-board="state">
+                        <div class="board-tag state">State</div>
+                        <img src="images/muti-purpose.jpg" alt="St. Mary's Multipurpose School">
+                        <div class="school-card-overlay">
+                            <h3>St. Mary's Multipurpose School & Junior College</h3>
+                            <p>Vashi</p>
+                            <a href="https://marianvashi.com/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="icse">
+                        <div class="board-tag icse">ICSE</div>
+                        <img src="images/stmarys-icse-koparkhairane.jpeg" alt="St. Mary's ICSE School">
+                        <div class="school-card-overlay">
+                            <h3>St. Mary's ICSE School</h3>
+                            <p>Koparkhairane, Navi Mumbai</p>
+                            <a href="https://www.stmarysicsekk.com/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="state">
+                        <div class="board-tag state">State</div>
+                        <img src="images/stthomas-english-kalyan.jpeg" alt="St. Thomas English School">
+                        <div class="school-card-overlay">
+                            <h3>St. Thomas English School</h3>
+                            <p>Kalyan</p>
+                            <a href="https://stthomasenglishschoolkalyanwest.com/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="state">
+                        <div class="board-tag state">State</div>
+                        <img src="images/stmarys-valsad.jpeg" alt="St. Mary's English High School">
+                        <div class="school-card-overlay">
+                            <h3>St. Mary's English High School</h3>
+                            <p>Valsad</p>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="icse">
+                        <div class="board-tag icse">ICSE</div>
+                        <img src="images/drmar-theophilus-pune.jpeg" alt="Dr. Mar Theophilus School">
+                        <div class="school-card-overlay">
+                            <h3>Dr. Mar Theophilus School</h3>
+                            <p>Dhanori, Pune</p>
+                            <a href="https://martheophilusschool.org/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="cbse">
+                        <div class="board-tag cbse">CBSE</div>
+                        <img src="images/gregorian-public-roha.jpeg" alt="Gregorian Public School">
+                        <div class="school-card-overlay">
+                            <h3>Gregorian Public School</h3>
+                            <p>Roha</p>
+                            <a href="https://gregorianpublicschool.in/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="state">
+                        <div class="board-tag state">State</div>
+                        <img src="images/stmarys-jnp-nhavasheva.jpeg" alt="St. Mary's JNP School">
+                        <div class="school-card-overlay">
+                            <h3>St. Mary's JNP School</h3>
+                            <p>JNPT URAN</p>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="state">
+                        <div class="board-tag state">State</div>
+                        <img src="images/stthomas-pune.jpeg" alt="St. Thomas Public School">
+                        <div class="school-card-overlay">
+                            <h3>St. Thomas Public School</h3>
+                            <p>Pune</p>
+                            <a href="https://stthomaspublicschool.in/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="state">
+                        <div class="board-tag state">State</div>
+                        <img src="images/stmarys-tejaswini-vashi.jpeg" alt="St. Mary's Tejaswini School">
+                        <div class="school-card-overlay">
+                            <h3>St. Mary's Tejaswini School</h3>
+                            <p>Vashi</p>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="cbse">
+                        <div class="board-tag cbse">CBSE</div>
+                        <img src="images/stmarys-public-khopoli.jpeg" alt="St. Mary's Public School">
+                        <div class="school-card-overlay">
+                            <h3>St. Mary's Public School</h3>
+                            <p>Khopoli</p>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="cbse">
+                        <div class="board-tag cbse">CBSE</div>
+                        <img src="images/stmarys-dhule.jpeg" alt="St. Mary's School">
+                        <div class="school-card-overlay">
+                            <h3>St. Mary's School</h3>
+                            <p>Dhule</p>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="management">
+                        <div class="board-tag management">Management</div>
+                        <img src="images/indira-institute-sanpada.jpeg" alt="Indira Institute">
+                        <div class="school-card-overlay">
+                            <h3>Indira Institute of Business Management (IIBM)</h3>
+                            <p>Sanpada</p>
+                            <a href="https://www.indiraiibm.edu.in/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="management">
+                        <div class="board-tag management">Management</div>
+                        <img src="images/western-college-sanpada.jpeg" alt="Western College">
+                        <div class="school-card-overlay">
+                            <h3>Western College of Commerce & Business Management (WCCBM)</h3>
+                            <p>Sanpada</p>
+                            <a href="https://www.wccbm.ac.in/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                    <div class="school-card" data-board="management">
+                        <div class="board-tag management">Management</div>
+                        <img src="images/drmar-theophilus-ims-sanpada.jpeg" alt="Dr. Mar Theophilus IMS">
+                        <div class="school-card-overlay">
+                            <h3>Dr. Mar Theophilus Institute of Management Studies (DMTIMS)</h3>
+                            <p>Sanpada</p>
+                            <a href="https://dmtims.edu.in/" target="_blank" rel="noopener noreferrer" class="visit-website">
+                                <i class="fas fa-external-link-alt"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-nav prev">‹</button>
+                <button class="slider-nav next">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo-section">
+                        <img src="images/school.png" alt="Logo">
+                        <h3>St. Mary's CBSE School</h3>
+                    </div>
+                    <p>St. Mary's CBSE School Vashi is run by The Malankara Orthodox Church Council of Bombay (MOCCB) which manages and operates the St. Mary's Group of Institutions in various parts of Maharashtra & Gujarat. We are committed to providing quality education and nurturing the overall development of our students.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/stmaryscbsevashi" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="about-history.html">About School</a>
+                    <a href="admissions.html">Admission Procedure</a>
+                    <a href="#">Enquiry</a>
+                    <a href="about-calendar.html">Event Calendar</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Important Links</h3>
+                    <a href="#">Student Login</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.google.com/?q=Dr.+Mar+Theophilus+Marg+Sector+10A+Vashi+Navi+Mumbai" target="_blank" rel="noopener noreferrer">
+                            Dr. Mar Theophilus Marg,<br>
+                            Sector 10A, Vashi,<br>
+                            Navi Mumbai - 400703
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:02227662725">022-27662725</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:cbsestmarysvashi@gmail.com">cbsestmarysvashi@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-globe"></i>
+                        <a href="https://stmarysvashi.in" target="_blank" rel="noopener noreferrer">stmarysvashi.in</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <a href="https://www.instagram.com/stmaryscbsevashi" target="_blank" rel="noopener noreferrer">stmaryscbsevashi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 St. Mary's School. All Rights Reserved.</p>
+                <p>Designed & Developed by <a href="https://www.aionpixel.com/" target="_blank" rel="noopener noreferrer">Aionpixel Technologies Pvt. Ltd.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>`n    <script src="js/chatbot.js"></script>
+</body>
+</html>
