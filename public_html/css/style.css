@@ -25,7 +25,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -1459,6 +1459,10 @@ footer {
     text-align: center;
   }
 }
+
+/* Chatbot */
+#cb-btn { position: fixed !important; right: 20px !important; bottom: 30px !important; z-index: 99999 !important; }
+#cb-panel { position: fixed !important; z-index: 99999 !important; }
 
 /* Admission Enquiry Popup */
 .popup-overlay {
