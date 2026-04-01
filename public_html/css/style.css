@@ -515,8 +515,8 @@ section {
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 40px;
   background: white;
   padding: 40px;
@@ -526,14 +526,9 @@ section {
   overflow: hidden;
 }
 
-@media (min-width: 992px) {
-  .about-grid {
-    grid-template-columns: 1fr 2fr;
-  }
-}
-
 .quick-links {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -1262,8 +1257,11 @@ footer {
   }
 
   .about-grid {
-    grid-template-columns: 1fr;
     padding: 20px;
+  }
+
+  .quick-links {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .grid-2, .grid-3, .grid-4 {
@@ -1329,7 +1327,7 @@ footer {
   }
 
   .quick-links {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Top bar: show only icons for email/phone, keep Student Login & Pay Fee Online */
@@ -1608,3 +1606,110 @@ footer {
 
 
 
+
+
+/* Calendar Styles */
+.cal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cal-month-title {
+  font-size: 28px;
+  color: var(--primary);
+  margin: 0;
+}
+
+.cal-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.cal-btn:hover {
+  background: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.cal-day-header {
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary);
+  padding: 15px 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--text);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cal-day:hover {
+  background: rgba(61, 90, 128, 0.05);
+  border-color: var(--primary);
+}
+
+.cal-day.empty {
+  border: none;
+  cursor: default;
+}
+
+.cal-day.has-event {
+  background: var(--secondary);
+  color: var(--primary);
+  font-weight: 700;
+  border-color: var(--secondary);
+}
+
+.cal-day.has-event:hover {
+  background: var(--secondary-dark);
+}
+
+.cal-dot {
+  position: absolute;
+  bottom: 5px;
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .cal-month-title {
+    font-size: 20px;
+  }
+  
+  .cal-day {
+    font-size: 14px;
+  }
+  
+  .cal-day-header {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+}
