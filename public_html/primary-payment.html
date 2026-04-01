@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary School Fee Payment - St. Mary's CBSE School</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .payment-section {
+            padding: 60px 0;
+            background: var(--bg-light);
+            min-height: calc(100vh - 200px);
+        }
+        .payment-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .payment-header {
+            background: var(--primary);
+            color: white;
+            padding: 36px 40px;
+            text-align: center;
+        }
+        .payment-header h2 {
+            font-family: 'Lora', serif;
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+        .payment-header p {
+            color: rgba(255,255,255,0.8);
+            font-size: 15px;
+        }
+        .payment-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        @media (max-width: 700px) {
+            .payment-body { grid-template-columns: 1fr; }
+            .payment-header h2 { font-size: 1.4rem; }
+            .payment-header { padding: 28px 20px; }
+            .qr-side, .details-side { padding: 28px 20px; }
+        }
+        .qr-side {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid var(--border);
+            background: #f8faff;
+        }
+        .qr-side img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            border: 3px solid var(--primary);
+            border-radius: 12px;
+            padding: 8px;
+            background: white;
+        }
+        .qr-label {
+            margin-top: 16px;
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 15px;
+            text-align: center;
+        }
+        .qr-sub {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 4px;
+            text-align: center;
+        }
+        .details-side {
+            padding: 40px;
+        }
+        .details-side h3 {
+            font-family: 'Lora', serif;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .detail-row {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .detail-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .detail-value {
+            font-size: 15px;
+            color: var(--text);
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            word-break: break-word;
+        }
+        .detail-value.highlight {
+            color: var(--primary);
+            font-size: 16px;
+        }
+        .payment-note {
+            background: rgba(42, 64, 116, 0.06);
+            border-left: 4px solid var(--secondary);
+            padding: 16px 20px;
+            margin: 0 40px 32px;
+            border-radius: 0 8px 8px 0;
+            font-size: 13px;
+            color: var(--text-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .payment-note i {
+            color: var(--secondary);
+            font-size: 16px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        @media (max-width: 700px) {
+            .payment-note { margin: 0 20px 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div>
+                <a href="mailto:cbsestmarysvashi@gmail.com"><i class="fas fa-envelope"></i><span class="link-text"> cbsestmarysvashi@gmail.com</span></a>
+                <a href="tel:02227662725"><i class="fas fa-phone"></i><span class="link-text"> 022-27662725</span></a>
+            </div>
+            <div>
+                <a href="coming-soon.html">Student Login</a>
+                <a href="payment.html">Pay Fee Online</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar container">
+            <div class="logo">
+                <img src="images/school.png" alt="St. Mary's CBSE School Logo">
+                <div class="logo-text">
+                    <h1>St. Mary's CBSE School</h1>
+                    <p>Spreading Light</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about-history.html">About Us <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="about-history.html">History</a>
+                        <a href="about-vision.html">Vision & Mission</a>
+                        <a href="about-president.html">President's Message</a>
+                        <a href="about-principal.html">Principal's Message</a>
+                        <a href="about-management.html">Management Team</a>
+                        <a href="about-calendar.html">Event Calendar</a>
+                    </div>
+                </li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header" style="margin-top: 120px;">
+        <div class="container">
+            <h1><i class="fas fa-credit-card" style="margin-right:12px;"></i>Pay Fee Online</h1>
+        </div>
+    </div>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-card">
+                <div class="payment-header">
+                    <h2>Primary School (Std. 1 to Std. 2)</h2>
+                     <h3>This QR code only applicable for Std. 1 and Std. 2</h3>
+                   <p style="line-height: 2.5;">
+    <span>Scan the QR code or use the bank details below to transfer the fee</span>
+</p>
+                </div>
+
+                <div class="payment-body">
+                    <!-- QR Side -->
+                    <div class="qr-side">
+                        <img src="images/primary.png" alt="Bank QR Code">
+                        <div class="qr-label">Scan &amp; Pay</div>
+                        <div class="qr-sub">Use any UPI / Banking App</div>
+                    </div>
+
+                    <!-- Details Side -->
+                    <div class="details-side">
+                        <h3><i class="fas fa-university"></i> Bank Account Details</h3>
+
+                        <div class="detail-row">
+                            <span class="detail-label">Account Name</span>
+                            <span class="detail-value highlight">ST. MARY'S CBSE SCHOOL – PRIMARY, A Unit of MOCCB</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Account Number</span>
+                            <span class="detail-value highlight">13690200039702</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">IFSC Code</span>
+                            <span class="detail-value highlight">FDRL0001369</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Account Address</span>
+                            <span class="detail-value highlight">Orthodox Church Centre,<br>Dr. Mar Theophilus Marg, Sector 10-A,<br>Vashi, Navi Mumbai – 400703</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Accounts Email</span>
+                            <span class="detail-value"><a href="mailto:accts.stmaryvashi@gmail.com" style="color:var(--primary);">accts.stmaryvashi@gmail.com</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step by Step Guide -->
+                <div style="padding: 32px 40px; border-top: 1px solid var(--border);">
+                    <h3 style="font-family: 'Lora', serif; color: var(--primary); font-size: 1.2rem; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-list-ol"></i> Important steps after making payment
+                    </h3>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="min-width: 36px; height: 36px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0;">1</div>
+                            <div style="padding-top: 6px;">
+                                <strong style="color: var(--text);">Make the Payment</strong>
+                                <p style="color: var(--text-light); font-size: 14px; margin-top: 4px;">Scan the QR code using any UPI app (GPay, PhonePe, Paytm, etc.) or do a direct bank transfer using the account details above.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="min-width: 36px; height: 36px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0;">2</div>
+                            <div style="padding-top: 6px;">
+                                <strong style="color: var(--text);">Take a Screenshot of the Payment Receipt</strong>
+                                <p style="color: var(--text-light); font-size: 14px; margin-top: 4px;">Save the transaction confirmation / receipt screenshot from your UPI or banking app immediately after payment.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="min-width: 36px; height: 36px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0;">3</div>
+                            <div style="padding-top: 6px;">
+                                <strong style="color: var(--text);">Email the Receipt to the Accounts Office</strong>
+                                <p style="color: var(--text-light); font-size: 14px; margin-top: 4px;">Send the screenshot to <a href="mailto:accts.stmaryvashi@gmail.com" style="color: var(--primary); font-weight: 600;">accts.stmaryvashi@gmail.com</a> with the following details in the email:</p>
+                                <ul style="margin-top: 8px; padding-left: 18px; color: var(--text-light); font-size: 14px; line-height: 1.8;">
+                                    <li>Student Name</li>
+                                    <li>Parent Name</li>
+                                    <li>Application ID</li>
+                                    <li>Amount Paid & Transaction ID</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div style="min-width: 36px; height: 36px; background: var(--secondary); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; flex-shrink: 0;">4</div>
+                            <div style="padding-top: 6px;">
+                                <strong style="color: var(--text);">Receive Confirmation from School</strong>
+                                <p style="color: var(--text-light); font-size: 14px; margin-top: 4px;">The accounts office will verify the payment and send you a confirmation. Please keep the receipt safe until you receive the official acknowledgement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-note">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>This account is to be used exclusively for the collection of fees for <strong>Primary students (Standards 1 to 2)</strong>. Payments will only be tracked after the receipt is emailed to <strong>accts.stmaryvashi@gmail.com</strong> with all required details.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo-section">
+                        <img src="images/school.png" alt="Logo">
+                        <h3>St. Mary's CBSE School</h3>
+                    </div>
+                    <p>St. Mary's CBSE School Vashi is run by The Malankara Orthodox Church Council of Bombay (MOCCB). We are committed to providing quality education and nurturing the overall development of our students.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/stmaryscbsevashi" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="about-history.html">About School</a>
+                    <a href="admissions.html">Admission Procedure</a>
+                    <a href="about-calendar.html">Event Calendar</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Important Links</h3>
+                    <a href="coming-soon.html">Student Login</a>
+                    <a href="payment.html">Pay Fee Online</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.google.com/?q=Dr.+Mar+Theophilus+Marg+Sector+10A+Vashi+Navi+Mumbai" target="_blank" rel="noopener noreferrer">
+                            Dr. Mar Theophilus Marg,<br>Sector 10A, Vashi,<br>Navi Mumbai - 400703
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:02227662725">022-27662725</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:cbsestmarysvashi@gmail.com">cbsestmarysvashi@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 St. Mary's School. All Rights Reserved.</p>
+                <p>Designed & Developed by <a href="https://www.aionpixel.com/" target="_blank" rel="noopener noreferrer">Aionpixel Technologies Pvt. Ltd.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>`n    <script src="js/enquiry-btn.js"></script>`n    <script src="js/chatbot.js"></script>
+</body>
+</html>

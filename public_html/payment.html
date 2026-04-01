@@ -3,15 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academics - St. Mary's CBSE School</title>
+    <title>Pay Fee Online - St. Mary's CBSE School</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .payment-select-section {
+            padding: 60px 0;
+            background: var(--bg-light);
+            min-height: calc(100vh - 200px);
+        }
+        .payment-select-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 48px;
+            color: var(--text-light);
+            font-size: 16px;
+        }
+        .payment-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        @media (max-width: 640px) {
+            .payment-options { grid-template-columns: 1fr; gap: 20px; }
+        }
+        .payment-option-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            padding: 44px 36px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            border: 2px solid transparent;
+            transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+        }
+        .payment-option-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 40px rgba(42,64,116,0.15);
+            transform: translateY(-4px);
+        }
+        .payment-option-card .icon-wrap {
+            width: 72px;
+            height: 72px;
+            background: rgba(42,64,116,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--primary);
+        }
+        .payment-option-card h3 {
+            font-family: 'Lora', serif;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        .payment-option-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin: 0;
+        }
+        .payment-option-card .btn-pay {
+            margin-top: 8px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s;
+        }
+        .payment-option-card:hover .btn-pay {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div>
@@ -25,6 +109,7 @@
         </div>
     </div>
 
+    <!-- Header -->
     <header>
         <nav class="navbar container">
             <div class="logo">
@@ -57,43 +142,40 @@
         </nav>
     </header>
 
-    <section class="page-header">
+    <!-- Page Header -->
+    <div class="page-header" style="margin-top: 120px;">
         <div class="container">
-            <h1>CBSE Curriculum</h1>
+            <h1><i class="fas fa-credit-card" style="margin-right:12px;"></i>Pay Fee Online</h1>
         </div>
-    </section>
+    </div>
 
-    <section class="content-section">
+    <!-- Selection Section -->
+    <section class="payment-select-section">
         <div class="container">
-            <div class="content-box">
-                <h2>Our Curriculum</h2>
-                <p>St. Mary's CBSE School follows the Central Board of Secondary Education (CBSE) curriculum, which is recognized nationally and provides a strong foundation for students from pre-primary through senior secondary levels. Our curriculum emphasizes conceptual understanding, holistic development, and prepares students for competitive examinations and higher education.</p>
+            <p class="payment-select-intro">Please select your school section below to proceed with the fee payment.</p>
+            <div class="payment-options">
 
-                <div style="background: rgba(61, 90, 128, 0.05); border: 1px solid rgba(61, 90, 128, 0.1); border-radius: 12px; padding: 30px; margin-top: 40px;">
-                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 20px;">Academic Levels</h3>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex-shrink: 0;"></span>
-                            <div>
-                                <span style="font-weight: 600; color: var(--text);">Mary Dale Pre-Primary School</span>
-                                <span style="color: var(--text-light); font-size: 14px; margin-left: 8px;">(Nursery, Jr.K.G, Sr.K.G.)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex-shrink: 0;"></span>
-                            <div>
-                                <span style="font-weight: 600; color: var(--text);">Primary School</span>
-                                <span style="color: var(--text-light); font-size: 14px; margin-left: 8px;">(Std. 1 to Std. 2)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Pre-Primary -->
+                <a href="#" class="payment-option-card">
+                    <div class="icon-wrap"><i class="fas fa-child"></i></div>
+                    <h3>Mary Dale Pre-Primary School</h3>
+                    <p>Nursery, Jr. K.G. &amp; Sr. K.G.</p>
+                    <span class="btn-pay">Pay Now <i class="fas fa-arrow-right"></i></span>
+                </a>
+
+                <!-- Primary -->
+                <a href="primary-payment.html" class="payment-option-card">
+                    <div class="icon-wrap"><i class="fas fa-book-open"></i></div>
+                    <h3>Primary School</h3>
+                    <p>Std. 1 to Std. 2</p>
+                    <span class="btn-pay">Pay Now <i class="fas fa-arrow-right"></i></span>
+                </a>
+
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -102,7 +184,7 @@
                         <img src="images/school.png" alt="Logo">
                         <h3>St. Mary's CBSE School</h3>
                     </div>
-                    <p>St. Mary's CBSE School Vashi is run by The Malankara Orthodox Church Council of Bombay (MOCCB) which manages and operates the St. Mary's Group of Institutions in various parts of Maharashtra & Gujarat. We are committed to providing quality education and nurturing the overall development of our students.</p>
+                    <p>St. Mary's CBSE School Vashi is run by The Malankara Orthodox Church Council of Bombay (MOCCB). We are committed to providing quality education and nurturing the overall development of our students.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -114,7 +196,6 @@
                     <h3>Quick Links</h3>
                     <a href="about-history.html">About School</a>
                     <a href="admissions.html">Admission Procedure</a>
-                    <a href="#">Enquiry</a>
                     <a href="about-calendar.html">Event Calendar</a>
                 </div>
                 <div class="footer-col">
@@ -128,9 +209,7 @@
                     <div class="footer-contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <a href="https://maps.google.com/?q=Dr.+Mar+Theophilus+Marg+Sector+10A+Vashi+Navi+Mumbai" target="_blank" rel="noopener noreferrer">
-                            Dr. Mar Theophilus Marg,<br>
-                            Sector 10A, Vashi,<br>
-                            Navi Mumbai - 400703
+                            Dr. Mar Theophilus Marg,<br>Sector 10A, Vashi,<br>Navi Mumbai - 400703
                         </a>
                     </div>
                     <div class="footer-contact-item">
@@ -141,14 +220,6 @@
                         <i class="fas fa-envelope"></i>
                         <a href="mailto:cbsestmarysvashi@gmail.com">cbsestmarysvashi@gmail.com</a>
                     </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-globe"></i>
-                        <a href="https://stmarysvashi.in" target="_blank" rel="noopener noreferrer">stmarysvashi.in</a>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fab fa-instagram"></i>
-                        <a href="https://www.instagram.com/stmaryscbsevashi" target="_blank" rel="noopener noreferrer">stmaryscbsevashi</a>
-                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -158,6 +229,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>`n    <script src="js/enquiry-btn.js"></script>`n    <script src="js/chatbot.js"></script>
+     <script src="js/script.js"></script>`n    <script src="js/enquiry-btn.js"></script>`n    <script src="js/chatbot.js"></script>
 </body>
 </html>
