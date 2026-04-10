@@ -99,7 +99,7 @@
 
   // State
   let open = false;
-  let messages = [{ from: 'bot', text: "👋 Hi! I'm Marian Bot.\n\nHow can I help you today? Type your question or pick a topic below." }];
+  let messages = [{ from: 'bot', text: "👋 Hi! I'm Marian Bot.\n\nHow may I assist you today? You can type your question or choose a topic below." }];
   let pos = { x: window.innerWidth - 100, y: window.innerHeight - 130 };
   let dragging = false, hasDragged = false, dragOffset = { x: 0, y: 0 };
 
@@ -233,7 +233,7 @@
   }
 
   function reset() {
-    messages = [{ from: 'bot', text: "👋 Hi! I'm Marian Bot.\n\nHow can I help you today? Type your question or pick a topic below." }];
+    messages = [{ from: 'bot', text: "👋 Hi! I'm Marian Bot.\n\nHow may I assist you today? You can type your question or choose a topic below." }];
     renderPanel();
   }
 

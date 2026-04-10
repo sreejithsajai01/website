@@ -1679,10 +1679,38 @@ footer {
   cursor: default;
 }
 
-.cal-day.has-event { font-weight: 700; }
-
-.cal-day.today { outline: 2px solid var(--primary); outline-offset: 2px; }
-
-.cal-dot { position: absolute; bottom: 5px; width: 6px; height: 6px; border-radius: 50%; }
-
+.cal-day.has-event {
+  background: var(--secondary);
+  color: var(--primary);
+  font-weight: 700;
+  border-color: var(--secondary);
 }
+
+.cal-day.has-event:hover {
+  background: var(--secondary-dark);
+}
+
+.cal-dot {
+  position: absolute;
+  bottom: 5px;
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .cal-month-title {
+    font-size: 20px;
+  }
+  
+  .cal-day {
+    font-size: 14px;
+  }
+  
+  .cal-day-header {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+}
+

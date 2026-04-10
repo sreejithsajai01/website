@@ -17,15 +17,15 @@
       overflow: hidden;
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 14px;
       white-space: nowrap;
-      padding: 3px 5px;
+      padding: 5px 7px;
     }
     #float-pill a {
       display: flex;
       align-items: center;
-      gap: 7px;
-      padding: 6px 14px;
+      gap: 8px;
+      padding: 9px 18px;
       text-decoration: none;
       letter-spacing: 0.3px;
       transition: background 0.25s, transform 0.2s;
@@ -51,10 +51,10 @@
     #float-pill .enq-tag {
       background: #f4c430;
       color: #2a4074;
-      font-size: 9px;
+      font-size: 13px;
       font-weight: 700;
-      padding: 2px 7px;
-      border-radius: 20px;
+      padding: 8px 16px;
+      border-radius: 50px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -69,20 +69,21 @@
   pill.id = 'float-pill';
   pill.innerHTML = `
     <a href="${FORM_URL}" target="_blank" rel="noopener noreferrer" class="pill-enroll">
-      <span class="enq-tag">Admission Open</span>
+      <span class="enq-tag">Enroll Now</span>
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
       </svg>
-      Enroll Now
+      Admission Form
     </a>
     <div class="pill-divider"></div>
-    <a href="payment.html" class="pill-pay">
+    <a href="coming-soon.html" class="pill-pay">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2a4074" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+        <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
       </svg>
-      Pay Fee Online
+      Applicant Login
     </a>
   `;
 
   document.body.appendChild(pill);
+
 })();
