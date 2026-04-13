@@ -42,7 +42,7 @@
     <li><a href="about-president.html">President's Message</a></li>
     <li><a href="about-principal.html">Principal's Message</a></li>
     <li><a href="about-management.html">Management Team</a></li>
-    <li><a href="about-calendar.html">Event Calendar</a></li>
+    <li><a href="event-calendar.html">Event Calendar</a></li>
 </ul>
 ```
 
@@ -65,7 +65,7 @@ public_html/
 ├── about-president.html ✅
 ├── about-principal.html ✅
 ├── about-management.html ✅
-├── about-calendar.html ✅
+├── event-calendar.html ✅
 ├── contact.html ✅
 ├── academics.html ✅
 ├── admissions.html ✅

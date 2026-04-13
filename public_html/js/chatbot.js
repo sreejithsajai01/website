@@ -148,7 +148,7 @@
   btn.innerHTML = `
     <div id="cb-card">
       <div id="cb-avatar-wrap">
-        <img src="images/chatbot_avatarr.png" alt="Marian Bot" />
+        <img src="images/chatbot-avatar.png" alt="Marian Bot" />
         <span id="cb-dot"></span>
       </div>
       <div id="cb-card-name">Marian Bot</div>

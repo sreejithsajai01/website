@@ -7,7 +7,7 @@
 2. **about-vision.html** - Vision & Mission statements
 3. **about-president.html** - President's message with professional photo layout
 4. **about-management.html** - Management team with member photos
-5. **about-calendar.html** - Event calendar for Academic Year 2026-27
+5. **event-calendar.html** - Event calendar for Academic Year 2026-27
 
 ### ✅ Updated All Existing Pages (8 pages):
 1. **index.html** - Homepage
@@ -80,7 +80,7 @@ public_html/
 ├── about-president.html ✅
 ├── about-principal.html ✅
 ├── about-management.html ✅
-├── about-calendar.html ✅
+├── event-calendar.html ✅
 ├── contact.html ✅
 ├── academics.html ✅
 ├── admissions.html ✅
